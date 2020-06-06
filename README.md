@@ -1,4 +1,4 @@
-# KGC-knowledge-graph
+# The KGC Knowledge Graph
 This is the Knowledge Graph of the Knowledge Graph Conference
 
 We will keep improving it and post updates here.
