@@ -1,3 +1,0 @@
-# The KGC Community Event Calendar
-
-Coming soon...
