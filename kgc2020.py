@@ -193,7 +193,7 @@ for row in speaker_file:
 		else:
 			additionalType = BNode()
 			g.add((additionalType, schema.name, Literal(additionalTypeName)))
-			g.add((additionalType, RDF.type, URIRef(owl + "class")))
+			g.add((additionalType, RDF.type, URIRef(owl + "Class")))
 			if row["instanceOfQID"]!= "":
 				g.add((additionalType, OWL.sameAs, URIRef(wd + row["instanceOfQID"])))
 			labelDict[additionalTypeName] = additionalType
