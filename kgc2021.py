@@ -295,17 +295,17 @@ for row in talkfile:
         g.add((talk, schema.performer, presenter))
 
 
-    for tagText in row["tag"].split():
-        if tagText in labelDict:
-            tag = labelDict[tagText]
-        else:
-            tag = URIRef(kgc + str(lastId))
-            lastId += 1
-            g.add((tag, RDF.type, SKOS.Concept))
-            g.add((tag, schema.name, Literal(tagText)))
-            #if row["tagQID"] != "":
-            #    g.add((tag, OWL.sameAs, URIRef(wd + row["tagQID"])))
-        g.add((talk, schema.about, tag))
+    # for tagText in row["tag"].split():
+    #     if tagText in labelDict:
+    #         tag = labelDict[tagText]
+    #     else:
+    #         tag = URIRef(kgc + str(lastId))
+    #         lastId += 1
+    #         g.add((tag, RDF.type, SKOS.Concept))
+    #         g.add((tag, schema.name, Literal(tagText)))
+    #         #if row["tagQID"] != "":
+    #         #    g.add((tag, OWL.sameAs, URIRef(wd + row["tagQID"])))
+    #     g.add((talk, schema.about, tag))
 
     #broader = row["facet of"]
     #if broader != "":
