@@ -6,5 +6,6 @@
 *.synctex.gz
 *.DS_Store
 *BB-BkUp
+*tests.*
 
 
