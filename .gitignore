@@ -6,6 +6,7 @@
 *.synctex.gz
 *.DS_Store
 *BB-BkUp
-*tests.*
+*tests*
+*.ipynb_checkpoints*
 
 

@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.knowledgegraph.tech#"
+     xml:base="http://www.knowledgegraph.tech"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.knowledgegraph.tech">
+        <rdfs:label>Knowledge Graph Conference Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/worksfor -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/worksfor">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/description -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/description"/>
+    
+
+
+    <!-- http://schema.org/name -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/AdministrativeArea -->
+
+    <owl:Class rdf:about="http://schema.org/AdministrativeArea">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/City -->
+
+    <owl:Class rdf:about="http://schema.org/City">
+        <rdfs:subClassOf rdf:resource="http://schema.org/AdministrativeArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/CivicStructure -->
+
+    <owl:Class rdf:about="http://schema.org/CivicStructure">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/CollegeOrUniversity -->
+
+    <owl:Class rdf:about="http://schema.org/CollegeOrUniversity">
+        <rdfs:subClassOf rdf:resource="http://schema.org/EducationalOrganization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Corporation -->
+
+    <owl:Class rdf:about="http://schema.org/Corporation">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Country -->
+
+    <owl:Class rdf:about="http://schema.org/Country">
+        <rdfs:subClassOf rdf:resource="http://schema.org/AdministrativeArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/EducationalOrganization -->
+
+    <owl:Class rdf:about="http://schema.org/EducationalOrganization">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/FinancialService -->
+
+    <owl:Class rdf:about="http://schema.org/FinancialService">
+        <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/GovernmentOrganization -->
+
+    <owl:Class rdf:about="http://schema.org/GovernmentOrganization">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/LocalBusiness -->
+
+    <owl:Class rdf:about="http://schema.org/LocalBusiness">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/MedicalOrganization -->
+
+    <owl:Class rdf:about="http://schema.org/MedicalOrganization">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/OnlineBusiness -->
+
+    <owl:Class rdf:about="http://schema.org/OnlineBusiness">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Organization -->
+
+    <owl:Class rdf:about="http://schema.org/Organization"/>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+    <owl:Class rdf:about="http://schema.org/Person"/>
+    
+
+
+    <!-- http://schema.org/Place -->
+
+    <owl:Class rdf:about="http://schema.org/Place"/>
+    
+
+
+    <!-- http://schema.org/ResearchOrganization -->
+
+    <owl:Class rdf:about="http://schema.org/ResearchOrganization">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
