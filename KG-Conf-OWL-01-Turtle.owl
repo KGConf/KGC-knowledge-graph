@@ -1,0 +1,165 @@
+@prefix : <http://www.knowledgegraph.tech#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.knowledgegraph.tech> .
+
+<http://www.knowledgegraph.tech> rdf:type owl:Ontology ;
+                                  rdfs:label "Knowledge Graph Conference Ontology" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://schema.org/worksfor
+<http://schema.org/worksfor> rdf:type owl:ObjectProperty ;
+                             rdfs:domain <http://schema.org/Person> ;
+                             rdfs:range <http://schema.org/Organization> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://schema.org/description
+<http://schema.org/description> rdf:type owl:DatatypeProperty .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/AdministrativeArea
+<http://schema.org/AdministrativeArea> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://schema.org/Place> .
+
+
+###  http://schema.org/City
+<http://schema.org/City> rdf:type owl:Class ;
+                         rdfs:subClassOf <http://schema.org/AdministrativeArea> .
+
+
+###  http://schema.org/CivicStructure
+<http://schema.org/CivicStructure> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://schema.org/Place> .
+
+
+###  http://schema.org/CollegeOrUniversity
+<http://schema.org/CollegeOrUniversity> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://schema.org/EducationalOrganization> .
+
+
+###  http://schema.org/Consortium
+<http://schema.org/Consortium> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://schema.org/Organization> .
+
+
+###  http://schema.org/Corporation
+<http://schema.org/Corporation> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://schema.org/Organization> .
+
+
+###  http://schema.org/Country
+<http://schema.org/Country> rdf:type owl:Class ;
+                            rdfs:subClassOf <http://schema.org/AdministrativeArea> .
+
+
+###  http://schema.org/CreativeWork
+<http://schema.org/CreativeWork> rdf:type owl:Class .
+
+
+###  http://schema.org/DigitalDocument
+<http://schema.org/DigitalDocument> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://schema.org/CreativeWork> .
+
+
+###  http://schema.org/EducationalOrganization
+<http://schema.org/EducationalOrganization> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://schema.org/CivicStructure> ,
+                                                            <http://schema.org/Organization> .
+
+
+###  http://schema.org/Event
+<http://schema.org/Event> rdf:type owl:Class .
+
+
+###  http://schema.org/EventSeries
+<http://schema.org/EventSeries> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://schema.org/Event> .
+
+
+###  http://schema.org/FinancialService
+<http://schema.org/FinancialService> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://schema.org/LocalBusiness> .
+
+
+###  http://schema.org/GovernmentOrganization
+<http://schema.org/GovernmentOrganization> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://schema.org/Organization> .
+
+
+###  http://schema.org/LocalBusiness
+<http://schema.org/LocalBusiness> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://schema.org/Organization> ,
+                                                  <http://schema.org/Place> .
+
+
+###  http://schema.org/MediaObject
+<http://schema.org/MediaObject> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://schema.org/CreativeWork> .
+
+
+###  http://schema.org/MedicalOrganization
+<http://schema.org/MedicalOrganization> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://schema.org/Organization> .
+
+
+###  http://schema.org/OnlineBusiness
+<http://schema.org/OnlineBusiness> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://schema.org/Organization> .
+
+
+###  http://schema.org/OnlineStore
+<http://schema.org/OnlineStore> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://schema.org/OnlineBusiness> .
+
+
+###  http://schema.org/Organization
+<http://schema.org/Organization> rdf:type owl:Class .
+
+
+###  http://schema.org/Person
+<http://schema.org/Person> rdf:type owl:Class .
+
+
+###  http://schema.org/Place
+<http://schema.org/Place> rdf:type owl:Class .
+
+
+###  http://schema.org/PresentationDigitalDocument
+<http://schema.org/PresentationDigitalDocument> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://schema.org/DigitalDocument> .
+
+
+###  http://schema.org/ResearchOrganization
+<http://schema.org/ResearchOrganization> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://schema.org/Organization> .
+
+
+###  http://schema.org/State
+<http://schema.org/State> rdf:type owl:Class ;
+                          rdfs:subClassOf <http://schema.org/AdministrativeArea> .
+
+
+###  http://schema.org/VideoObject
+<http://schema.org/VideoObject> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://schema.org/MediaObject> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

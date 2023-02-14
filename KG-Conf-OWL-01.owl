@@ -98,6 +98,14 @@
     
 
 
+    <!-- http://schema.org/Consortium -->
+
+    <owl:Class rdf:about="http://schema.org/Consortium">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
     <!-- http://schema.org/Corporation -->
 
     <owl:Class rdf:about="http://schema.org/Corporation">
@@ -114,11 +122,39 @@
     
 
 
+    <!-- http://schema.org/CreativeWork -->
+
+    <owl:Class rdf:about="http://schema.org/CreativeWork"/>
+    
+
+
+    <!-- http://schema.org/DigitalDocument -->
+
+    <owl:Class rdf:about="http://schema.org/DigitalDocument">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    </owl:Class>
+    
+
+
     <!-- http://schema.org/EducationalOrganization -->
 
     <owl:Class rdf:about="http://schema.org/EducationalOrganization">
         <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
         <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Event -->
+
+    <owl:Class rdf:about="http://schema.org/Event"/>
+    
+
+
+    <!-- http://schema.org/EventSeries -->
+
+    <owl:Class rdf:about="http://schema.org/EventSeries">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
     </owl:Class>
     
 
@@ -148,6 +184,14 @@
     
 
 
+    <!-- http://schema.org/MediaObject -->
+
+    <owl:Class rdf:about="http://schema.org/MediaObject">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    </owl:Class>
+    
+
+
     <!-- http://schema.org/MedicalOrganization -->
 
     <owl:Class rdf:about="http://schema.org/MedicalOrganization">
@@ -160,6 +204,14 @@
 
     <owl:Class rdf:about="http://schema.org/OnlineBusiness">
         <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/OnlineStore -->
+
+    <owl:Class rdf:about="http://schema.org/OnlineStore">
+        <rdfs:subClassOf rdf:resource="http://schema.org/OnlineBusiness"/>
     </owl:Class>
     
 
@@ -182,10 +234,34 @@
     
 
 
+    <!-- http://schema.org/PresentationDigitalDocument -->
+
+    <owl:Class rdf:about="http://schema.org/PresentationDigitalDocument">
+        <rdfs:subClassOf rdf:resource="http://schema.org/DigitalDocument"/>
+    </owl:Class>
+    
+
+
     <!-- http://schema.org/ResearchOrganization -->
 
     <owl:Class rdf:about="http://schema.org/ResearchOrganization">
         <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/State -->
+
+    <owl:Class rdf:about="http://schema.org/State">
+        <rdfs:subClassOf rdf:resource="http://schema.org/AdministrativeArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/VideoObject -->
+
+    <owl:Class rdf:about="http://schema.org/VideoObject">
+        <rdfs:subClassOf rdf:resource="http://schema.org/MediaObject"/>
     </owl:Class>
 </rdf:RDF>
 
