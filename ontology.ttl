@@ -1,0 +1,127 @@
+@prefix kgc: <http://www.knowledgegraph.tech/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+schema:City a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+schema:Consortium a owl:Class ;
+    rdfs:subClassOf schema:Organization .
+
+schema:EventSeries a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+schema:PresentationDigitalDocument a owl:Class ;
+    rdfs:subClassOf schema:DigitalDocument .
+
+schema:State a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+schema:additionalType a owl:DatatypeProperty .
+
+schema:address a owl:DatatypeProperty .
+
+schema:alumniOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:CollegeOrUniversity .
+
+schema:archivedAt a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:description a owl:DatatypeProperty .
+
+schema:embedUrl a owl:DatatypeProperty ;
+    rdfs:domain schema:VideoObject .
+
+schema:eventAttendanceMode a owl:DatatypeProperty ;
+    rdfs:domain schema:Event .
+
+schema:geoWithin a owl:ObjectProperty ;
+    rdfs:domain schema:Place ;
+    rdfs:range schema:AdministrativeArea .
+
+schema:industry a owl:ObjectProperty .
+
+schema:keywords a owl:DatatypeProperty .
+
+schema:knowsAbout a owl:ObjectProperty .
+
+schema:location a owl:ObjectProperty ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:AdministrativeArea .
+
+schema:memberOf a owl:ObjectProperty ;
+    rdfs:range schema:Organization .
+
+schema:name a owl:DatatypeProperty .
+
+schema:nationality a owl:ObjectProperty ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Country .
+
+schema:performer a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:Person .
+
+schema:sameAs a owl:ObjectProperty .
+
+schema:worksfor a owl:ObjectProperty ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Organization .
+
+kgc:Conference a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:Talk a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:Tutorial a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:Workshop a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+skos:Concept a owl:Class .
+
+skos:broader a owl:ObjectProperty .
+
+skos:narrower a owl:ObjectProperty .
+
+schema:CivicStructure a owl:Class ;
+    rdfs:subClassOf schema:Place .
+
+schema:CollegeOrUniversity a owl:Class ;
+    rdfs:subClassOf schema:EducationalOrganization .
+
+schema:Country a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+schema:DigitalDocument a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:EducationalOrganization a owl:Class ;
+    rdfs:subClassOf schema:CivicStructure,
+        schema:Organization .
+
+schema:MediaObject a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:VideoObject a owl:Class ;
+    rdfs:subClassOf schema:MediaObject .
+
+schema:CreativeWork a owl:Class .
+
+schema:Place a owl:Class .
+
+schema:Person a owl:Class .
+
+schema:AdministrativeArea a owl:Class ;
+    rdfs:subClassOf schema:Place .
+
+schema:Organization a owl:Class .
+
+schema:Event a owl:Class .
+
