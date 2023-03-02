@@ -81,6 +81,8 @@ kgc:Talk a owl:Class ;
 kgc:Tutorial a owl:Class ;
     rdfs:subClassOf schema:Event .
 
+kgc:Wiki a owl:Class .
+
 kgc:Workshop a owl:Class ;
     rdfs:subClassOf schema:Event .
 
