@@ -1,5 +1,6 @@
 @prefix kgc: <http://www.knowledgegraph.tech/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -9,6 +10,10 @@ schema:City a owl:Class ;
 
 schema:Consortium a owl:Class ;
     rdfs:subClassOf schema:Organization .
+
+schema:EventAttendanceModeEnumeration a owl:Class ;
+    rdfs:subClassOf schema:Enumeration ;
+    owl:oneOf ( schema:MixedEventAttendanceMode schema:OfflineEventAttendanceMode schema:OnlineEventAttendanceMode ) .
 
 schema:EventSeries a owl:Class ;
     rdfs:subClassOf schema:Event .
@@ -68,9 +73,13 @@ schema:performer a owl:ObjectProperty ;
 
 schema:sameAs a owl:ObjectProperty .
 
+schema:superEvent a owl:ObjectProperty .
+
 schema:worksfor a owl:ObjectProperty ;
-    rdfs:domain schema:Person ;
-    rdfs:range schema:Organization .
+    rdfs:domain schema:Event,
+        schema:Person ;
+    rdfs:range schema:Event,
+        schema:Organization .
 
 kgc:Conference a owl:Class ;
     rdfs:subClassOf schema:Event .
@@ -80,8 +89,6 @@ kgc:Talk a owl:Class ;
 
 kgc:Tutorial a owl:Class ;
     rdfs:subClassOf schema:Event .
-
-kgc:Wiki a owl:Class .
 
 kgc:Workshop a owl:Class ;
     rdfs:subClassOf schema:Event .
@@ -108,6 +115,11 @@ schema:EducationalOrganization a owl:Class ;
     rdfs:subClassOf schema:CivicStructure,
         schema:Organization .
 
+schema:Enumeration a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:Intangible a owl:Class .
+
 schema:MediaObject a owl:Class ;
     rdfs:subClassOf schema:CreativeWork .
 
@@ -126,4 +138,6 @@ schema:AdministrativeArea a owl:Class ;
 schema:Organization a owl:Class .
 
 schema:Event a owl:Class .
+
+[] rdf:rest () .
 
