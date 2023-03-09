@@ -11,10 +11,6 @@ schema:City a owl:Class ;
 schema:Consortium a owl:Class ;
     rdfs:subClassOf schema:Organization .
 
-schema:EventAttendanceModeEnumeration a owl:Class ;
-    rdfs:subClassOf schema:Enumeration ;
-    owl:oneOf ( schema:MixedEventAttendanceMode schema:OfflineEventAttendanceMode schema:OnlineEventAttendanceMode ) .
-
 schema:EventSeries a owl:Class ;
     rdfs:subClassOf schema:Event .
 
@@ -41,8 +37,9 @@ schema:description a owl:DatatypeProperty .
 schema:embedUrl a owl:DatatypeProperty ;
     rdfs:domain schema:VideoObject .
 
-schema:eventAttendanceMode a owl:DatatypeProperty ;
-    rdfs:domain schema:Event .
+schema:eventAttendanceMode a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:EventAttendanceModeEnumeration .
 
 schema:geoWithin a owl:ObjectProperty ;
     rdfs:domain schema:Place ;
@@ -118,6 +115,10 @@ schema:EducationalOrganization a owl:Class ;
 schema:Enumeration a owl:Class ;
     rdfs:subClassOf schema:Intangible .
 
+schema:EventAttendanceModeEnumeration a owl:Class ;
+    rdfs:subClassOf schema:Enumeration ;
+    owl:oneOf ( schema:MixedEventAttendanceMode schema:OfflineEventAttendanceMode schema:OnlineEventAttendanceMode ) .
+
 schema:Intangible a owl:Class .
 
 schema:MediaObject a owl:Class ;
@@ -138,6 +139,4 @@ schema:AdministrativeArea a owl:Class ;
 schema:Organization a owl:Class .
 
 schema:Event a owl:Class .
-
-[] rdf:rest () .
 
