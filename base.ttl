@@ -76,13 +76,19 @@ schema:performer a owl:ObjectProperty ;
 schema:sameAs a owl:DatatypeProperty ;
     rdfs:range xsd:anyURI .
 
-schema:superEvent a owl:ObjectProperty .
+schema:superEvent a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:Event .
 
 schema:worksfor a owl:ObjectProperty ;
-    rdfs:domain schema:Event,
-        schema:Person ;
-    rdfs:range schema:Event,
-        schema:Organization .
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Organization .
+
+kgc: a owl:Ontology ;
+    rdfs:label "Knowledge Graph Conference Ontology" ;
+    rdfs:comment "Designed By Bita Banihashemi",
+        "Email: firstName DOT lastName AT gmail DOT com" ;
+    owl:versionInfo "1.0" .
 
 kgc:Conference a owl:Class ;
     rdfs:subClassOf schema:Event .
