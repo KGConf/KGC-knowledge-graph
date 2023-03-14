@@ -4,6 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 schema:City a owl:Class ;
     rdfs:subClassOf schema:AdministrativeArea .
@@ -47,9 +48,13 @@ schema:geoWithin a owl:ObjectProperty ;
 
 schema:industry a owl:ObjectProperty .
 
+schema:jobTitle a owl:DatatypeProperty .
+
 schema:keywords a owl:DatatypeProperty .
 
 schema:knowsAbout a owl:ObjectProperty .
+
+schema:linkedIn rdfs:range xsd:anyURI .
 
 schema:location a owl:ObjectProperty ;
     rdfs:domain schema:Organization ;
@@ -68,7 +73,8 @@ schema:performer a owl:ObjectProperty ;
     rdfs:domain schema:Event ;
     rdfs:range schema:Person .
 
-schema:sameAs a owl:ObjectProperty .
+schema:sameAs a owl:DatatypeProperty ;
+    rdfs:range xsd:anyURI .
 
 schema:superEvent a owl:ObjectProperty .
 
@@ -89,6 +95,8 @@ kgc:Tutorial a owl:Class ;
 
 kgc:Workshop a owl:Class ;
     rdfs:subClassOf schema:Event .
+
+kgc:linkedIn a owl:DatatypeProperty .
 
 skos:Concept a owl:Class .
 
