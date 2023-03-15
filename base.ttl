@@ -102,6 +102,17 @@ kgc:Tutorial a owl:Class ;
 kgc:Workshop a owl:Class ;
     rdfs:subClassOf schema:Event .
 
+kgc:hasBusinessType a owl:ObjectProperty ;
+    rdfs:domain schema:Organization ;
+    rdfs:range kgc:BusinessType .
+
+kgc:hasFieldOfWork a owl:ObjectProperty ;
+    rdfs:range kgc:FieldOfWork .
+
+kgc:hasIndustry a owl:ObjectProperty ;
+    rdfs:domain schema:Organization ;
+    rdfs:range kgc:BusinessIndustry .
+
 kgc:linkedIn a owl:DatatypeProperty .
 
 skos:Concept a owl:Class .
@@ -133,17 +144,26 @@ schema:EventAttendanceModeEnumeration a owl:Class ;
     rdfs:subClassOf schema:Enumeration ;
     owl:oneOf ( schema:MixedEventAttendanceMode schema:OfflineEventAttendanceMode schema:OnlineEventAttendanceMode ) .
 
-schema:Intangible a owl:Class .
-
 schema:MediaObject a owl:Class ;
     rdfs:subClassOf schema:CreativeWork .
 
 schema:VideoObject a owl:Class ;
     rdfs:subClassOf schema:MediaObject .
 
+kgc:BusinessIndustry a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+kgc:BusinessType a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+kgc:FieldOfWork a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
 schema:CreativeWork a owl:Class .
 
 schema:Place a owl:Class .
+
+schema:Intangible a owl:Class .
 
 schema:Person a owl:Class .
 
