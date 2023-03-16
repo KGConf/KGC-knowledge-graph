@@ -93,6 +93,9 @@ kgc: a owl:Ontology ;
 kgc:Conference a owl:Class ;
     rdfs:subClassOf schema:Event .
 
+kgc:County a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
 kgc:Talk a owl:Class ;
     rdfs:subClassOf schema:Event .
 
