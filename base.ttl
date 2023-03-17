@@ -21,6 +21,10 @@ schema:PresentationDigitalDocument a owl:Class ;
 schema:State a owl:Class ;
     rdfs:subClassOf schema:AdministrativeArea .
 
+schema:about a owl:ObjectProperty .
+
+schema:abstract a owl:DatatypeProperty .
+
 schema:additionalType a owl:DatatypeProperty .
 
 schema:address a owl:DatatypeProperty .
@@ -80,6 +84,10 @@ schema:superEvent a owl:ObjectProperty ;
     rdfs:domain schema:Event ;
     rdfs:range schema:Event .
 
+schema:workPerformed a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:CreativeWork .
+
 schema:worksfor a owl:ObjectProperty ;
     rdfs:domain schema:Person ;
     rdfs:range schema:Organization .
@@ -96,6 +104,9 @@ kgc:Conference a owl:Class ;
 kgc:County a owl:Class ;
     rdfs:subClassOf schema:AdministrativeArea .
 
+kgc:Tag a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
 kgc:Talk a owl:Class ;
     rdfs:subClassOf schema:Event .
 
@@ -104,6 +115,8 @@ kgc:Tutorial a owl:Class ;
 
 kgc:Workshop a owl:Class ;
     rdfs:subClassOf schema:Event .
+
+kgc:facetOf a owl:ObjectProperty .
 
 kgc:hasBusinessType a owl:ObjectProperty ;
     rdfs:domain schema:Organization ;
@@ -162,13 +175,13 @@ kgc:BusinessType a owl:Class ;
 kgc:FieldOfWork a owl:Class ;
     rdfs:subClassOf schema:Intangible .
 
-schema:CreativeWork a owl:Class .
-
 schema:Place a owl:Class .
 
-schema:Intangible a owl:Class .
+schema:CreativeWork a owl:Class .
 
 schema:Person a owl:Class .
+
+schema:Intangible a owl:Class .
 
 schema:AdministrativeArea a owl:Class ;
     rdfs:subClassOf schema:Place .

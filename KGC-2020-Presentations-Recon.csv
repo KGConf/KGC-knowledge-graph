@@ -1,4 +1,4 @@
-Unique ID,Name,Company,Title,Description,tag,tagQID,facet of,facetOfQID
+Unique ID,Name,Company,Title,Description,Tag,TagQID,Facet of,FacetOfQID
 1,Brian Donohue,Capital One,Validating Data Categories using Knowledge Graphs,"One of the challenges in protecting consumer privacy and managing data risk is the ability to validate that privacy-related data from across our data ecosystem has been identified and categorized accurately and consistently. This challenge has become especially salient in light of recent legislation like GDPR and CCPA. At Capital One, the 2nd line is using standardized semantic models (ontologies) and technology to validate whether data is privacy-related as well as recommend privacy categories to data producers.",knowledge graph,Q33002955,,
 ,Bethany Sehon,,,,finance,Q43015,,
 ,,,,,privacy,Q188728,,
