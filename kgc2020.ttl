@@ -1,0 +1,2268 @@
+@prefix kgc: <http://www.knowledgegraph.tech/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schema:PresentationDigitalDocument a owl:Class ;
+    rdfs:subClassOf schema:DigitalDocument .
+
+schema:about a owl:ObjectProperty .
+
+schema:abstract a owl:DatatypeProperty .
+
+schema:additionalType a owl:DatatypeProperty .
+
+schema:alumniOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:CollegeOrUniversity .
+
+schema:archivedAt a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:description a owl:DatatypeProperty .
+
+schema:embedUrl a owl:DatatypeProperty ;
+    rdfs:domain schema:VideoObject .
+
+schema:eventAttendanceMode a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:EventAttendanceModeEnumeration .
+
+schema:geoWithin a owl:ObjectProperty ;
+    rdfs:domain schema:Place ;
+    rdfs:range schema:AdministrativeArea .
+
+schema:industry a owl:ObjectProperty .
+
+schema:jobTitle a owl:DatatypeProperty .
+
+schema:keywords a owl:DatatypeProperty .
+
+schema:knowsAbout a owl:ObjectProperty .
+
+schema:linkedIn rdfs:range xsd:anyURI .
+
+schema:location a owl:ObjectProperty ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:AdministrativeArea .
+
+schema:memberOf a owl:ObjectProperty ;
+    rdfs:range schema:Organization .
+
+schema:name a owl:DatatypeProperty .
+
+schema:nationality a owl:ObjectProperty ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Country .
+
+schema:performer a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:Person .
+
+schema:sameAs a owl:DatatypeProperty ;
+    rdfs:range xsd:anyURI .
+
+schema:superEvent a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:Event .
+
+schema:workPerformed a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:CreativeWork .
+
+schema:worksfor a owl:ObjectProperty ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Organization .
+
+kgc: a owl:Ontology ;
+    rdfs:label "Knowledge Graph Conference Ontology" ;
+    rdfs:comment "Designed By Bita Banihashemi",
+        "Email: firstName DOT lastName AT gmail DOT com" ;
+    owl:versionInfo "1.0" .
+
+kgc:000008 a kgc:County ;
+    schema:geoWithin kgc:000009 ;
+    schema:name "Fairfax County" ;
+    schema:sameAs wd:Q341915 .
+
+kgc:000022 a schema:City ;
+    schema:geoWithin kgc:000023 ;
+    schema:name "Austin" ;
+    schema:sameAs wd:Q16559 .
+
+kgc:000044 a schema:City ;
+    schema:geoWithin kgc:000045 ;
+    schema:name "Ithaca" ;
+    schema:sameAs wd:Q5695442 .
+
+kgc:000065 a schema:City ;
+    schema:geoWithin kgc:000066 ;
+    schema:name "San Mateo" ;
+    schema:sameAs wd:Q169943 .
+
+kgc:000073 a kgc:County ;
+    schema:geoWithin kgc:000009 ;
+    schema:name "Arlington County" ;
+    schema:sameAs wd:Q107126 .
+
+kgc:000090 a schema:City ;
+    schema:geoWithin kgc:000091 ;
+    schema:name "Seattle" ;
+    schema:sameAs wd:Q5083 .
+
+kgc:000099 a schema:City ;
+    schema:geoWithin kgc:000100 ;
+    schema:name "Sebastopol" ;
+    schema:sameAs wd:Q985264 .
+
+kgc:000101 a schema:Person ;
+    schema:alumniOf kgc:000102 ;
+    schema:description "Rafael GonÃ§alves is a Research Scientist at Stanford University. He researches methods for engineering and reasoning over ontologies primarily represented in OWL. He steers the research activities of the ProtÃ©gÃ© group, which develops ProtÃ©gÃ© and WebProtÃ©gÃ©: widely used, open source ontology editors with rich collaboration features for Web based editing." ;
+    schema:jobTitle "Research Scientist" ;
+    schema:name "Rafael S GonÃ§alves" ;
+    schema:sameAs wd:Q88654416 ;
+    schema:worksFor kgc:000103 ;
+    kgc:linkedIn "http://linkedin.com/in/rsgoncalves" .
+
+kgc:000104 a schema:City ;
+    schema:geoWithin kgc:000105 ;
+    schema:name "Stanford" ;
+    schema:sameAs wd:Q173813 .
+
+kgc:000117 a schema:City ;
+    schema:geoWithin kgc:000118 ;
+    schema:name "Ghent" ;
+    schema:sameAs wd:Q1296 .
+
+kgc:000128 a schema:City ;
+    schema:geoWithin kgc:000129 ;
+    schema:name "Ulm" ;
+    schema:sameAs wd:Q3012 .
+
+kgc:000137 a schema:City ;
+    schema:geoWithin kgc:000138 ;
+    schema:name "Cambridge" ;
+    schema:sameAs wd:Q21713103 .
+
+kgc:000145 a schema:City ;
+    schema:geoWithin kgc:000105 ;
+    schema:name "Sunnyvale" ;
+    schema:sameAs wd:Q208459 .
+
+kgc:000151 a schema:City ;
+    schema:geoWithin kgc:000152 ;
+    schema:name "Sofia" ;
+    schema:sameAs wd:Q472 .
+
+kgc:000188 a schema:City ;
+    schema:geoWithin kgc:000189 ;
+    schema:name "Dublin" ;
+    schema:sameAs wd:Q1761 .
+
+kgc:000194 a schema:State ;
+    schema:name "Irish Free State" .
+
+kgc:000212 a schema:City ;
+    schema:geoWithin kgc:000213 ;
+    schema:name "Charlotte" ;
+    schema:sameAs wd:Q16565 .
+
+kgc:000216 a schema:State ;
+    schema:geoWithin kgc:000217 ;
+    schema:name "Thirteen Colonies" ;
+    schema:sameAs wd:Q179997 .
+
+kgc:000219 a schema:Country ;
+    schema:name "Great Britain" ;
+    schema:sameAs wd:Q161885 .
+
+kgc:000223 a schema:City ;
+    schema:geoWithin kgc:000091 ;
+    schema:name "Redmond" ;
+    schema:sameAs wd:Q223718 .
+
+kgc:000236 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000237,
+        kgc:000238,
+        kgc:000239,
+        kgc:000242,
+        kgc:000243,
+        kgc:000244 ;
+    schema:abstract "One of the challenges in protecting consumer privacy and managing data risk is the ability to validate that privacy-related data from across our data ecosystem has been identified and categorized accurately and consistently. This challenge has become especially salient in light of recent legislation like GDPR and CCPA. At Capital One, the 2nd line is using standardized semantic models (ontologies) and technology to validate whether data is privacy-related as well as recommend privacy categories to data producers." ;
+    schema:name "Validating Data Categories using Knowledge Graphs" ;
+    schema:performer kgc:000001,
+        kgc:000016 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000245 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000246 ;
+    schema:abstract """In this presentation, we'll cover why a data catalog is the first knowledge graph that an organization should build.  Most organizations don't have a clear picture of their data assets and how they're being used - a data datalog helps provide that picture and unlock the value of data.  We'll explore why a data catalog is a knowledge graph, and how a data catalog can be used as a foundational asset to build more granular domain and application knowledge graphs.
+""" ;
+    schema:name "A Data Catalog should be your organization's first Knowledge Graph" ;
+    schema:performer kgc:000017 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000248 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000249,
+        kgc:000250,
+        kgc:000251,
+        kgc:000252,
+        kgc:000253 ;
+    schema:abstract "In the realm of enterprise applications such as cybersecurity and anti-money laundering (AML), data and system engineers team up to deal with interconnected data of great scale and richness. The regulatory need adds requirements to instant tracibility and explanability of data and analytic models, to aid and reduce human workloads. Moreover, the teams have to deal with reliability and timeliness of data and events that are of dubious precision and cleanliness. In this work, we will share our real-world experiences of integrating streaming graph operations, with automatically tuned analytics including Graph Behavior Learning, Machine Learning and Bayesian Reasoning. We will also describe the use of imperfect learning which is critical to real-time enterprise applications." ;
+    schema:name "Enterprise Knowledge Graph and Machine Learning Integration with live data" ;
+    schema:performer kgc:000027 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000254 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000034,
+        kgc:000237,
+        kgc:000255,
+        kgc:000256,
+        kgc:000257 ;
+    schema:abstract "In today’s world understanding the full context of an event is not an easy thing, especially in a world where there’s countless sources of low quality one dimensional content is fighting for our attention. Which leaves most readers of the news uniformed or spending time piecing together incomplete information. At Dow Jones we are taking advantage of the wealth of data & information we have access to, and modeling out a more complete view of the world so that this additional context can be provided through our knowledge graph. As a result of this effort will be providing those readers that deserve more this missing context through the Wall Street Journal. In this talk we will share what Dow Jones is working towards to better inform our readers through the application of graph technologies, nlp, and a lot of data extraction." ;
+    schema:name "Better Informing Our Readers through the Dow Jones Knowledge Graph" ;
+    schema:performer kgc:000032 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000258 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000259,
+        kgc:000260,
+        kgc:000261 ;
+    schema:abstract "Predictive analytics in inventory management has not been the traditional domain of knowledge graphs and semantics; however, it is a surprisingly natural fit. This talk will review knowledge graphs in the supply chain and look into the details of implementation. In our central case, using a semantic model, we build a ‘digital twin’ of a complex inventory management supply chain. Data from heterogeneous sources - including warehouse management systems, point of sale systems and weather data – are then imported into the knowledge graph. Using the graph we carry out analytics, optimization, scheduling and Monte Carlo simulations. A complex set of operations built around the central supply chain knowledge graph. The net result is a predictive analytic system that delivers real value to the enterprise (up to a 50% reduction in inventory). The knowledge graph can be extended to include product information and other central commercial data use cases. This presentation will draw on the production delivery of TerminusDB to the largest retailer in Ireland." ;
+    schema:name "Inventory Management Knowledge Graph" ;
+    schema:performer kgc:000036 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000262 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000263,
+        kgc:000264,
+        kgc:000265,
+        kgc:000266,
+        kgc:000267,
+        kgc:000268,
+        kgc:000269,
+        kgc:000270,
+        kgc:000271 ;
+    schema:abstract "As part of the Linked Data For Production: Pathway to Implementation (LD4P2) project’s larger goal of building a pathway to the use of linked data in the description of library resources, we are exploring the integration of linked data sources in library discovery interfaces.  Through a series of focused experiments and prototype building, aided by user studies and feedback, we have explored linking and displaying connections between library catalog data and linked data sources such as Wikidata and DbPedia as well as library authorities such as FAST, Library of Congress Subject Headings, and the Library of Congress Name Authority File.   Examples of areas we investigated for the integration of linked data include: knowledge panels bringing in contextual information and relationships from knowledge graphs like Wikidata to describe people and subjects related to library resources in the catalog; suggested searches based on user-entered queries using results from Wikidata and DbPedia; and browsing experiences for subjects and authors bringing in relationships and data from Wikidata and library authorities.  In this presentation, we will review the challenges and opportunities with bringing in information from external knowledge graphs into a library catalog to support discovery.  LD4P2 (http://ld4p.org) is a multi-institution collaborative effort funded by the Andrew W. Mellon Foundation.  " ;
+    schema:name "Integrating data from knowledge graphs to enhance library discovery" ;
+    schema:performer kgc:000039 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000272 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000029,
+        kgc:000226,
+        kgc:000255,
+        kgc:000273,
+        kgc:000274 ;
+    schema:abstract "Enterprises that are building Knowledge Graphs are rapidly getting a grip on unstructured data with current advances in Natural Language Processing (NLP) techniques.   But there is still a large mass of unstructured data that is untapped and that is spoken conversations with customers. Speech to text for general purpose conversations (e.g. Google, Alexa, Siri) have proven themselves in the market to be highly accurate.  However, speech recognition technology for domain specific industries with lots of product names, industry lingo, and acronyms often creates a challenge for accuracy and usefulness of the content. In this presentation we will demonstrate how taxonomy driven speech recognition helps solve these industry specific terminology challenges for real-time voice capture and how this process augments an Enterprise Knowledge Graph for customer insights enabling real time decision support." ;
+    schema:name "The Knowledge Graph that Listens" ;
+    schema:performer kgc:000057 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000275 a kgc:Talk ;
+    schema:about kgc:000021,
+        kgc:000026,
+        kgc:000029,
+        kgc:000276 ;
+    schema:abstract "Since the 1960s, semantic networks of various kinds have been used for knowledge representation in AI and NLP.  From the mid 1990s to 2005, Tim Berners-Lee and his colleagues adapted that technology to the Semantic Web.  During the past 15 years, research in AI and related fields has created new opportunities, but it has also posed challenges that were not foreseen in 2005.  This talk will analyze the strengths and weaknesses of various knowledge graphs and their implications for future developments." ;
+    schema:name "From Semantic Networks to Knowledge Graphs" ;
+    schema:performer kgc:000062 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000277 a kgc:Talk ;
+    schema:about kgc:000025,
+        kgc:000026,
+        kgc:000278,
+        kgc:000279,
+        kgc:000280 ;
+    schema:abstract "While understanding the context of data is key, it's important to remember there is no universal context. What makes sense in one case may not in another. We see this often in MDM scenarios; we can't agree on the definition of a Customer and the process grinds to a halt. Not only does a logical data model let us better represent our data, it provides us the flexibility to look at the data from a different perspective and bring more agility to how we leverage data in the enterprise" ;
+    schema:name "Insufficient Facts Always Invite Danger: Combat Them with a Logical Model" ;
+    schema:performer kgc:000071 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000281 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000034,
+        kgc:000282,
+        kgc:000283 ;
+    schema:abstract "Expressing opinions and interacting with others on the Web has led to the production of an abundance of online discourse data, such as claims and viewpoints on controversial topics, their sources and contexts (e.g., events, entities). These data constitute a valuable source of insights for studies into misinformation spread, bias reinforcement, echo chambers or political agenda setting. While knowledge graphs of today enable data reuse and federation thus improving information retrieval and facilitating research and knowledge discovery in various fields, they do not store information about claims and related online discourse data, making it difficult to access, query and reuse this wealth of information. In my talk, I will present recent work in collaboration with the Leibniz Institute of Social Sciences GESIS (Germany), on the construction of ClaimsKG - a knowledge graph of fact-checked controversial claims, which facilitates structured queries about their truth values, authors, dates, journalistic reviews and other kinds of metadata and provides ground truth data for a number of tasks relevant to the analysis of societal debates on the web. I will discuss perspectives on modelling claims in a generalized and contextualized manner, as well as related challenges such as claim disambiguation and the assessment of claim relatedness. I will present preliminary results on learning claim vector representations (embeddings) from ClaimsKG and their application for the task of automatic fact-checking." ;
+    schema:name "A knowledge graph of controversial claims and its applications" ;
+    schema:performer kgc:000074 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000284 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000237,
+        kgc:000243,
+        kgc:000255,
+        kgc:000257,
+        kgc:000285 ;
+    schema:abstract "The Information Management team at Morgan Stanley has built an RDF graph and a semantic knowledge base to help answer domain specific questions, formulate classification recommendations and deliver quality search to our internal users. In doing so over the past 4 years, we also helped other departments across the firm discover and embrace semantic data modeling for their own use cases. In the first part of our presentation, we would like to briefly describe the Semantic Modeling and Ontology consortium we created within the Firm before diving deeper into our knowledge base creation effort. We think that a knowledge base reflecting concepts specifically relevant to our company is extremely valuable to develop semantic technology applications. However, populating knowledge bases can be time consuming, costly and error prone, with an end product that is difficult to maintain. In the second part of this presentation, we would like to discuss a framework for automatic generation of a Simple Knowledge Organization System (SKOS) knowledge base from unstructured text. Our Natural Language Processing (NLP) engine parses the input text to create a semantic knowledge graph, which is then mapped to a SKOS knowledge model. During the linguistic understanding of the text, relevant domain concepts are identified and connected by semantic links -- abstractions of underlying relations between concepts that capture the overall meaning of text based on a corpus of roughly 6,500 policies and procedures published at Morgan Stanley." ;
+    schema:name "Automated Knowledge Base creation in a large financial services organization" ;
+    schema:performer kgc:000082 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000286 a kgc:Talk ;
+    schema:about kgc:000252,
+        kgc:000287,
+        kgc:000288,
+        kgc:000289 ;
+    schema:abstract "Yes. Why? Because building a knowledge graph means you are consolidating your important knowledge assets, and that forces you to think of the “bigger picture” of all the data you have in your organization including shared, common domain models. You are not merely shoving data into a warehouse, but actually thinking how different things connect and fit together. Once built, the graph can serve as the source of data for many applications, including Machine and Deep Learning use cases. In this talk, we will walk through the typical tasks involved in building a knowledge graph, options for data modeling and querying (e.g., RDF and Property Graph), as well as tools and integrations. We will discuss and share insights from customers using knowledge graphs to power innovation and putting those into production." ;
+    schema:name "Are Knowledge Graphs a good thing? What does it take to build one?" ;
+    schema:performer kgc:000084 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000290 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000252,
+        kgc:000291,
+        kgc:000292,
+        kgc:000293,
+        kgc:000294,
+        kgc:000295,
+        kgc:000296 ;
+    schema:abstract "The Rich Context project at NYU Wagner is the knowledge graph complement to the ADRF platform for cross-agency social science research using sensitive data, currently used by 50+ agencies. Rich Context represents metadata about datasets and their use in research which in turn influences public policy, with a goal of producing recommender systems for analysts and policymakers. Most all of the code is open source. This talk introduces the background for the project, our team process for collaboration, and several areas where machine learning is used to infer or clean metadata obtained from scholarly infrastructure and for semi-automated graph construction,  along with human-in-the-loop feedback mechanisms for domain experts to help improve our graph." ;
+    schema:name "Rich Context: a knowledge graph for linking datasets with research outcomes" ;
+    schema:performer kgc:000097 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000297 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000226,
+        kgc:000243,
+        kgc:000244,
+        kgc:000299 ;
+    schema:abstract "Pinterest is a popular Web application that has over 250 million active users. It is a visual discovery engine for finding ideas for recipes, fashion, weddings, home decoration, and much more. In the last year, the company decided to create a knowledge graph that aims to represent the vast amount of content and users on Pinterest, to help both content recommendation and ads targeting. In this talk, we present the engineering of an ontology--the Pinterest Taxonomy--that forms the core of Pinterest's knowledge graph, the Pinterest Taste Graph. We describe modeling choices and enhancements to the cloud-based WebProtégé tool that we used for the creation of the ontology. In two months, eight Pinterest engineers, without prior experience of ontologies, knowledge graphs, and WebProtégé, revamped an existing taxonomy of noisy terms into an OWL ontology, which they then combine with additional structured information and machinery to form the Pinterest Taste Graph. We share our experience and present the key aspects of our work that we believe will be useful for others working in this area." ;
+    schema:name "Use of OWL and Semantic Web Technologies at Pinterest" ;
+    schema:performer kgc:000298 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000300 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000111,
+        kgc:000253,
+        kgc:000301 ;
+    schema:abstract "Cherre’s knowledge graph is a model of the entire US real estate ecosystem. The graph incorporates hundreds of millions of entities such as properties, addresses, individual and commercial owners, lenders, brokers, estate managers, lawyers etc. as nodes – while the edges are various types of connections between the entities. A wealth of attributes are associated with each entity. Cherre’s knowledge graph is a closed-world graph: it allows inferring an absence of connection between two entities if there is no edge between them in the graph. Furthermore, Cherre’s graph is temporal: edges and nodes are being added and deleted on a timely basis. Some of the main challenges in constructing a closed-world graph from noisy data sources are entity resolution and disambiguation. In this talk, we will present parallel algorithms for entity resolution and disambiguation in Cherre’s knowledge graph, and outline our current work on assessing entity similarities using (temporal) node embedding." ;
+    schema:name "Modeling Real Estate Ecosystem with Cherre's Knowledge Graph" ;
+    schema:performer kgc:000108 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000302 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000238,
+        kgc:000303 ;
+    schema:abstract """In today’s data-driven economy, the company with the most data wins. This means that companies go through great lengths to collect all of our data, sometimes even crossing ethical boundaries. But in the end, we all lose: having the best data process is not an indication of how well a company innovates or what value its services bring. As a result, innovation has come to a standstill, and people are stuck with mediocre data experiences.
+
+If data truly is the new oil, then what we’re currently doing is pouring all that oil in barrels—often without the ability to open the lid ourselves. In order for data to fuel the engine, it has to flow much better than it does today.
+
+In this talk, I will explain how the Solid project gives people back control over their personal knowledge graphs. In doing so, we enable small and large companies alike to innovate.""" ;
+    schema:name "Personal knowledge graphs on the Web" ;
+    schema:performer kgc:000112 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000304 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000243,
+        kgc:000288,
+        kgc:000299,
+        kgc:000305,
+        kgc:000306,
+        kgc:000307,
+        kgc:000308 ;
+    schema:abstract "Grasping large Knowledge Graphs is challenging. We present SemSpect, an innovative tool that brings together overview and detail view into one perspective by visually aggregating graph nodes and relationships for efficient exploration and data-driven querying of graphs. It comes either with a reasoning back-end for OWL RL for RDF or as a brand-new Graph App for Neo4j. In our talk we will report on experiences with business-critical, real-world Knowledge Graphs from various domains such as engineering industry, life sciences and intelligence." ;
+    schema:name "Visual Analytics of Large Knowledge Graphs" ;
+    schema:performer kgc:000126 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000309 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000136,
+        kgc:000310,
+        kgc:000311 ;
+    schema:abstract "An extremely powerful and efficient use for Knowledge Graphs is to unite well-understood domains of knowledge alongside novel and specific business/scientific questions.  Using small ontologies that embed large reference taxonomies, we are able to go from tactical scientific questions (bottom-up) to common taxonomies and reference datasets (middle-out) approach to model scientific questions, aligning with enterprise master data strategies on the way up.  If building blocks follow FAIR (Findable, Accessible, Interoperable, Reusable) data principles, reusing these processes becomes more and more efficient over time as the middle layer grows.  Examples in the translational medicine space will be highlighted." ;
+    schema:name "Middle-Out FAIR Data Integration with Knowledge Graphs" ;
+    schema:performer kgc:000134 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000312 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000034,
+        kgc:000244,
+        kgc:000252,
+        kgc:000255,
+        kgc:000257,
+        kgc:000301,
+        kgc:000313,
+        kgc:000314 ;
+    schema:abstract "The Yahoo Knowledge(YK) graph crawls, reconciles and blends information (around 10B fact triples) from 200 M entities across 30 semi-structured source (crawlable sites like Wikipedia, IMDB, LonelyPlanet etc and as well licensed feeds) graphs  to a merged graph of 75 M entities, 5B facts distributed across 140 entity types and 300 attributes.  From classifying entity type of source entities, to reconcile entities across sources (e.g. Brad Pitt from Wikipedia vs. Brad Pitt from IMDB), and blending conflicting and complementing facts for each entity from different sources, the YK graph encapsulates production scale machine learning solutions for multi-label classification(e.g. predicted entity types for Arnold Schwarzenegger could be Actor, Politician, BusinessPerson etc ), large scale high precision binary classifiers along with an array of distributed hashing techniques help scale a potential billion edge comparisons (de-duplication of entities across sources require high precision classifiers for which we develop active learning and precision clamped training strategies) and lastly hubs and authorities based fact blending from competing sources. To support product initiatives like surfacing knowledge augmented results on web and sponsored searches we build a variety of \"knowledge discovery\" services like 1. knowledge triples based question answering and reading comprehension type question answering utilizing our blended/merged knowledge graph, 2. related entities for a given entity to other connected entities beyond direct ontological relations to generate browsing interest to other sites/properties in Yahoo. In contrast to broad cross domain knowledge, we delve into deep domain specific information extraction from news text and videos to power unique experiences for brands like Yahoo! Sports. Specifically for US Sports (NBA/NFL/NHL/MLB/Soccer) our text information extraction sits in the cross roads of fact finding in articles, fine grained entity typing and topical extractive summarization of temporal topics like trades/contracts/injuries and performances connecting player and potential teams to provide 360 degree browsing of daily fantasy news/sports rumors. Through our Video deep linking capabilities we link moments in highlight videos to points in time of a game such that we can power within-video search/browse experiences for e.g. queries like \"Lebron Jame's dunks from yesterday\" would seek to exact moments in a highlight video where LeBron dunked or \"Laker's top scorer's tonight\" would find the stats of the top Laker's scorers, followed by seeking to exact moments of their plays in highlight videos." ;
+    schema:name "Machine learning in Yahoo Knowledge Graph" ;
+    schema:performer kgc:000141 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000315 a kgc:Talk ;
+    schema:about kgc:000288,
+        kgc:000299,
+        kgc:000316,
+        kgc:000317,
+        kgc:000318,
+        kgc:000319 ;
+    schema:abstract "Semantic Objects (SOML) are used to generate GraphQL schema and RDF shapes and to determine access control without application server/API development efforts. We can also generate SOML from OWL ontologies and RDFS schema. The result is a platform that combines the comprehension of SPARQL engine with the scalability of MongoDB and search capabilities of Elastic and provides GraphQL interfaces that allow federation of 3rd party (non-semantic) sources." ;
+    schema:name "Semantic Objects Please Application Developers with GraphQL and Facilitate Quality Knowledge Graphs" ;
+    schema:performer kgc:000148 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000320 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000237,
+        kgc:000321,
+        kgc:000322 ;
+    schema:abstract "In this talk, I will describe the challenges of building a Client Relationship Management (CRM) system automatically starting from the electronic communication (e.g., email) data between a firm and its clients. Building a communication Knowledge Graph from emails is the starting point in such a design of a CRM system - several other complex technical graph algorithmic problems follow: vertex centrality (aka client importance), edge strength (aka client coverage), vertex deduplication (aka unique client identification). Putting everything together, this talk tells the story of how crm-related business questions posed by bankers turn into technical problems solved by engineers, leading to the design of a CRM system whose users don’t maintain manually, yet enjoy using it." ;
+    schema:name "Towards building a CRM system using a Knowledge Graph of Communication Data" ;
+    schema:performer kgc:000155 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000323 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000244,
+        kgc:000324,
+        kgc:000325 ;
+    schema:abstract "Law firms are starting to build knowledge graphs to power next-generation marketing and business development applications that efficiently integrate data and help deliver the most important intelligence insights to the right people sooner. These systems help firms spot opportunities sooner, author higher-value client alerts, and foster cross-selling and RFP responses. They also enhance the ability of law firms to analyze the relationships between markets, clients, matters, lawyers, and practices to spot growth opportunities. This talk will explain the challenges and benefits of bringing knowledge graphs to the legal services market." ;
+    schema:name "How Knowledge Graphs Will Help Law Firms Win Business and Serve Clients Better" ;
+    schema:performer kgc:000162 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000326 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000237,
+        kgc:000243,
+        kgc:000271,
+        kgc:000295,
+        kgc:000327,
+        kgc:000328,
+        kgc:000329,
+        kgc:000330,
+        kgc:000331 ;
+    schema:abstract """The Financial Industry Business Ontology (FIBO) has matured in significant areas over the last few years, but until recently there were few examples to help users understand how to interpret it and build it into their own knowledge graphs. Since early 2019, the FIBO development team has been focused primarily on use cases to address the steep learning curve: 
+• How to represent businesses and incorporate data about them that is publicly available, such as identifiers, locations, ownership and control information and other details from the Global Legal Entity Identifier Foundation (GLEIF), Open Corporates, state and government registries, etc.,
+• How to use that information to investigate counterparty relationships,
+• How to build on that baseline to represent securities (stocks, bonds, etc.) issued by these organizations,
+• How to leverage those securities to represent the components of an index and track index performance, such as the Dow Jones Industrial Average,
+• How to use this information to represent more complex derivative instruments.
+In this talk, we will take a quick cook’s tour through some of the more basic use cases and related ontologies. The approach that FIBO has taken to build a use case stack that can be used to demonstrate the value of knowledge graphs translates well to most domain-specific projects. The use cases, ontologies, and reference and example data are all publicly available and open source. While some of the work is still underway, the basic building blocks are in place. Conference participants can download and try them, and the cook’s tour is intended to provide enough of an introduction to help make that feasible.""" ;
+    schema:name "Using FIBO: A Use-Case Driven Cooks Tour" ;
+    schema:performer kgc:000169 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000332 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000136,
+        kgc:000288,
+        kgc:000289,
+        kgc:000294,
+        kgc:000333 ;
+    schema:abstract "Graphs provide a new dimension to managing and analyzing data, and enterprises are keen to explore and adopt this technology. There have been some barriers to adoption, including a lack of familiarity with graph query languages and tools and challenges in integrating graph analytics into existing workflows without using specialized silos. We will illustrate customer use cases from three different industries and see how they overcome some of these challenges to successfully deploy solutions based on graphs, enabling significant impact on their businesses. The use cases are the use of RDF for a semantic terminology server in Pharma, use of RDF for linking public data sets (Department of National Statistics in Japan), and use of Property Graphs for fraud detection (Paysafe, an online payments solutions company)." ;
+    schema:name "Using Graph Analytics in Enterprise Applications" ;
+    schema:performer kgc:000174 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000334 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000244,
+        kgc:000335,
+        kgc:000336 ;
+    schema:abstract "The proposed meta-graph solution for recommender systems is a living process for semi-automatically resolving recommendations using guided queries upon a knowledge graph. In addition, this solution is explainable; it can provide comprehensible recommendations which show the reason for each result along with a statistical measure. A detailed use case for this application which is an issue tracking system for Oil & Gas companies is presented in this work. In the introduced use case, the interlinks between failure events and their associated actions are captured in a knowledge graph. To overcome data sparsity, scarcity, and non-trivial relationships, a relatively new concept called ‘meta-graphs’ are employed. Using meta-graph patterns defined on the knowledge graph schema, we can recommend actions based on the semantic relatedness of the various failure events and their corrective actions. Moreover, the recommendation results selected by the end-user and the meta-graphs evaluated by the domain experts are automatically graded during the entire lifecycle of the system for transfer learning, reliability evaluation and reproducibility." ;
+    schema:name "A Meta-graph Solution for Recommender Systems" ;
+    schema:performer kgc:000185 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000337 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000252,
+        kgc:000257,
+        kgc:000338 ;
+    schema:abstract "Knowledge graphs are increasingly built using complex multifaceted machine learning based systems relying on a wide of different data sources. To be effective these must constantly evolve and thus be maintained. I present work on combining knowledge graph construction (e.g. information extraction) and refinement (e.g. link prediction) in end to end systems. I then discuss the challenges of ongoing system maintenance, knowledge graph quality and traceability." ;
+    schema:name "Knowledge Graph Maintenance" ;
+    schema:performer kgc:000198 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000339 a kgc:Talk ;
+    schema:about kgc:000012,
+        kgc:000026,
+        kgc:000243,
+        kgc:000340 ;
+    schema:abstract "Every enterprise needs an efficient cybersecurity controls governance. Do I have adequate controls coverage for existent and emerging threats? Can I produce a regulatory report showing that I have the necessary controls in place? Can I produce a control usage metrics report? Are there other vendor or open source products that can be more efficient or more cost effective? What will it take for a vendor to register its product as an implementation of a specific control? What is the cost of implementing and operating (people, process, technology) critical controls for an enterprise of my size? This presentation introduces a draft W3C Cyber Controls Ontology and Knowledge Graph to address the questions above. During this presentation we will cover the ontology model as well interactively run the knowledge graph queries in a Jupyter notebook." ;
+    schema:name "W3C Cyber Control Ontology and Knowledge Graph - a standard based cyber controls intelligence" ;
+    schema:performer kgc:000210 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000341 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000034,
+        kgc:000257,
+        kgc:000282,
+        kgc:000301 ;
+    schema:abstract "The development and availability of Web knowledge repositories, in particular Wikipedia, as the largest general-knowledge encyclopedic collection, have changed remarkably not only the way in which individual users fulfill their informational needs but also the way in which information providers organize data by employing large knowledge graphs derived from these repositories. In this talk, we will take a closer look at the task of linking to entities from knowledge graphs both as an enabler for new user experiences on the Web, and in particular in Web news, and as a key instrument for keeping the information from knowledge graphs fresh and accurate. One part of the talk will cover news processing in near-real time for fact extraction and fact verification. Another part will cover news consumption experiences enabled by entity linking from concept-based video navigation to social-media guided news presentation. Finally, the talk will follow a journey from the idea of enabling users to check facts in their Office documents to integrating the Microsoft Knowledge Graph with Excel through the new Data Types feature." ;
+    schema:name "Entity Linking: The Symbiosis between Knowledge Graphs and News" ;
+    schema:performer kgc:000220 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000342 a kgc:Talk ;
+    schema:about kgc:000025,
+        kgc:000026,
+        kgc:000246,
+        kgc:000294,
+        kgc:000343 ;
+    schema:abstract "Knowledge graphs have been on the rise and organizations have found a variety of use cases for the technology. One specific type of a use case is the implementation of a knowledge graph as a semantic data catalog. With the inherent power of the technology to integrate structured and unstructured information, the application of knowledge graphs as data catalogs seems to be a foregone conclusion. Capturing the semantic context of data in a smart data catalog application provides much more than simple description of the organization’s data. In this presentation we will discuss key considerations and business value of semantic data catalogs. We will also review a specific use case where we implemented a semantic data catalog for a government organization to help them track, discover, and govern a large number of data sets." ;
+    schema:name "The Curious Case of the Semantic Data Catalog" ;
+    schema:performer kgc:000224 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:000344 a kgc:Talk ;
+    schema:about kgc:000026,
+        kgc:000136,
+        kgc:000345 ;
+    schema:abstract "A critical barrier in current drug discovery is the inability to utilize public datasets in an integrated fashion to fully understand the actions of drugs and chemical compounds on biological systems. There is a need to intelligently integrate heterogeneous datasets pertaining to compounds, drugs, targets, genes, diseases, and drug side effects now available to enable effective network data mining algorithms to extract important biological relationships. In this talk, we demonstrate the semantic integration of 25 different databases and develop various mining and predication methods to identify hidden associations that could provide valuable directions for further exploration at the experimental level. (Conflict of Interest: I am the co-founder of Data2Discovery - https://www.d2discovery.com/)" ;
+    schema:name "Knowledge Graph for Drug Discovery" ;
+    schema:performer kgc:000229 ;
+    schema:superEvent kgc:conference-2020 .
+
+kgc:Tutorial a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:Workshop a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:facetOf a owl:ObjectProperty .
+
+kgc:hasAddress a owl:ObjectProperty ;
+    rdfs:range kgc:Address .
+
+kgc:hasBusinessType a owl:ObjectProperty ;
+    rdfs:domain schema:Organization ;
+    rdfs:range kgc:BusinessType .
+
+kgc:hasFieldOfWork a owl:ObjectProperty ;
+    rdfs:range kgc:FieldOfWork .
+
+kgc:hasIndustry a owl:ObjectProperty ;
+    rdfs:domain schema:Organization ;
+    rdfs:range kgc:BusinessIndustry .
+
+kgc:linkedIn a owl:DatatypeProperty .
+
+skos:Concept a owl:Class .
+
+skos:broader a owl:ObjectProperty .
+
+skos:narrower a owl:ObjectProperty .
+
+schema:CivicStructure a owl:Class ;
+    rdfs:subClassOf schema:Place .
+
+schema:DigitalDocument a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:EducationalOrganization a owl:Class ;
+    rdfs:subClassOf schema:CivicStructure,
+        schema:Organization .
+
+schema:Enumeration a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:EventAttendanceModeEnumeration a owl:Class ;
+    rdfs:subClassOf schema:Enumeration ;
+    owl:oneOf ( schema:MixedEventAttendanceMode schema:OfflineEventAttendanceMode schema:OnlineEventAttendanceMode ) .
+
+schema:EventSeries a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+schema:MediaObject a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:VideoObject a owl:Class ;
+    rdfs:subClassOf schema:MediaObject .
+
+kgc:000001 a schema:Person ;
+    schema:description "As an Ontologist in Enterprise Data Management, Brian is responsible for leveraging semantic technology to mitigate data risk and promote a shared understanding of data across Capital One. Prior to joining Capital One, Brian spent 3 years at a Research and Defense company as a developer and curator of the Common Core Ontologies: a suite of open source, mid-level ontologies currently under consideration as a NIST Standard in Artificial Intelligence. Brian holds a Ph.D. from the University at Buffalo (SUNY), and is also an affiliate member of the National Center for Ontological Research. His research has focused on applications of formal ontology to cybersecurity, situational awareness, aircraft maintenance, geopolitics, natural language user interfaces, and legal and regulatory compliance." ;
+    schema:name "Brian Donohue" ;
+    schema:nationality kgc:000002,
+        kgc:000011 ;
+    schema:worksFor kgc:000003 .
+
+kgc:000002 a schema:Country ;
+    schema:name "No1" ;
+    schema:sameAs wd:Y1 .
+
+kgc:000007 a kgc:Address ;
+    schema:description "Tysons" .
+
+kgc:000011 a schema:Country ;
+    schema:name "No2" ;
+    schema:sameAs wd:Y2 .
+
+kgc:000014 a kgc:Address ;
+    schema:description "McLean" .
+
+kgc:000016 a schema:Person ;
+    schema:description "Bethany leads a team of product managers, ontologists, data scientists, and data analysts, enhancing Capital Oneâ€™s data management capabilities around metadata collection, quality and best practices.  Bethany is also responsible for establishing the Ontology practice, a capability that is being used to facilitate a common understanding of the data and analytics across the Capital One ecosystem." ;
+    schema:name "Bethany Sehon" ;
+    schema:worksFor kgc:000003 ;
+    kgc:linkedIn "https://www.linkedin.com/in/bethanysehon/" .
+
+kgc:000017 a schema:Person ;
+    schema:description "Bryon is the CTO and co-founder of data.world - on a mission to build the world's most meaningful, collaborative, and abundant data resource.  Bryon is a recognized leader in building large-scale consumer internet systems and an expert in data integration solutions.Bryon's twenty years of academic and professional experience spans AI research at Case Western Reserve University, enterprise software at Trilogy, and consumer web experience at Amazon and most recently in ten years building HomeAway.com.  At HomeAway, Bryon oversaw platform development and the integration of thirty acquisitions while building the world's largest online marketplace for vacation rentals." ;
+    schema:name "Bryon Jacob" ;
+    schema:worksFor kgc:000018 ;
+    kgc:linkedIn "https://www.linkedin.com/in/bryon/" .
+
+kgc:000018 a schema:Organization ;
+    schema:additionalType kgc:000019,
+        kgc:000020 ;
+    schema:knowsAbout kgc:000021,
+        kgc:000025,
+        kgc:000026 ;
+    schema:name "data.world" ;
+    schema:sameAs wd:Q91143628 ;
+    kgc:hasBusinessType kgc:000019 ;
+    kgc:hasFieldOfWork kgc:000021,
+        kgc:000025,
+        kgc:000026 ;
+    kgc:hasIndustry kgc:000020 .
+
+kgc:000023 a kgc:County ;
+    schema:geoWithin kgc:000024 ;
+    schema:name "Travis County" ;
+    schema:sameAs wd:Q110426 .
+
+kgc:000024 a schema:State ;
+    schema:geoWithin kgc:000010 ;
+    schema:name "Texas" ;
+    schema:sameAs wd:Q1439 .
+
+kgc:000027 a schema:Person ;
+    schema:description "Dr. Chen Yong Cher is the CTO of Infrastructure at Graphen. He oversees Graphen's core AI platform, Ardi, and some of its cybersecurity and risk management solutions catering to financial firms. Prior to Graphen, he was a System Researcher at IBM for 12 years. He was a contributor to BlueGene/Q supercomputer and DARPA's PERCS and PERFECT projects, and coauthored over 25 patents and 40 technical papers." ;
+    schema:name "Chen Yong Cher" ;
+    schema:worksFor kgc:000028 ;
+    kgc:linkedIn "https://www.linkedin.com/in/chenyongcher" .
+
+kgc:000028 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000020 ;
+    schema:knowsAbout kgc:000026,
+        kgc:000029 ;
+    schema:name "Graphen, Inc." ;
+    schema:sameAs wd:Q91145348 ;
+    kgc:hasBusinessType kgc:000005 ;
+    kgc:hasFieldOfWork kgc:000026,
+        kgc:000029 ;
+    kgc:hasIndustry kgc:000020 .
+
+kgc:000030 a schema:City ;
+    schema:name "New York City" ;
+    schema:sameAs wd:Q60 .
+
+kgc:000031 a schema:State ;
+    schema:geoWithin kgc:000010 ;
+    schema:name "New York" ;
+    schema:sameAs wd:Q1384 .
+
+kgc:000032 a schema:Person ;
+    schema:description "Currently works at Dow Jones as the head of engineering for a team that is looking to deliver its customers more relevant information by leveraging big data technologies, graphs, and nlp. Recently relocated from Minneapolis to Barcelona to build the team tasked with working towards this effort. When he isnâ€™t coding he enjoys exploring this new city via bike, and finding new breweries." ;
+    schema:name "Dylan Roy" ;
+    schema:worksFor kgc:000033 ;
+    kgc:linkedIn "https://www.linkedin.com/in/dylan-roy/" .
+
+kgc:000033 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000013,
+        kgc:000034,
+        kgc:000035 ;
+    schema:name "Dow Jones & Company" ;
+    schema:sameAs wd:Q1126244 ;
+    kgc:hasBusinessType kgc:000005,
+        kgc:000013 ;
+    kgc:hasIndustry kgc:000034,
+        kgc:000035 .
+
+kgc:000036 a schema:Person ;
+    schema:description "Gavin is interested in improving the best practices of the software development community. He is a strong believer in formal methods and the use of mathematics and logic as disciplines to increase the quality and robustness of software. Specialties: Database implementation, logic programming, functional programming, type theory, logic, theorem proving, software specification. " ;
+    schema:name "Gavin Mendel-Gleason" ;
+    schema:worksFor kgc:000037 ;
+    kgc:linkedIn "https://www.linkedin.com/in/gavinmendelgleason/" .
+
+kgc:000037 a schema:Organization ;
+    schema:additionalType kgc:000038 ;
+    schema:name "TerminusDB" ;
+    schema:sameAs wd:Q88903913 ;
+    kgc:hasBusinessType kgc:000038 .
+
+kgc:000039 a schema:Person ;
+    schema:description "Huda Khan works in software development at Mann Library, Cornell University. She is interested in the design and architecture of linked data and semantic web applications, specifically in: (a) supporting usability through effective interface design and (b) enabling flexible interplay between different components and/or technologies.  In the LD4P2 grant, she has focused on experiments around integrating linked data into library discovery systems." ;
+    schema:name "Huda Khan" ;
+    schema:nationality kgc:000040,
+        kgc:000046 ;
+    schema:worksFor kgc:000041 ;
+    kgc:linkedIn "https://www.linkedin.com/in/hudakhan/" .
+
+kgc:000040 a schema:Country ;
+    schema:name "No3" ;
+    schema:sameAs wd:Y3 .
+
+kgc:000041 a schema:Organization ;
+    schema:additionalType kgc:000043,
+        kgc:000048,
+        kgc:000050,
+        kgc:000052,
+        kgc:000054 ;
+    schema:memberOf kgc:000042,
+        kgc:000047,
+        kgc:000049,
+        kgc:000051,
+        kgc:000053,
+        kgc:000055,
+        kgc:000056 ;
+    schema:name "Cornell University" ;
+    schema:sameAs wd:Q49115 ;
+    kgc:hasBusinessType kgc:000043,
+        kgc:000048,
+        kgc:000050,
+        kgc:000052,
+        kgc:000054 .
+
+kgc:000042 a schema:Consortium ;
+    schema:name "Ivy League" ;
+    schema:sameAs wd:Q49113 .
+
+kgc:000045 a kgc:County ;
+    schema:geoWithin kgc:000031 ;
+    schema:name "Tompkins County" ;
+    schema:sameAs wd:Q56153 .
+
+kgc:000046 a schema:Country ;
+    schema:name "No4" ;
+    schema:sameAs wd:Y4 .
+
+kgc:000057 a schema:Person ;
+    schema:alumniOf kgc:000059 ;
+    schema:description "Jans Aasman is a Ph.D. psychologist and expert in Cognitive Science - as well as CEO of Franz Inc., an early innovator in Artificial Intelligence and provider of Knowledge Graph Solutions based on AllegroGraph.  As both a scientist and CEO, Dr. Aasman continues to break ground in the areas of Artificial Intelligence and Knowledge Graphs as he works hand-in-hand with numerous Fortune 500 organizations as well as US and Foreign governments.  " ;
+    schema:name "Jans Aasman" ;
+    schema:nationality kgc:000058 ;
+    schema:sameAs wd:Q22276676 ;
+    schema:worksFor kgc:000060 ;
+    kgc:linkedIn "https://www.linkedin.com/in/jans-aasman-272107/" .
+
+kgc:000058 a schema:Country ;
+    schema:name "Kingdom of the Netherlands" ;
+    schema:sameAs wd:Q29999 .
+
+kgc:000059 a schema:CollegeOrUniversity ;
+    schema:name "University of Groningen" ;
+    schema:sameAs wd:Q850730 .
+
+kgc:000060 a schema:Organization ;
+    schema:additionalType kgc:000038,
+        kgc:000061 ;
+    schema:name "AllegroGraph" ;
+    schema:sameAs wd:Q4731408 ;
+    kgc:hasBusinessType kgc:000038,
+        kgc:000061 .
+
+kgc:000062 a schema:Person ;
+    schema:alumniOf kgc:000063,
+        kgc:000068,
+        kgc:000069,
+        kgc:000070 ;
+    schema:description "John F. Sowa spent 30 years on R & D projects at IBM and is a cofounder of VivoMind Research LLC.  He is a fellow of the AAAI, and he has published several books and many articles on logic, AI, and computational linguistics." ;
+    schema:name "John F. Sowa" ;
+    schema:nationality kgc:000010 ;
+    schema:sameAs wd:Q92665 ;
+    schema:worksFor kgc:000064 ;
+    kgc:linkedIn "https://www.linkedin.com/in/john-sowa-2660602/" .
+
+kgc:000063 a schema:CollegeOrUniversity ;
+    schema:name "Harvard University" ;
+    schema:sameAs wd:Q13371 .
+
+kgc:000064 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000020 ;
+    schema:knowsAbout kgc:000026,
+        kgc:000029 ;
+    schema:name "Kyndi, Inc." ;
+    schema:sameAs wd:Q91146443 ;
+    kgc:hasBusinessType kgc:000005 ;
+    kgc:hasFieldOfWork kgc:000026,
+        kgc:000029 ;
+    kgc:hasIndustry kgc:000020 .
+
+kgc:000068 a schema:CollegeOrUniversity ;
+    schema:name "Massachusetts Institute of Technology" ;
+    schema:sameAs wd:Q49108 .
+
+kgc:000069 a schema:CollegeOrUniversity ;
+    schema:name "Free University of Brussels" ;
+    schema:sameAs wd:Q20754971 .
+
+kgc:000070 a schema:CollegeOrUniversity ;
+    schema:name "Harvard School of Engineering and Applied Sciences" ;
+    schema:sameAs wd:Q5676553 .
+
+kgc:000071 a schema:Person ;
+    schema:description "Michael is VP of Engineering and Co-Founder at Stardog, where he manages their world-class engineering organization and helps shape the direction of the Stardog Knowledge Graph. He has over 15 years of experience in the AI, Semantic Technology, and Graph Database fields. Prior to Stardog, Michael performed research on the use of graph-based technologies in pervasive computing environments while at Fujitsu Labs of America. Michael is a graduate of the University of Maryland in Computer Science and an alumnus of its MINDLAB, a seminal research group in Semantic Web technology." ;
+    schema:jobTitle "VP of Engineering and Co-Founder" ;
+    schema:name "Michael Grove" ;
+    schema:worksFor kgc:000072 ;
+    kgc:linkedIn "https://www.linkedin.com/in/michaelhgrove/" .
+
+kgc:000072 a schema:Organization ;
+    schema:additionalType kgc:000038 ;
+    schema:name "Stardog" ;
+    schema:sameAs wd:Q91147741 ;
+    kgc:hasBusinessType kgc:000038 .
+
+kgc:000074 a schema:Person ;
+    schema:description "Dr. Konstantin Todorov is Assoc. Professor at the University of Montpellier since 2012. He obtained his PhD in Cognitive Science from the Univ. of OsnabrÃ¼ck (Germany) in 2010 after receiving a MSc in Statistical Learning from the Univ. of Provence (France).  His research lies in the AI fields of knowledge and data integration and extraction with applications in the fields of cultural heritage, agriculture and social sciences." ;
+    schema:name "Konstantin Todorov" ;
+    schema:worksFor kgc:000075 ;
+    kgc:linkedIn "https://www.lirmm.fr/users/utilisateurs-lirmm/konstantin-todorov" .
+
+kgc:000075 a schema:Organization ;
+    schema:additionalType kgc:000077 ;
+    schema:memberOf kgc:000076,
+        kgc:000078,
+        kgc:000079,
+        kgc:000080,
+        kgc:000081 ;
+    schema:name "University of Montpellier" ;
+    schema:sameAs wd:Q776223 ;
+    kgc:hasBusinessType kgc:000077 .
+
+kgc:000076 a schema:Consortium ;
+    schema:name "Mediterra" ;
+    schema:sameAs wd:Q3304068 .
+
+kgc:000078 a schema:Consortium ;
+    schema:name "Coimbra Group" ;
+    schema:sameAs wd:Q211620 .
+
+kgc:000079 a schema:Consortium ;
+    schema:name "Couperin Consortium" ;
+    schema:sameAs wd:Q2994760 .
+
+kgc:000081 a schema:Consortium ;
+    schema:name "Renater" ;
+    schema:sameAs wd:Q3456896 .
+
+kgc:000082 a schema:Person ;
+    schema:description "Nic Seyot serves as Head of Information Management for Morgan Stanley and as Head of Data & Analytics for the Legal and Compliance Division. Nic joined Morgan Stanley in 2014 to help create services and tools to better organize, retrieve, retain and protect the firmâ€™s information. Since 2019, Nic leads the Data & Analytics team who provides advanced analytics and visualization for trade and financial crimes surveillance. Prior to joining Morgan Stanley he worked at GE Capital, where he held increasingly senior roles in information management. Nic earned his Masterâ€™s in Information Sciences and Knowledge Management from the Sorbonne in Paris." ;
+    schema:name "Nicolas Seyot" ;
+    schema:worksFor kgc:000083 ;
+    kgc:linkedIn "https://www.linkedin.com/in/nseyot/" .
+
+kgc:000083 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000006,
+        kgc:000013,
+        kgc:000015 ;
+    schema:memberOf kgc:000004 ;
+    schema:name "Morgan Stanley" ;
+    schema:sameAs wd:Q334204 ;
+    kgc:hasBusinessType kgc:000005,
+        kgc:000013,
+        kgc:000015 ;
+    kgc:hasIndustry kgc:000006 .
+
+kgc:000084 a schema:Person ;
+    schema:alumniOf kgc:000086 ;
+    schema:description "Ora is a senior software architect and researcher, with many years of experience in all aspects of the software industry (academic research & teaching, software R&D and strategy in large corporations, software start-ups, venture capitalism, standardization and industry consortia). He has a strong focus and expertise on Graph Databases, Data Management, Artificial Intelligence, Ontologies and Web technologies." ;
+    schema:name "Ora Lassila" ;
+    schema:nationality kgc:000085 ;
+    schema:sameAs wd:Q7099202 ;
+    schema:worksFor kgc:000087 ;
+    kgc:linkedIn "https://www.linkedin.com/in/oralassila" .
+
+kgc:000085 a schema:Country ;
+    schema:name "Finland" ;
+    schema:sameAs wd:Q33 .
+
+kgc:000086 a schema:CollegeOrUniversity ;
+    schema:name "Helsinki University of Technology" ;
+    schema:sameAs wd:Q1646874 .
+
+kgc:000087 a schema:Organization ;
+    schema:additionalType kgc:000088,
+        kgc:000089,
+        kgc:000093,
+        kgc:000094,
+        kgc:000095,
+        kgc:000096 ;
+    schema:memberOf kgc:000004 ;
+    schema:name "Amazon Web Services" ;
+    schema:sameAs wd:Q456157 ;
+    kgc:hasBusinessType kgc:000088,
+        kgc:000093,
+        kgc:000094,
+        kgc:000095,
+        kgc:000096 ;
+    kgc:hasIndustry kgc:000089 .
+
+kgc:000092 a schema:State ;
+    schema:geoWithin kgc:000010 ;
+    schema:name "Washington" ;
+    schema:sameAs wd:Q1223 .
+
+kgc:000097 a schema:Person ;
+    schema:description "Known as a \"player/coach\", with core expertise in data science, natural language processing, machine learning, cloud computing; 35+ years tech industry experience, ranging from Bell Labs to early-stage start-ups. Co-chair Rev and JupyterCon. Advisor for NYU Coleridge Initiative, IBM Data Science Community, Amplify Partners, Recognai, Primer. Formerly: Director, Community Evangelism @ Databricks and Apache Spark. Cited in 2015 as one of the Top 30 People in Big Data and Analytics by Innovation Enterprise." ;
+    schema:name "Paco Nathan" ;
+    schema:nationality kgc:000010 ;
+    schema:sameAs wd:Q7123088 ;
+    schema:worksFor kgc:000098 ;
+    kgc:linkedIn "https://www.linkedin.com/in/ceteri/" .
+
+kgc:000098 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000020 ;
+    schema:knowsAbout kgc:000029 ;
+    schema:name "Derwen, Inc." ;
+    schema:sameAs wd:Q91148424 ;
+    kgc:hasBusinessType kgc:000005 ;
+    kgc:hasFieldOfWork kgc:000029 ;
+    kgc:hasIndustry kgc:000020 .
+
+kgc:000100 a kgc:County ;
+    schema:geoWithin kgc:000067 ;
+    schema:name "Sonoma County" ;
+    schema:sameAs wd:Q108067 .
+
+kgc:000102 a schema:CollegeOrUniversity ;
+    schema:name "University of Manchester" ;
+    schema:sameAs wd:Q230899 .
+
+kgc:000103 a schema:Organization ;
+    schema:additionalType kgc:000043,
+        kgc:000052,
+        kgc:000054,
+        kgc:000106 ;
+    schema:memberOf kgc:000012,
+        kgc:000047,
+        kgc:000049,
+        kgc:000051,
+        kgc:000055,
+        kgc:000056,
+        kgc:000107 ;
+    schema:name "Stanford University" ;
+    schema:sameAs wd:Q41506 ;
+    kgc:hasBusinessType kgc:000043,
+        kgc:000052,
+        kgc:000054,
+        kgc:000106 .
+
+kgc:000107 a schema:Consortium ;
+    schema:name "Pac-12 Conference" ;
+    schema:sameAs wd:Q128471 .
+
+kgc:000108 a schema:Person ;
+    schema:alumniOf kgc:000109 ;
+    schema:description "Ron Bekkerman is the CTO of Cherre Inc., an AI-powered real estate data integration platform. From 2013 to 2018, Ron was Assistant Professor and Director of the Big Data Science Lab at the University of Haifa, Israel. Prior to that, he was the Chief Data Officer of Viola Ventures, a founding member of the Data Science team at LinkedIn, and a Research Scientist at HP Labs in the Bay Area. He received his B.Sc. and M.Sc. in Computer Science from the Technion â€“ Israel Institute of Technology, and his Ph.D. in Machine Learning from the University of Massachusetts, Amherst." ;
+    schema:jobTitle "CTO" ;
+    schema:name "Ron Bekkerman" ;
+    schema:sameAs wd:Q89694904 ;
+    schema:worksFor kgc:000110 ;
+    kgc:linkedIn "https://www.linkedin.com/in/bekkerman/" .
+
+kgc:000109 a schema:CollegeOrUniversity ;
+    schema:name "University of Massachusetts Amherst" ;
+    schema:sameAs wd:Q15142 .
+
+kgc:000110 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000020 ;
+    schema:knowsAbout kgc:000029,
+        kgc:000111 ;
+    schema:name "Cherre Inc." ;
+    schema:sameAs wd:Q91148428 ;
+    kgc:hasBusinessType kgc:000005 ;
+    kgc:hasFieldOfWork kgc:000029,
+        kgc:000111 ;
+    kgc:hasIndustry kgc:000020 .
+
+kgc:000112 a schema:Person ;
+    schema:alumniOf kgc:000114 ;
+    schema:description "Ruben Verborgh is a professor of Decentralized Web technology at IDLab, Ghent University â€“ imec, and a research affiliate at the Decentralized Information Group of CSAIL at MIT. Additionally, he acts as a technology advocate for Inrupt and the Solid ecosystem wherein people and organizations control their own data. He aims to build a more intelligent generation of clients for a decentralized Web at the intersection of Linked Data and hypermedia-driven Web APIs." ;
+    schema:jobTitle "Professor of Decentralized Web Technology" ;
+    schema:knowsAbout kgc:000021,
+        kgc:000120,
+        kgc:000121,
+        kgc:000123,
+        kgc:000124 ;
+    schema:name "Ruben Verborgh" ;
+    schema:nationality kgc:000113 ;
+    schema:sameAs wd:Q30085536 ;
+    schema:worksFor kgc:000114 ;
+    kgc:hasFieldOfWork kgc:000021,
+        kgc:000120,
+        kgc:000121,
+        kgc:000123,
+        kgc:000124 ;
+    kgc:linkedIn "https://ruben.verborgh.org/resume/#biography" .
+
+kgc:000115 a schema:Consortium ;
+    schema:name "Ghent University Association" ;
+    schema:sameAs wd:Q2027055 .
+
+kgc:000118 a kgc:County ;
+    schema:geoWithin kgc:000119 ;
+    schema:name "East Flanders" ;
+    schema:sameAs wd:Q1114 .
+
+kgc:000119 a schema:State ;
+    schema:geoWithin kgc:000113 ;
+    schema:name "Flemish Region" ;
+    schema:sameAs wd:Q9337 .
+
+kgc:000122 a schema:Consortium ;
+    schema:name "Confederation of Open Access Repositories" ;
+    schema:sameAs wd:Q48789578 .
+
+kgc:000125 a schema:Consortium ;
+    schema:name "International GLAM Labs Community" ;
+    schema:sameAs wd:Q72936141 .
+
+kgc:000126 a schema:Person ;
+    schema:description "Thorsten CEO of derivo GmbH since 2010. derivo is an SME that supports leading European companies including Siemens, Schaeffler and Festo to successfully build and implement Knowledge Graphs and reasoning technology in complex technical domains. Thorsten studied Computer Science at Ulm University. He received national scholarships to work at the Information Sciences Institute at the University of Southern California and to finish his dissertation at Otto- von-Guericke University in Magdeburg. He also headed the international working group that specified OWLlink, a communication protocol for OWL, that became a W3C member submission in 2011." ;
+    schema:jobTitle "CEO" ;
+    schema:name "Thorsten Liebig" ;
+    schema:worksFor kgc:000127 ;
+    kgc:linkedIn "https://www.linkedin.com/in/tliebig/" .
+
+kgc:000127 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000132 ;
+    schema:knowsAbout kgc:000021,
+        kgc:000029,
+        kgc:000133 ;
+    schema:name "derivo GmbH" ;
+    schema:sameAs wd:Q91149041 ;
+    kgc:hasBusinessType kgc:000005,
+        kgc:000132 ;
+    kgc:hasFieldOfWork kgc:000021,
+        kgc:000029,
+        kgc:000133 .
+
+kgc:000129 a kgc:County ;
+    schema:geoWithin kgc:000130 ;
+    schema:name "TÃ¼bingen Government Region" ;
+    schema:sameAs wd:Q8170 .
+
+kgc:000130 a schema:State ;
+    schema:geoWithin kgc:000131 ;
+    schema:name "Baden-WÃ¼rttemberg" ;
+    schema:sameAs wd:Q985 .
+
+kgc:000131 a schema:Country ;
+    schema:name "Germany" ;
+    schema:sameAs wd:Q183 .
+
+kgc:000134 a schema:Person ;
+    schema:description "Tom's interest and experience are in the application of informatics to critical problems in personal medicine, systems biology, biomarker discovery and drug development along the entire discovery spectrum (defining the problem, experimental design, aligning cross-omics platforms, biostatistics and bioinformatics to objectives, managing programs, synthesizing results, publishing and communicating results, and validating results). His experience straddles the computational, scientific and business side in this space. Tom has worked in cardiovascular disease, cancer, liver and muscle toxicity, diabetes and CNS disease." ;
+    schema:jobTitle "Senior Director, Bioinformatics" ;
+    schema:name "Tom Plasterer" ;
+    schema:worksFor kgc:000135 ;
+    kgc:linkedIn "https://www.linkedin.com/in/tplasterer/" .
+
+kgc:000135 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000013,
+        kgc:000136 ;
+    schema:name "AstraZeneca" ;
+    schema:sameAs wd:Q731938 ;
+    kgc:hasBusinessType kgc:000005,
+        kgc:000013 ;
+    kgc:hasIndustry kgc:000136 .
+
+kgc:000138 a kgc:County ;
+    schema:geoWithin kgc:000139 ;
+    schema:name "Cambridgeshire" ;
+    schema:sameAs wd:Q23112 .
+
+kgc:000139 a schema:State ;
+    schema:geoWithin kgc:000140 ;
+    schema:name "East of England" ;
+    schema:sameAs wd:Q48006 .
+
+kgc:000140 a schema:Country ;
+    schema:name "England" ;
+    schema:sameAs wd:Q21 .
+
+kgc:000141 a schema:Person ;
+    schema:description "Topojoy currently leads information extraction on text and videos in Yahoo Knowledge Graph which powers search and information organization in products in Yahoo! like Finance, Sports, entity search and browse. He has worked on Yahoo Knowledge Graph (YK) for 4 years on various aspects of creating knowledge graphs like reconciliation of source graphs, type classifying semistructured pages to right ontology types, ranking related entities beyond the obvious neighbours to name a few. Before Yahoo Knowledge graphs, he worked for Yahoo shopping on attribute extraction and classification of shopping feeds into large taxonomies of products." ;
+    schema:name "Topojoy Biswas" ;
+    schema:worksFor kgc:000142 ;
+    kgc:linkedIn "https://www.linkedin.com/in/topojoy-biswas-43122713/" .
+
+kgc:000142 a schema:Organization ;
+    schema:additionalType kgc:000094,
+        kgc:000143,
+        kgc:000144,
+        kgc:000147 ;
+    schema:memberOf kgc:000004,
+        kgc:000012,
+        kgc:000146 ;
+    schema:name "Verizon Media" ;
+    schema:sameAs wd:Q29231846 ;
+    kgc:hasBusinessType kgc:000094 ;
+    kgc:hasIndustry kgc:000143,
+        kgc:000144,
+        kgc:000147 .
+
+kgc:000146 a schema:Consortium ;
+    schema:name "Node.js Foundation" ;
+    schema:sameAs wd:Q38620786 .
+
+kgc:000148 a schema:Person ;
+    schema:description "Vassil has more than 15 years in software development in various domains like life sciences, pharmaceutical, health care and telecommunication. In the past 10 years he mostly engaged with the development of complex enterprise knowledge management solutions that features natural language processing, text analytics, reasoning, semantics, ontology design, linked data, conceptual model design, implementation of formal grammars and graph databases. During Vassil's career he was involved in small startups that developed in bigger organization and also in a large global organization. " ;
+    schema:name "Vassil Momtchev" ;
+    schema:worksFor kgc:000149 ;
+    kgc:linkedIn "https://www.linkedin.com/in/vassil-momtchev/" .
+
+kgc:000149 a schema:Organization ;
+    schema:additionalType kgc:000020,
+        kgc:000021,
+        kgc:000038,
+        kgc:000150 ;
+    schema:memberOf kgc:000012 ;
+    schema:name "Ontotext" ;
+    schema:sameAs wd:Q7095072 ;
+    kgc:hasBusinessType kgc:000150 ;
+    kgc:hasIndustry kgc:000020,
+        kgc:000021,
+        kgc:000038 .
+
+kgc:000152 a kgc:County ;
+    schema:geoWithin kgc:000153 ;
+    schema:name "Sofia Capital Municipality" ;
+    schema:sameAs wd:Q4442915 .
+
+kgc:000153 a schema:State ;
+    schema:geoWithin kgc:000154 ;
+    schema:name "Sofia City Province" ;
+    schema:sameAs wd:Q1585725 .
+
+kgc:000154 a schema:Country ;
+    schema:name "Bulgaria" ;
+    schema:sameAs wd:Q219 .
+
+kgc:000155 a schema:Person ;
+    schema:description "Christos Boutsidis is the head of the Relationship Analytics and Engineering Department at Goldman Sachs. The focus of his organization is on building the Goldman Sachs Knowledge Graph and making it available firm-wide. Before that, Christos was a Research Scientist with the Scalable Machine Learning Group of Yahoo Research in New York and a Research Staff Member with the Mathematical Sciences Department of the IBM T. J. Watson Research Center in Yorktown Heights, NY. Dr. Boutsidis earned a Ph.D. in Computer Science from Rensselaer Polytechnic Institute in May of 2011 and a BS in Computer Engineering from the University of Patras, in Greece in July of 2006. Dr Boutsidis has published over 30 articles in conferences and journals in algorithms, machine learning, and statistical data analysis." ;
+    schema:name "Christos Boutsidis" ;
+    schema:worksFor kgc:000156 ;
+    kgc:linkedIn "https://www.linkedin.com/in/boutsidis/" .
+
+kgc:000156 a schema:Organization ;
+    schema:additionalType kgc:000006,
+        kgc:000015,
+        kgc:000093,
+        kgc:000157,
+        kgc:000160,
+        kgc:000161 ;
+    schema:memberOf kgc:000004,
+        kgc:000159 ;
+    schema:name "Goldman Sachs" ;
+    schema:sameAs wd:Q193326 ;
+    kgc:hasAddress kgc:000158 ;
+    kgc:hasBusinessType kgc:000015,
+        kgc:000093,
+        kgc:000157,
+        kgc:000160,
+        kgc:000161 ;
+    kgc:hasIndustry kgc:000006 .
+
+kgc:000158 a kgc:Address ;
+    schema:description "200 West Street, Battery Park City,  Manhattan" ;
+    schema:geoWithin kgc:000030 .
+
+kgc:000162 a schema:Person ;
+    schema:description "David Kamien is the founder and CEO of Mind-Alliance Systems (www.mind-alliance.com) where he leads the company's efforts to deliver AI-powered software systems and research services that help clients make better decisions and work smarter.  David Kamien is an author and inventor with unique expertise in improving information sharing and collaboration within and between organizations. David has a law degree from the College of Law and Business and a B.A. from the Hebrew University of Jerusalem." ;
+    schema:jobTitle "CEO" ;
+    schema:name "David Kamien" ;
+    schema:worksFor kgc:000163 ;
+    kgc:linkedIn "https://www.linkedin.com/in/davidkamien/" .
+
+kgc:000163 a schema:Organization ;
+    schema:additionalType kgc:000005 ;
+    schema:knowsAbout kgc:000029,
+        kgc:000168 ;
+    schema:name "Mind-Alliance Systems" ;
+    schema:sameAs wd:Q91149765 ;
+    kgc:hasAddress kgc:000164 ;
+    kgc:hasBusinessType kgc:000005 ;
+    kgc:hasFieldOfWork kgc:000029,
+        kgc:000168 .
+
+kgc:000164 a kgc:Address ;
+    schema:description "Whippany" ;
+    schema:geoWithin kgc:000165 .
+
+kgc:000165 a schema:City ;
+    schema:geoWithin kgc:000166 ;
+    schema:name "Hanover Township" ;
+    schema:sameAs wd:Q3016895 .
+
+kgc:000166 a kgc:County ;
+    schema:geoWithin kgc:000167 ;
+    schema:name "Morris County" ;
+    schema:sameAs wd:Q498163 .
+
+kgc:000167 a schema:State ;
+    schema:geoWithin kgc:000010 ;
+    schema:name "New Jersey" ;
+    schema:sameAs wd:Q1408 .
+
+kgc:000169 a schema:Person ;
+    schema:description "Elisa F. Kendall is a Partner in Thematix Partners LLC and graduate level lecturer in computer science, focused on data management, data governance, knowledge representation, and decisioning systems. Her consulting practice includes business and information architecture, knowledge representation strategies, and ontology design, development, and training for clients in financial services, government, manufacturing, media, pharmaceutical, and retail domains. Recent projects have focused on use of ontologies to drive natural language processing, machine learning, interoperability, and other knowledge graph-based applications. Elisa represents knowledge representation, ontology, information architecture, and data management concerns on the Object Management Group (OMG)â€™s Architecture Board, is co-editor of the Ontology Definition Metamodel (ODM) and Languages, Countries, and Codes (LCC) standards, and a contributor to a number of other ISO, W3C, and OMG standards, including the Financial Industry Business Ontology (FIBO). Prior to joining Thematix, she was the founder and CEO of Sandpiper Software, an early entrant in the Semantic Web domain. Earlier in her career she was software development manager for Aspect Development, and before that a ground systems data processing engineer for Lockheed Martin. She holds a B.S. in Mathematics and Computer Science from UCLA, and an A.M in Linguistics from Stanford University." ;
+    schema:name "Elisa Kendall" ;
+    schema:worksFor kgc:000170 ;
+    kgc:linkedIn "https://www.linkedin.com/in/elisakendall/" .
+
+kgc:000170 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000171,
+        kgc:000172 ;
+    schema:knowsAbout kgc:000133,
+        kgc:000173 ;
+    schema:name "Thematix Partners LLC" ;
+    schema:sameAs wd:Q91149831 ;
+    kgc:hasBusinessType kgc:000005,
+        kgc:000172 ;
+    kgc:hasFieldOfWork kgc:000133,
+        kgc:000173 ;
+    kgc:hasIndustry kgc:000171 .
+
+kgc:000174 a schema:Person ;
+    schema:description "Melli Annamalai is a product manager at Oracle. She has vast experience in multiple technology areas related to unstructured and semi-structured data management. Her current focus areas are Graphs, Apache Kafka, and Big Data. She works closely with customers as they deploy solutions using Oracle products. She is a regular presenter at Oracle Open World and other industry events." ;
+    schema:jobTitle "Product Manager" ;
+    schema:name "Melliyal Annamalai" ;
+    schema:worksFor kgc:000175 ;
+    kgc:linkedIn "https://www.linkedin.com/in/melliyal/" .
+
+kgc:000175 a schema:Organization ;
+    schema:additionalType kgc:000176,
+        kgc:000177,
+        kgc:000181 ;
+    schema:memberOf kgc:000004,
+        kgc:000012,
+        kgc:000180,
+        kgc:000182,
+        kgc:000183,
+        kgc:000184 ;
+    schema:name "Oracle Corporation" ;
+    schema:sameAs wd:Q19900 ;
+    kgc:hasAddress kgc:000178 ;
+    kgc:hasBusinessType kgc:000176 ;
+    kgc:hasIndustry kgc:000177,
+        kgc:000181 .
+
+kgc:000178 a kgc:Address ;
+    schema:description "Redwood Shores" ;
+    schema:geoWithin kgc:000179 .
+
+kgc:000179 a schema:City ;
+    schema:geoWithin kgc:000066 ;
+    schema:name "Redwood City" ;
+    schema:sameAs wd:Q505549 .
+
+kgc:000180 a schema:Consortium ;
+    schema:name "European Committee for Interoperable Systems" ;
+    schema:sameAs wd:Q2985457 .
+
+kgc:000182 a schema:Consortium ;
+    schema:name "OpenAPI Initiative" ;
+    schema:sameAs wd:Q63256596 .
+
+kgc:000183 a schema:Consortium ;
+    schema:name "CVE Numbering Authorities" ;
+    schema:sameAs wd:Q67904121 .
+
+kgc:000184 a schema:Consortium ;
+    schema:name "Business Software Alliance" ;
+    schema:sameAs wd:Q852297 .
+
+kgc:000185 a schema:Person ;
+    schema:description "Neda Abolhassani is an R&D Associate Principal and Data Scientist at Accenture Labs. She holds a Ph.D. in Computer Science from University of Georgia. Her research explores ontology engineering, knowledge representation and integration, as well as machine learning." ;
+    schema:jobTitle "R&D Associate Principal and Data Scientist" ;
+    schema:name "Neda Abolhassani" ;
+    schema:worksFor kgc:000186 ;
+    kgc:linkedIn "https://www.linkedin.com/in/neda-abolhassani-ph-d-61354329/" .
+
+kgc:000186 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000171,
+        kgc:000176,
+        kgc:000187,
+        kgc:000193,
+        kgc:000196,
+        kgc:000197 ;
+    schema:memberOf kgc:000004,
+        kgc:000192,
+        kgc:000195 ;
+    schema:name "Accenture" ;
+    schema:sameAs wd:Q338825 ;
+    kgc:hasBusinessType kgc:000005,
+        kgc:000176,
+        kgc:000196 ;
+    kgc:hasIndustry kgc:000171,
+        kgc:000187,
+        kgc:000193,
+        kgc:000197 .
+
+kgc:000189 a kgc:County ;
+    schema:geoWithin kgc:000190 ;
+    schema:name "County Dublin" ;
+    schema:sameAs wd:Q173500 .
+
+kgc:000190 a schema:State ;
+    schema:geoWithin kgc:000191 ;
+    schema:name "Leinster" ;
+    schema:sameAs wd:Q159736 .
+
+kgc:000191 a schema:Country ;
+    schema:name "Ireland" ;
+    schema:sameAs wd:Q27 .
+
+kgc:000192 a schema:Consortium ;
+    schema:name "JS Foundation" ;
+    schema:sameAs wd:Q80655185 .
+
+kgc:000195 a schema:Consortium ;
+    schema:name "German-Swiss Chamber of Commerce" ;
+    schema:sameAs wd:Q17353641 .
+
+kgc:000198 a schema:Person ;
+    schema:description "Paul Groth is Professor of Algorithmic Data Science at the University of Amsterdam where he leads the Intelligent Data Engineering Lab (INDElab.org). Paul led the design of a number of large scale data integration and knowledge graph construction efforts in the biomedical domain. Paul was co-chair of the W3C Provenance Working Group and continues to research data provenance and data integration." ;
+    schema:jobTitle "Professor of Algorithmic Data Science" ;
+    schema:knowsAbout kgc:000021,
+        kgc:000204,
+        kgc:000207,
+        kgc:000208,
+        kgc:000209 ;
+    schema:name "Paul Groth" ;
+    schema:sameAs wd:Q21678689 ;
+    schema:worksFor kgc:000199 ;
+    kgc:hasFieldOfWork kgc:000021,
+        kgc:000204,
+        kgc:000207,
+        kgc:000208,
+        kgc:000209 ;
+    kgc:linkedIn "https://www.linkedin.com/in/pgroth/" .
+
+kgc:000199 a schema:Organization ;
+    schema:additionalType kgc:000116,
+        kgc:000206 ;
+    schema:memberOf kgc:000056,
+        kgc:000080,
+        kgc:000200,
+        kgc:000205 ;
+    schema:name "University of Amsterdam" ;
+    schema:sameAs wd:Q214341 ;
+    kgc:hasBusinessType kgc:000116,
+        kgc:000206 .
+
+kgc:000200 a schema:Consortium ;
+    schema:name "Association of Universities in the Netherlands" ;
+    schema:sameAs wd:Q2574590 .
+
+kgc:000201 a schema:City ;
+    schema:geoWithin kgc:000201,
+        kgc:000202 ;
+    schema:name "Amsterdam" ;
+    schema:sameAs wd:Q727 .
+
+kgc:000202 a schema:State ;
+    schema:geoWithin kgc:000203 ;
+    schema:name "North Holland" ;
+    schema:sameAs wd:Q701 .
+
+kgc:000203 a schema:Country ;
+    schema:name "Netherlands" ;
+    schema:sameAs wd:Q55 .
+
+kgc:000205 a schema:Consortium ;
+    schema:name "Stichting Academisch Erfgoed" ;
+    schema:sameAs wd:Q3212092 .
+
+kgc:000210 a schema:Person ;
+    schema:description "Radu Marian is a Solution Architect at Bank of America, Research and Innovation Team of Global Information Security.  Radu has specialized in building semantic knowledge graph solutions for cyber security domain - specifically W3C Cyber Control Ontology and Knowledge Graph new submission initiative.  Other interests are Bible Knowledge Graph and building domain specific languages for interacting with knowledge graphs, creating and building knowledge graph Thesaurus using NLP of existent corpora." ;
+    schema:jobTitle "Solution Architect" ;
+    schema:name "Radu Marian" ;
+    schema:worksFor kgc:000211 ;
+    kgc:linkedIn "https://www.linkedin.com/in/radu-marian-6a9a943/" .
+
+kgc:000211 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000006,
+        kgc:000013,
+        kgc:000015,
+        kgc:000215,
+        kgc:000218 ;
+    schema:memberOf kgc:000012,
+        kgc:000159 ;
+    schema:name "Bank of America" ;
+    schema:sameAs wd:Q487907 ;
+    kgc:hasBusinessType kgc:000005,
+        kgc:000013,
+        kgc:000015 ;
+    kgc:hasIndustry kgc:000006,
+        kgc:000215,
+        kgc:000218 .
+
+kgc:000213 a kgc:County ;
+    schema:geoWithin kgc:000214 ;
+    schema:name "Mecklenburg County" ;
+    schema:sameAs wd:Q507770 .
+
+kgc:000214 a schema:State ;
+    schema:geoWithin kgc:000010 ;
+    schema:name "North Carolina" ;
+    schema:sameAs wd:Q1454 .
+
+kgc:000217 a schema:Country ;
+    schema:name "Kingdom of England" ;
+    schema:sameAs wd:Q179876 .
+
+kgc:000220 a schema:Person ;
+    schema:description "Silviu Cucerzan is a Sr. Principal researcher in Microsoft Research, which he joined in 2003, after completing his PhD studies at the Johns Hopkins University. His research has focused on topics at the intersection of NLP and IR with concrete applications to industry, including entity recognition and linking, multilingual spelling correction, question answering, query suggestion and ad selection, vertical search, fact extraction, fact verification, and vandalism detection. His collaborations with product groups have resulted in numerous technology transfers to Microsoft products. During 2016 to 2019, he led the NLP group in the Bing Knowledge Graph group, where he was responsible for developing and shipping new technologies for fact extraction from news, Web tables, and text, as well as vandalism detection in Web knowledge collections. After winning the Microsoft Hackathon with a project that was bringing knowledge from the Bing graph to Office applications, he led the team that developed the back-end for the new Data Types feature in Excel, which intelligently enhances spreadsheets with rich content from Bingâ€™s knowledge graph" ;
+    schema:name "Silviu Cucerzan" ;
+    schema:worksFor kgc:000221 ;
+    kgc:linkedIn "https://www.linkedin.com/in/silviu-cucerzan-245a213/" .
+
+kgc:000221 a schema:Organization ;
+    schema:additionalType kgc:000206,
+        kgc:000222 ;
+    schema:name "Microsoft Research" ;
+    schema:sameAs wd:Q1144725 ;
+    kgc:hasBusinessType kgc:000206,
+        kgc:000222 .
+
+kgc:000224 a schema:Person ;
+    schema:description "Yanko Ivanov is a Senior Solution Architect at Enterprise Knowledge, LLC. He is an expert in strategy, design, and implementation of knowledge and information management systems. Mr. Ivanov is focusing on system design and integration leveraging ontology and knowledge graph techniques.  " ;
+    schema:jobTitle "Senior Solution Architect" ;
+    schema:name "Yanko Ivanov" ;
+    schema:worksFor kgc:000225 ;
+    kgc:linkedIn "https://www.linkedin.com/in/yankoivanov/" .
+
+kgc:000225 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000171 ;
+    schema:knowsAbout kgc:000026,
+        kgc:000133,
+        kgc:000226,
+        kgc:000227,
+        kgc:000228 ;
+    schema:name "Enterprise Knowledge LLC" ;
+    schema:sameAs wd:Q91151007 ;
+    kgc:hasBusinessType kgc:000005 ;
+    kgc:hasFieldOfWork kgc:000026,
+        kgc:000133,
+        kgc:000226,
+        kgc:000227,
+        kgc:000228 ;
+    kgc:hasIndustry kgc:000171 .
+
+kgc:000229 a schema:Person ;
+    schema:description "Dr. Ying Ding is Bill & Lewis Suit Professor at School of Information, University of Texas at Austin. Before that, she was a professor and director of graduate studies for data science program at School of Informatics, Computing, and Engineering at Indiana University. She has led the effort to develop the online data science graduate program for Indiana University. She also worked as a senior researcher at Department of Computer Science, University of Innsburck (Austria) and Free University of Amsterdam (the Netherlands). She has been involved in various NIH, NSF and European-Union funded projects. She has published 240+ papers in journals, conferences, and workshops, and served as the program committee member for 200+ international conferences. She is the co-editor of book series called Semantic Web Synthesis by Morgan & Claypool publisher, the co-editor-in-chief for Data Intelligence published by MIT Press and Chinese Academy of Sciences, and serves as the editorial board member for several top journals in Information Science and Semantic Web. She is the co-founder of Data2Discovery company advancing cutting edge AI technologies in drug discovery and healthcare. Her current research interests include data-driven science of science, AI in healthcare, Semantic Web, knowledge graph, data science, scholarly communication, and the application of Web technologies." ;
+    schema:name "Ying Ding" ;
+    schema:worksFor kgc:000230 ;
+    kgc:linkedIn "https://www.linkedin.com/in/ying-ding-6a63bb/" .
+
+kgc:000230 a schema:Organization ;
+    schema:additionalType kgc:000232,
+        kgc:000233,
+        kgc:000234 ;
+    schema:memberOf kgc:000047,
+        kgc:000049,
+        kgc:000053,
+        kgc:000055,
+        kgc:000056,
+        kgc:000231,
+        kgc:000235 ;
+    schema:name "University of Texas at Austin" ;
+    schema:sameAs wd:Q49213 ;
+    kgc:hasBusinessType kgc:000232,
+        kgc:000233,
+        kgc:000234 .
+
+kgc:000231 a schema:Consortium ;
+    schema:name "Innovative Multicultural Curricula for the Young European and US Engineers and Scientists" ;
+    schema:sameAs wd:Q3151430 .
+
+kgc:000235 a schema:Consortium ;
+    schema:name "Association of Research Libraries" ;
+    schema:sameAs wd:Q4810036 .
+
+kgc:000239 a kgc:Tag ;
+    schema:name "European General Data Protection Regulation" ;
+    schema:sameAs wd:Q1172506 ;
+    kgc:facetOf kgc:000238,
+        kgc:000240,
+        kgc:000241 .
+
+kgc:000242 a kgc:Tag ;
+    schema:name "California Consumer Privacy Act" ;
+    schema:sameAs wd:Q60754243 ;
+    kgc:facetOf kgc:000240,
+        kgc:000241 .
+
+kgc:000247 a kgc:Tag ;
+    schema:name "metadata management" ;
+    schema:sameAs wd:Q6822246 .
+
+kgc:000249 a kgc:Tag ;
+    schema:name "cyber security" ;
+    schema:sameAs wd:Q17233037 .
+
+kgc:000250 a kgc:Tag ;
+    schema:name "anti-money laundering" ;
+    schema:sameAs wd:Q2007303 .
+
+kgc:000251 a kgc:Tag ;
+    schema:name "Regulatory compliance" ;
+    schema:sameAs wd:Q626741 .
+
+kgc:000256 a kgc:Tag ;
+    schema:name "data extraction" ;
+    schema:sameAs wd:Q5227287 .
+
+kgc:000259 a kgc:Tag ;
+    schema:name "Stock management" ;
+    schema:sameAs wd:Q10289327 ;
+    kgc:facetOf kgc:000260 .
+
+kgc:000261 a kgc:Tag ;
+    schema:name "Predictive analytics" ;
+    schema:sameAs wd:Q1053367 .
+
+kgc:000263 a kgc:Tag ;
+    schema:name "library" ;
+    schema:sameAs wd:Q7075 .
+
+kgc:000264 a kgc:Tag ;
+    schema:name "library science" ;
+    schema:sameAs wd:Q199655 .
+
+kgc:000265 a kgc:Tag ;
+    schema:name "Wikidata" ;
+    schema:sameAs wd:Q2013 .
+
+kgc:000266 a kgc:Tag ;
+    schema:name "DBpedia" ;
+    schema:sameAs wd:Q465 .
+
+kgc:000267 a kgc:Tag ;
+    schema:name "Library of Congress Subject Headings" ;
+    schema:sameAs wd:Q1823134 .
+
+kgc:000268 a kgc:Tag ;
+    schema:name "Library of Congress Authorities" ;
+    schema:sameAs wd:Q13219454 .
+
+kgc:000269 a kgc:Tag ;
+    schema:name "authority control" ;
+    schema:sameAs wd:Q36524 .
+
+kgc:000270 a kgc:Tag ;
+    schema:name "controlled vocabulary" ;
+    schema:sameAs wd:Q1469824 .
+
+kgc:000273 a kgc:Tag ;
+    schema:name "virtual assistant" ;
+    schema:sameAs wd:Q3467906 .
+
+kgc:000274 a kgc:Tag ;
+    schema:name "decision support system" ;
+    schema:sameAs wd:Q330268 .
+
+kgc:000276 a kgc:Tag ;
+    schema:name "semantic network" ;
+    schema:sameAs wd:Q1045785 .
+
+kgc:000278 a kgc:Tag ;
+    schema:name "master data management" ;
+    schema:sameAs wd:Q190349 .
+
+kgc:000279 a kgc:Tag ;
+    schema:name "EKG" .
+
+kgc:000280 a kgc:Tag ;
+    schema:name "data modeling" ;
+    schema:sameAs wd:Q367664 .
+
+kgc:000283 a kgc:Tag ;
+    schema:name "fake news" ;
+    schema:sameAs wd:Q28549308 .
+
+kgc:000285 a kgc:Tag ;
+    schema:name "Simple Knowledge Organization System" ;
+    schema:sameAs wd:Q2288360 .
+
+kgc:000287 a kgc:Tag ;
+    schema:name "deep learning" ;
+    schema:sameAs wd:Q197536 .
+
+kgc:000291 a kgc:Tag ;
+    schema:name "social science" ;
+    schema:sameAs wd:Q34749 .
+
+kgc:000292 a kgc:Tag ;
+    schema:name "VIP" .
+
+kgc:000293 a kgc:Tag ;
+    schema:name "metadata" ;
+    schema:sameAs wd:Q180160 .
+
+kgc:000296 a kgc:Tag ;
+    schema:name "scholarly communication" ;
+    schema:sameAs wd:Q7432048 .
+
+kgc:000298 a schema:Person ;
+    schema:name "Rafael Gonçalves" .
+
+kgc:000303 a kgc:Tag ;
+    schema:name "Data economy" ;
+    schema:sameAs wd:Q59385693 .
+
+kgc:000305 a kgc:Tag ;
+    schema:name "data visualization" ;
+    schema:sameAs wd:Q6504956 .
+
+kgc:000306 a kgc:Tag ;
+    schema:name "engineering" ;
+    schema:sameAs wd:Q11023 .
+
+kgc:000307 a kgc:Tag ;
+    schema:name "life sciences" ;
+    schema:sameAs wd:Q864928 .
+
+kgc:000308 a kgc:Tag ;
+    schema:name "intelligence assessment" ;
+    schema:sameAs wd:Q4488757 .
+
+kgc:000310 a kgc:Tag ;
+    schema:name "FAIR data" ;
+    schema:sameAs wd:Q29032648 .
+
+kgc:000311 a kgc:Tag ;
+    schema:name "translational medicine" ;
+    schema:sameAs wd:Q17112037 .
+
+kgc:000313 a kgc:Tag ;
+    schema:name "deep linking" ;
+    schema:sameAs wd:Q258394 .
+
+kgc:000314 a kgc:Tag ;
+    schema:name "binary classification" ;
+    schema:sameAs wd:Q17005494 .
+
+kgc:000316 a kgc:Tag ;
+    schema:name "GraphQL" ;
+    schema:sameAs wd:Q25104949 .
+
+kgc:000317 a kgc:Tag ;
+    schema:name "SPARQL" ;
+    schema:sameAs wd:Q54871 .
+
+kgc:000318 a kgc:Tag ;
+    schema:name "MongoDB" ;
+    schema:sameAs wd:Q1165204 .
+
+kgc:000319 a kgc:Tag ;
+    schema:name "Elasticsearch" ;
+    schema:sameAs wd:Q3050461 .
+
+kgc:000321 a kgc:Tag ;
+    schema:name "customer relationship management" ;
+    schema:sameAs wd:Q485643 .
+
+kgc:000322 a kgc:Tag ;
+    schema:name "graph algorithm" ;
+    schema:sameAs wd:Q30503704 .
+
+kgc:000324 a kgc:Tag ;
+    schema:name "law" ;
+    schema:sameAs wd:Q7748 .
+
+kgc:000325 a kgc:Tag ;
+    schema:name "law firm" ;
+    schema:sameAs wd:Q613142 .
+
+kgc:000327 a kgc:Tag ;
+    schema:name "Financial Industry Business Ontology,Stock Index" .
+
+kgc:000328 a kgc:Tag ;
+    schema:name "derivative" ;
+    schema:sameAs wd:Q66295 .
+
+kgc:000329 a kgc:Tag ;
+    schema:name "Global Legal Entity Identifier Foundation" ;
+    schema:sameAs wd:Q90175664 .
+
+kgc:000330 a kgc:Tag ;
+    schema:name "OpenCorporates" ;
+    schema:sameAs wd:Q7095760 .
+
+kgc:000331 a kgc:Tag ;
+    schema:name "security" ;
+    schema:sameAs wd:Q169489 .
+
+kgc:000333 a kgc:Tag ;
+    schema:name "fraud prevention" ;
+    schema:sameAs wd:Q1451528 .
+
+kgc:000335 a kgc:Tag ;
+    schema:name "petroleum industry" ;
+    schema:sameAs wd:Q862571 .
+
+kgc:000336 a kgc:Tag ;
+    schema:name "issue tracking system" ;
+    schema:sameAs wd:Q1480561 .
+
+kgc:000338 a kgc:Tag ;
+    schema:name "Academic" .
+
+kgc:000340 a kgc:Tag ;
+    schema:name "Cyber security" .
+
+kgc:000343 a kgc:Tag ;
+    schema:name "data governance" ;
+    schema:sameAs wd:Q872685 .
+
+kgc:000345 a kgc:Tag ;
+    schema:name "drug discovery" ;
+    schema:sameAs wd:Q1418791 .
+
+kgc:Conference a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:000003 a schema:Organization ;
+    schema:additionalType kgc:000005,
+        kgc:000006,
+        kgc:000013,
+        kgc:000015 ;
+    schema:memberOf kgc:000004,
+        kgc:000012 ;
+    schema:name "Capital One" ;
+    schema:sameAs wd:Q1034654 ;
+    kgc:hasAddress kgc:000007,
+        kgc:000014 ;
+    kgc:hasBusinessType kgc:000005,
+        kgc:000013,
+        kgc:000015 ;
+    kgc:hasIndustry kgc:000006 .
+
+kgc:000009 a schema:State ;
+    schema:geoWithin kgc:000010 ;
+    schema:name "Virginia" ;
+    schema:sameAs wd:Q1370 .
+
+kgc:000019 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000019" ;
+    schema:sameAs wd:Q78443472 .
+
+kgc:000035 a kgc:BusinessIndustry ;
+    schema:name "media industry" ;
+    schema:sameAs wd:Q56611639 .
+
+kgc:000048 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000048" ;
+    schema:sameAs wd:Q615150 .
+
+kgc:000050 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000050" ;
+    schema:sameAs wd:Q7638697 .
+
+kgc:000051 a schema:Consortium ;
+    schema:name "IIIF Consortium" ;
+    schema:sameAs wd:Q35677307 .
+
+kgc:000053 a schema:Consortium ;
+    schema:name "Scholarly Publishing and Academic Resources Coalition" ;
+    schema:sameAs wd:Q647039 .
+
+kgc:000061 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000061" ;
+    schema:sameAs wd:Q3539533 .
+
+kgc:000066 a kgc:County ;
+    schema:geoWithin kgc:000067 ;
+    schema:name "San Mateo County" ;
+    schema:sameAs wd:Q108101 .
+
+kgc:000077 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000077" ;
+    schema:sameAs wd:Q3551775 .
+
+kgc:000088 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000088" ;
+    schema:sameAs wd:Q1210425 .
+
+kgc:000089 a kgc:BusinessIndustry ;
+    schema:name "cloud computing" ;
+    schema:sameAs wd:Q483639 .
+
+kgc:000091 a kgc:County ;
+    schema:geoWithin kgc:000092 ;
+    schema:name "King County" ;
+    schema:sameAs wd:Q108861 .
+
+kgc:000095 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000095" ;
+    schema:sameAs wd:Q241317 .
+
+kgc:000096 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000096" ;
+    schema:sameAs wd:Q165194 .
+
+kgc:000105 a kgc:County ;
+    schema:geoWithin kgc:000067 ;
+    schema:name "Santa Clara County" ;
+    schema:sameAs wd:Q110739 .
+
+kgc:000113 a schema:Country ;
+    schema:name "Belgium" ;
+    schema:sameAs wd:Q31 .
+
+kgc:000114 a schema:CollegeOrUniversity ;
+    schema:additionalType kgc:000106,
+        kgc:000116 ;
+    schema:memberOf kgc:000047,
+        kgc:000080,
+        kgc:000115,
+        kgc:000122,
+        kgc:000125 ;
+    schema:name "Ghent University" ;
+    schema:sameAs wd:Q1137665 ;
+    kgc:hasBusinessType kgc:000106,
+        kgc:000116 .
+
+kgc:000120 a kgc:FieldOfWork ;
+    schema:name "decentralization on the internet" ;
+    schema:sameAs wd:Q10911465 .
+
+kgc:000121 a kgc:FieldOfWork ;
+    schema:name "computer science" ;
+    schema:sameAs wd:Q21198 .
+
+kgc:000123 a kgc:FieldOfWork ;
+    schema:name "World Wide Web" ;
+    schema:sameAs wd:Q466 .
+
+kgc:000124 a kgc:FieldOfWork ;
+    schema:name "Linked Data Fragments" ;
+    schema:sameAs wd:Q31202219 .
+
+kgc:000132 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000132" ;
+    schema:sameAs wd:Q15829892 .
+
+kgc:000143 a kgc:BusinessIndustry ;
+    schema:name "Internet" ;
+    schema:sameAs wd:Q75 .
+
+kgc:000144 a kgc:BusinessIndustry ;
+    schema:name "communication medium" ;
+    schema:sameAs wd:Q340169 .
+
+kgc:000147 a kgc:BusinessIndustry ;
+    schema:name "technology" ;
+    schema:sameAs wd:Q11016 .
+
+kgc:000150 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000150" ;
+    schema:sameAs wd:Q783794 .
+
+kgc:000157 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000157" ;
+    schema:sameAs wd:Q161726 .
+
+kgc:000159 a schema:Consortium ;
+    schema:name "FIDO Alliance" ;
+    schema:sameAs wd:Q15731702 .
+
+kgc:000160 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000160" ;
+    schema:sameAs wd:Q319845 .
+
+kgc:000161 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000161" ;
+    schema:sameAs wd:Q873442 .
+
+kgc:000168 a kgc:FieldOfWork ;
+    schema:name "" ;
+    schema:sameAs wd: .
+
+kgc:000172 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000172" ;
+    schema:sameAs wd:Q149789 .
+
+kgc:000173 a kgc:FieldOfWork ;
+    schema:name "" ;
+    schema:sameAs wd: .
+
+kgc:000177 a kgc:BusinessIndustry ;
+    schema:name "information technology consulting" ;
+    schema:sameAs wd:Q1540863 .
+
+kgc:000181 a kgc:BusinessIndustry ;
+    schema:name "software development" ;
+    schema:sameAs wd:Q638608 .
+
+kgc:000187 a kgc:BusinessIndustry ;
+    schema:name "management consulting industry" ;
+    schema:sameAs wd:Q23699878 .
+
+kgc:000193 a kgc:BusinessIndustry ;
+    schema:name "outsourcing" ;
+    schema:sameAs wd:Q61515 .
+
+kgc:000196 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000196" ;
+    schema:sameAs wd:Q2089936 .
+
+kgc:000197 a kgc:BusinessIndustry ;
+    schema:name "information technology" ;
+    schema:sameAs wd:Q11661 .
+
+kgc:000204 a kgc:FieldOfWork ;
+    schema:name "Web science" ;
+    schema:sameAs wd:Q579439 .
+
+kgc:000207 a kgc:FieldOfWork ;
+    schema:name "altmetrics" ;
+    schema:sameAs wd:Q14565201 .
+
+kgc:000208 a kgc:FieldOfWork ;
+    schema:name "data lineage" ;
+    schema:sameAs wd:Q1172162 .
+
+kgc:000209 a kgc:FieldOfWork ;
+    schema:name "data integration" ;
+    schema:sameAs wd:Q386824 .
+
+kgc:000215 a kgc:BusinessIndustry ;
+    schema:name "bank" ;
+    schema:sameAs wd:Q22687 .
+
+kgc:000218 a kgc:BusinessIndustry ;
+    schema:name "International Standard Industrial Classification" ;
+    schema:sameAs wd:Q1666934 .
+
+kgc:000222 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000222" ;
+    schema:sameAs wd:Q334453 .
+
+kgc:000227 a kgc:FieldOfWork ;
+    schema:name "" ;
+    schema:sameAs wd: .
+
+kgc:000228 a kgc:FieldOfWork ;
+    schema:name "" ;
+    schema:sameAs wd: .
+
+kgc:000232 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000232" ;
+    schema:sameAs wd:Q62078547 .
+
+kgc:000233 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000233" ;
+    schema:sameAs wd:Q20971972 .
+
+kgc:000234 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000234" ;
+    schema:sameAs wd:Q23002039 .
+
+kgc:000240 a kgc:Tag ;
+    schema:name "information privacy" ;
+    schema:sameAs wd:Q456632 .
+
+kgc:000241 a kgc:Tag ;
+    schema:name "personal data" ;
+    schema:sameAs wd:Q3702971 .
+
+kgc:000246 a kgc:Tag ;
+    schema:name "data catalog" ;
+    schema:sameAs wd:Q29937289 ;
+    kgc:facetOf kgc:000247 .
+
+kgc:000253 a kgc:Tag ;
+    schema:name "reasoning" ;
+    schema:sameAs wd:Q1156402 .
+
+kgc:000260 a kgc:Tag ;
+    schema:name "supply-chain management" ;
+    schema:sameAs wd:Q492886 .
+
+kgc:000271 a kgc:Tag ;
+    schema:name "open data" ;
+    schema:sameAs wd:Q309901 .
+
+kgc:000282 a kgc:Tag ;
+    schema:name "fact checking" ;
+    schema:sameAs wd:Q59555084 .
+
+kgc:000289 a kgc:Tag ;
+    schema:name "graph property" ;
+    schema:sameAs wd:Q722659 .
+
+kgc:000295 a kgc:Tag ;
+    schema:name "public data" ;
+    schema:sameAs wd:Q42649975 .
+
+schema:Place a owl:Class .
+
+kgc:000049 a schema:Consortium ;
+    schema:name "Digital Library Federation" ;
+    schema:sameAs wd:Q5275906 .
+
+kgc:000055 a schema:Consortium ;
+    schema:name "Center for Research Libraries" ;
+    schema:sameAs wd:Q5059850 .
+
+kgc:000067 a schema:State ;
+    schema:geoWithin kgc:000010 ;
+    schema:name "California" ;
+    schema:sameAs wd:Q99 .
+
+kgc:000080 a schema:Consortium ;
+    schema:name "European University Association" ;
+    schema:sameAs wd:Q868940 .
+
+kgc:000111 a kgc:FieldOfWork ;
+    schema:name "" ;
+    schema:sameAs wd: .
+
+kgc:000238 a kgc:Tag ;
+    schema:name "privacy" ;
+    schema:sameAs wd:Q188728 .
+
+kgc:000294 a kgc:Tag ;
+    schema:name "government" ;
+    schema:sameAs wd:Q7188 .
+
+kgc:000299 a kgc:Tag ;
+    schema:name "Web Ontology Language" ;
+    schema:sameAs wd:Q826165 .
+
+kgc:000301 a kgc:Tag ;
+    schema:name "entity linking" ;
+    schema:sameAs wd:Q17012245 .
+
+schema:CreativeWork a owl:Class .
+
+kgc:000025 a kgc:FieldOfWork ;
+    schema:name "" ;
+    schema:sameAs wd: .
+
+kgc:000043 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000043" ;
+    schema:sameAs wd:Q902104 .
+
+kgc:000047 a schema:Consortium ;
+    schema:name "ORCID, Inc." ;
+    schema:sameAs wd:Q19861084 .
+
+kgc:000052 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000052" ;
+    schema:sameAs wd:Q15936437 .
+
+kgc:000054 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000054" ;
+    schema:sameAs wd:Q23002054 .
+
+kgc:000056 a schema:Consortium ;
+    schema:name "Coalition for Networked Information" ;
+    schema:sameAs wd:Q5137944 .
+
+kgc:000093 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000093" ;
+    schema:sameAs wd:Q21980538 .
+
+kgc:000094 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000094" ;
+    schema:sameAs wd:Q658255 .
+
+kgc:000106 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000106" ;
+    schema:sameAs wd:Q45400320 .
+
+kgc:000116 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000116" ;
+    schema:sameAs wd:Q3918 .
+
+kgc:000176 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000176" ;
+    schema:sameAs wd:Q891723 .
+
+kgc:000206 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000206" ;
+    schema:sameAs wd:Q31855 .
+
+kgc:000226 a kgc:FieldOfWork ;
+    schema:name "" ;
+    schema:sameAs wd: .
+
+kgc:000255 a kgc:Tag ;
+    schema:name "natural language processing" ;
+    schema:sameAs wd:Q30642 .
+
+kgc:000288 a kgc:Tag ;
+    schema:name "Resource Description Framework" ;
+    schema:sameAs wd:Q54872 .
+
+schema:Intangible a owl:Class .
+
+kgc:000136 a kgc:BusinessIndustry ;
+    schema:name "pharmaceutical industry" ;
+    schema:sameAs wd:Q507443 .
+
+kgc:000237 a kgc:Tag ;
+    schema:name "finance" ;
+    schema:sameAs wd:Q43015 .
+
+kgc:000244 a kgc:Tag ;
+    schema:name "recommender system" ;
+    schema:sameAs wd:Q554950 .
+
+kgc:000252 a kgc:Tag ;
+    schema:name "machine learning" ;
+    schema:sameAs wd:Q2539 .
+
+kgc:000257 a kgc:Tag ;
+    schema:name "information extraction" ;
+    schema:sameAs wd:Q1662562 .
+
+kgc:000034 a kgc:BusinessIndustry ;
+    schema:name "news" ;
+    schema:sameAs wd:Q38926 .
+
+kgc:000133 a kgc:FieldOfWork ;
+    schema:name "" ;
+    schema:sameAs wd: .
+
+kgc:000171 a kgc:BusinessIndustry ;
+    schema:name "professional services industry" ;
+    schema:sameAs wd:Q23700345 .
+
+kgc:000243 a kgc:Tag ;
+    schema:name "ontology" ;
+    schema:sameAs wd:Q324254 .
+
+kgc:Address a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+schema:AdministrativeArea a owl:Class ;
+    rdfs:subClassOf schema:Place .
+
+kgc:000004 a schema:Consortium ;
+    schema:name "Linux Foundation" ;
+    schema:sameAs wd:Q858851 .
+
+kgc:000012 a schema:Consortium ;
+    schema:name "World Wide Web Consortium" ;
+    schema:sameAs wd:Q37033 .
+
+kgc:000006 a kgc:BusinessIndustry ;
+    schema:name "financial services" ;
+    schema:sameAs wd:Q837171 .
+
+kgc:000015 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000015" ;
+    schema:sameAs wd:Q730038 .
+
+kgc:000038 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000038" ;
+    schema:sameAs wd:Q595971 .
+
+kgc:000010 a schema:Country ;
+    schema:name "United States of America" ;
+    schema:sameAs wd:Q30 .
+
+schema:CollegeOrUniversity a owl:Class ;
+    rdfs:subClassOf schema:EducationalOrganization .
+
+schema:Event a owl:Class .
+
+kgc:000013 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000013" ;
+    schema:sameAs wd:Q6881511 .
+
+kgc:000021 a kgc:FieldOfWork ;
+    schema:name "" ;
+    schema:sameAs wd: .
+
+kgc:000020 a kgc:BusinessIndustry ;
+    schema:name "software industry" ;
+    schema:sameAs wd:Q880371 .
+
+kgc:000029 a kgc:FieldOfWork ;
+    schema:name "" ;
+    schema:sameAs wd: .
+
+schema:State a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+kgc:County a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+schema:Country a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+schema:City a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+kgc:BusinessIndustry a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+kgc:FieldOfWork a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+kgc:000005 a kgc:BusinessType ;
+    schema:name "http://www.knowledgegraph.tech/000005" ;
+    schema:sameAs wd:Q4830453 .
+
+schema:Consortium a owl:Class ;
+    rdfs:subClassOf schema:Organization .
+
+kgc:Talk a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:conference-2020 a schema:EventSeries,
+        kgc:Conference ;
+    schema:eventAttendanceMode schema:OnlineEventAttendanceMode ;
+    schema:name "Knowledge Graph Conference 2020" ;
+    schema:sameAs wd:Q76451254 .
+
+kgc:BusinessType a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:Organization a owl:Class .
+
+schema:Person a owl:Class .
+
+kgc:000026 a kgc:FieldOfWork ;
+    schema:name "" ;
+    schema:sameAs wd: .
+
+kgc:Tag a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+

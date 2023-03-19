@@ -27,8 +27,6 @@ schema:abstract a owl:DatatypeProperty .
 
 schema:additionalType a owl:DatatypeProperty .
 
-schema:address a owl:DatatypeProperty .
-
 schema:alumniOf a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain schema:Person ;
@@ -118,6 +116,9 @@ kgc:Workshop a owl:Class ;
 
 kgc:facetOf a owl:ObjectProperty .
 
+kgc:hasAddress a owl:ObjectProperty ;
+    rdfs:range kgc:Address .
+
 kgc:hasBusinessType a owl:ObjectProperty ;
     rdfs:domain schema:Organization ;
     rdfs:range kgc:BusinessType .
@@ -165,6 +166,9 @@ schema:MediaObject a owl:Class ;
 
 schema:VideoObject a owl:Class ;
     rdfs:subClassOf schema:MediaObject .
+
+kgc:Address a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
 
 kgc:BusinessIndustry a owl:Class ;
     rdfs:subClassOf schema:Intangible .
