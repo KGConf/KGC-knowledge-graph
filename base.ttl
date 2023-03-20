@@ -6,9 +6,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-schema:City a owl:Class ;
-    rdfs:subClassOf schema:AdministrativeArea .
-
 schema:Consortium a owl:Class ;
     rdfs:subClassOf schema:Organization .
 
@@ -18,14 +15,18 @@ schema:EventSeries a owl:Class ;
 schema:PresentationDigitalDocument a owl:Class ;
     rdfs:subClassOf schema:DigitalDocument .
 
-schema:State a owl:Class ;
-    rdfs:subClassOf schema:AdministrativeArea .
-
 schema:about a owl:ObjectProperty .
 
 schema:abstract a owl:DatatypeProperty .
 
-schema:additionalType a owl:DatatypeProperty .
+schema:additionalType a owl:ObjectProperty .
+
+schema:address a owl:ObjectProperty ;
+    rdfs:range schema:PostalAddress .
+
+schema:addressCountry a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range schema:Country .
 
 schema:alumniOf a owl:FunctionalProperty,
         owl:ObjectProperty ;
@@ -75,6 +76,8 @@ schema:performer a owl:ObjectProperty ;
     rdfs:domain schema:Event ;
     rdfs:range schema:Person .
 
+schema:postalCode a owl:DatatypeProperty .
+
 schema:sameAs a owl:DatatypeProperty ;
     rdfs:range xsd:anyURI .
 
@@ -86,7 +89,7 @@ schema:workPerformed a owl:ObjectProperty ;
     rdfs:domain schema:Event ;
     rdfs:range schema:CreativeWork .
 
-schema:worksfor a owl:ObjectProperty ;
+schema:worksFor a owl:ObjectProperty ;
     rdfs:domain schema:Person ;
     rdfs:range schema:Organization .
 
@@ -98,9 +101,6 @@ kgc: a owl:Ontology ;
 
 kgc:Conference a owl:Class ;
     rdfs:subClassOf schema:Event .
-
-kgc:County a owl:Class ;
-    rdfs:subClassOf schema:AdministrativeArea .
 
 kgc:Tag a owl:Class ;
     rdfs:subClassOf schema:Intangible .
@@ -114,10 +114,19 @@ kgc:Tutorial a owl:Class ;
 kgc:Workshop a owl:Class ;
     rdfs:subClassOf schema:Event .
 
-kgc:facetOf a owl:ObjectProperty .
+kgc:addressCity a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range schema:City .
 
-kgc:hasAddress a owl:ObjectProperty ;
-    rdfs:range kgc:Address .
+kgc:addressCounty a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range kgc:County .
+
+kgc:addressRegion a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range schema:State .
+
+kgc:facetOf a owl:ObjectProperty .
 
 kgc:hasBusinessType a owl:ObjectProperty ;
     rdfs:domain schema:Organization ;
@@ -132,11 +141,18 @@ kgc:hasIndustry a owl:ObjectProperty ;
 
 kgc:linkedIn a owl:DatatypeProperty .
 
+kgc:streetAddress a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range kgc:Address .
+
 skos:Concept a owl:Class .
 
 skos:broader a owl:ObjectProperty .
 
 skos:narrower a owl:ObjectProperty .
+
+schema:City a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
 
 schema:CivicStructure a owl:Class ;
     rdfs:subClassOf schema:Place .
@@ -144,8 +160,8 @@ schema:CivicStructure a owl:Class ;
 schema:CollegeOrUniversity a owl:Class ;
     rdfs:subClassOf schema:EducationalOrganization .
 
-schema:Country a owl:Class ;
-    rdfs:subClassOf schema:AdministrativeArea .
+schema:ContactPoint a owl:Class ;
+    rdfs:subClassOf schema:StructuredValue .
 
 schema:DigitalDocument a owl:Class ;
     rdfs:subClassOf schema:CreativeWork .
@@ -164,6 +180,12 @@ schema:EventAttendanceModeEnumeration a owl:Class ;
 schema:MediaObject a owl:Class ;
     rdfs:subClassOf schema:CreativeWork .
 
+schema:State a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+schema:StructuredValue a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
 schema:VideoObject a owl:Class ;
     rdfs:subClassOf schema:MediaObject .
 
@@ -176,8 +198,14 @@ kgc:BusinessIndustry a owl:Class ;
 kgc:BusinessType a owl:Class ;
     rdfs:subClassOf schema:Intangible .
 
+kgc:County a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
 kgc:FieldOfWork a owl:Class ;
     rdfs:subClassOf schema:Intangible .
+
+schema:Country a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
 
 schema:Place a owl:Class .
 
@@ -186,6 +214,9 @@ schema:CreativeWork a owl:Class .
 schema:Person a owl:Class .
 
 schema:Intangible a owl:Class .
+
+schema:PostalAddress a owl:Class ;
+    rdfs:subClassOf schema:ContactPoint .
 
 schema:AdministrativeArea a owl:Class ;
     rdfs:subClassOf schema:Place .
