@@ -1,0 +1,1570 @@
+@prefix kgc: <http://www.knowledgegraph.tech/> .
+@prefix kgcr: <http://www.knowledgegraph.tech/iri/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/wiki/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schema:Consortium a owl:Class ;
+    rdfs:subClassOf schema:Organization .
+
+schema:PresentationDigitalDocument a owl:Class ;
+    rdfs:subClassOf schema:DigitalDocument .
+
+schema:WebSite a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:about a owl:ObjectProperty .
+
+schema:abstract a owl:DatatypeProperty .
+
+schema:additionalType a owl:ObjectProperty .
+
+schema:address a owl:ObjectProperty ;
+    rdfs:range schema:PostalAddress .
+
+schema:addressCountry a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range schema:Country .
+
+schema:alumniOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:CollegeOrUniversity .
+
+schema:archivedAt a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:description a owl:DatatypeProperty .
+
+schema:embedUrl a owl:DatatypeProperty ;
+    rdfs:domain schema:VideoObject .
+
+schema:eventAttendanceMode a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:EventAttendanceModeEnumeration .
+
+schema:geoWithin a owl:ObjectProperty ;
+    rdfs:domain schema:Place ;
+    rdfs:range schema:AdministrativeArea .
+
+schema:industry a owl:ObjectProperty .
+
+schema:jobTitle a owl:DatatypeProperty .
+
+schema:keywords a owl:DatatypeProperty .
+
+schema:knowsAbout a owl:ObjectProperty .
+
+schema:linkedIn rdfs:range xsd:anyURI .
+
+schema:location a owl:ObjectProperty ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:AdministrativeArea .
+
+schema:memberOf a owl:ObjectProperty ;
+    rdfs:range schema:Organization .
+
+schema:name a owl:DatatypeProperty .
+
+schema:nationality a owl:ObjectProperty ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Country .
+
+schema:performer a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:Person .
+
+schema:postalCode a owl:DatatypeProperty .
+
+schema:sameAs a owl:ObjectProperty .
+
+schema:superEvent a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:Event .
+
+schema:workPerformed a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:CreativeWork .
+
+schema:worksFor a owl:ObjectProperty ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Organization .
+
+kgc: a owl:Ontology ;
+    rdfs:label "Knowledge Graph Conference Ontology" ;
+    rdfs:comment "Designed By Bita Banihashemi",
+        "Email: firstName DOT lastName AT gmail DOT com" ;
+    owl:versionInfo "1.0" .
+
+kgc:LinkedInProfile a owl:Class ;
+    rdfs:subClassOf schema:ProfilePage .
+
+kgc:Tag a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+kgc:Talk a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:Tutorial a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:Workshop a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:addressCity a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range schema:City .
+
+kgc:addressCounty a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range kgc:County .
+
+kgc:addressRegion a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range schema:State .
+
+kgc:facetOf a owl:ObjectProperty .
+
+kgc:hasBusinessType a owl:ObjectProperty ;
+    rdfs:domain schema:Organization ;
+    rdfs:range kgc:BusinessType .
+
+kgc:hasFieldOfWork a owl:ObjectProperty ;
+    rdfs:range kgc:FieldOfWork .
+
+kgc:hasIndustry a owl:ObjectProperty ;
+    rdfs:domain schema:Organization ;
+    rdfs:range kgc:BusinessIndustry .
+
+kgcr:000379 kgc:addressCity kgcr:000381 ;
+    kgc:addressCounty kgcr:000382 ;
+    kgc:streetAddress kgcr:000380 .
+
+kgcr:000385 kgc:addressCounty kgcr:000382 .
+
+kgcr:000386 schema:geoWithin kgcr:000382 .
+
+kgcr:000388 kgc:addressCity kgcr:000390 ;
+    kgc:addressCounty kgcr:000227 ;
+    kgc:streetAddress kgcr:000389 .
+
+kgcr:000399 kgc:addressCity kgcr:000401 ;
+    kgc:addressCounty kgcr:000402 ;
+    kgc:streetAddress kgcr:000400 .
+
+kgcr:000418 kgc:addressCity kgcr:000097 ;
+    kgc:addressCounty kgcr:000098 ;
+    kgc:streetAddress kgcr:000251 .
+
+kgcr:000421 kgc:addressCity kgcr:000010 ;
+    kgc:streetAddress kgcr:000098 .
+
+kgcr:000431 kgc:addressCity kgcr:000433 ;
+    kgc:addressCounty kgcr:000434 ;
+    kgc:streetAddress kgcr:000432 .
+
+kgcr:000437 kgc:addressCity kgcr:000439 ;
+    kgc:streetAddress kgcr:000438 .
+
+kgcr:000442 kgc:streetAddress kgcr:000443 .
+
+kgcr:000450 kgc:addressCity kgcr:000451 ;
+    kgc:addressCounty kgcr:000452 ;
+    kgc:streetAddress kgcr:000451 .
+
+kgcr:000465 kgc:addressCity kgcr:000467 ;
+    kgc:addressCounty kgcr:000468 ;
+    kgc:streetAddress kgcr:000466 .
+
+kgcr:000469 kgc:addressCounty kgcr:000468 .
+
+kgcr:000470 schema:geoWithin kgcr:000468 .
+
+kgcr:000472 kgc:addressCity kgcr:000167 ;
+    kgc:addressCounty kgcr:000168 ;
+    kgc:streetAddress kgcr:000166 .
+
+kgcr:000481 kgc:addressCity kgcr:000401 ;
+    kgc:addressCounty kgcr:000402 ;
+    kgc:streetAddress kgcr:000400 .
+
+kgcr:000495 kgc:addressCity kgcr:000497 ;
+    kgc:addressCounty kgcr:000498 ;
+    kgc:streetAddress kgcr:000496 .
+
+kgcr:000504 kgc:addressCity kgcr:000506 ;
+    kgc:addressCounty kgcr:000507 ;
+    kgc:streetAddress kgcr:000505 .
+
+kgcr:000512 kgc:addressCity kgcr:000009 ;
+    kgc:addressCounty kgcr:000010 ;
+    kgc:streetAddress kgcr:000513 .
+
+kgcr:000517 kgc:addressCity kgcr:000069 ;
+    kgc:addressCounty kgcr:000070 ;
+    kgc:streetAddress kgcr:000518 .
+
+kgcr:000523 kgc:addressCity kgcr:000097 ;
+    kgc:addressCounty kgcr:000098 ;
+    kgc:streetAddress kgcr:000096 .
+
+kgcr:000533 kgc:addressCity kgcr:000535 ;
+    kgc:addressCounty kgcr:000010 ;
+    kgc:streetAddress kgcr:000534 .
+
+kgcr:000542 kgc:addressCity kgcr:000113 ;
+    kgc:addressCounty kgcr:000070 ;
+    kgc:streetAddress kgcr:000543 .
+
+kgcr:000549 kgc:addressCity kgcr:000551 ;
+    kgc:addressCounty kgcr:000552 ;
+    kgc:streetAddress kgcr:000550 .
+
+kgcr:000566 schema:worksFor kgcr:000567 .
+
+kgcr:000568 kgc:addressCity kgcr:000570 ;
+    kgc:addressCounty kgcr:000070 ;
+    kgc:streetAddress kgcr:000569 .
+
+kgcr:000653 kgc:addressCity kgcr:000142 ;
+    kgc:streetAddress kgcr:000654 .
+
+kgcr:000758 schema:about kgcr:000759 ;
+    schema:abstract "As part of this presentation, attendees will learn about the following: Content Enrichment: Development and deployment of a 5-stage taxonomy. Applying the taxonomy to tag regulations and classify them for improved discovery & work assignment. Smart Authoring: Leveraging advanced NLP and ML techniques to learn from the past content authoring for identification of key requirements and faster & complete authoring. Obligation Graph: Finally linking regulatory obligations to products, process, functional area, topics and raw citation text. This enables end-end audit trail and linkage of policies to regulatory requirements enabling financial institutions to meet their regulatory compliance" ;
+    schema:performer kgcr:000375 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000760,
+        kgcr:000761 .
+
+kgcr:000762 schema:about kgcr:000763 ;
+    schema:abstract "How can linked data architectures, knowledge graphs and personal data protection methods such as SOLID become easier to use so that everyday people can take advantage of them?",
+        "While taxonomies are easier to design and create than ontologies, too often they are created without any skill or training, and poorly designed taxonomies yield poor results. This tutorial will cover the basics and best practices in taxonomy design, including: types of controlled vocabularies, standards, sources for topical concepts, wording of labels, alternative labels, hierarchical and associative relationships, and governance. This tutorial also explains the approach of semantically enriching an existing taxonomy to become an ontology by adding a semantic layer of an ontology or custom scheme." ;
+    schema:performer kgcr:000387,
+        kgcr:000391,
+        kgcr:000500,
+        kgcr:000553,
+        kgcr:000555,
+        kgcr:000611 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000764,
+        kgcr:000765,
+        kgcr:000766,
+        kgcr:000854,
+        kgcr:000859,
+        kgcr:000883 .
+
+kgcr:000767 schema:abstract "Our understanding of how diet affects our health is limited to the role of 150 key nutritional components systematically tracked by the USDA and other national databases in all foods. Yet, these nutritional components represent only a tiny fraction of the over 26,000 distinct, definable biochemicals present in our food. While many of these biochemicals have documented effects on health, they remain unquantified in any systematic fashion across different individual foods. Their invisibility to experimental, clinical, and epidemiological studies defines them as the ‘Dark Matter of Nutrition.’ I will speak about our efforts to develop a high-resolution library of this nutritional dark matter, and the tole of network medicine and knowledge graphs in our journey to uncover the role of individual food molecules in our health, opening up novel avenues by which to understand, avoid, and control disease." ;
+    schema:performer kgcr:000394 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000768,
+        kgcr:000769 .
+
+kgcr:000770 schema:abstract "In the realm of data-driven businesses, structured data, being highly organized and easily understood by machines, is a valuable resource. IATE, with almost one million concepts storing multilingual terms and metadata, holds a large part of the textual knowledge of the EU. However, it can only be accessed lexically, and the database concepts stand-alone. If IATE were taxonomized, i.e. related concepts linked up into knowledge graphs yielding a full-fledged ontology, its data could not only be consumed by linguists but would also become accessible by the machine-readable SPARQL endpoint, which makes it a powerful resource for AI projects, particularly within SMEs that rarely have the means to create multilingual formalized knowledge. Coreon team elevated a sub-domain of IATE terminology into a multilingual knowledge graph. We taxonomized a flat list of 425 concepts within the COVID sub-domain, benchmarking two approaches to tackle this task: automatically through a custom-enhanced off-the-shelf language model and a manual creation of the knowledge graph by a linguist expert. The automatically created knowledge graph was later revised by a human, corrections and time effort measured and compared with performance metrics of the manual approach. In this talk, we will dwell on the performance and resource-saving advantages of our custom method and show how the achieved productivity rate can make the taxonomization of even large terminology databases economically viable. We demonstrate empirically the effectiveness of our collaborative-robot approach in a typical industry use case scenario: using the resulting IATE/Covid graph for initialization of a Convolutional Neural Network (CNN) in a multilingual document classification task, we get a classification granularity that is not reachable by state-of-the-art models, such as non-initialized CNNs and zero-shot classifiers." ;
+    schema:performer kgcr:000406 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000771,
+        kgcr:000772 .
+
+kgcr:000773 schema:about kgcr:000774 ;
+    schema:abstract "It is a difficult task for traditional pattern-based matching or machine learning approaches to identify entities and the relationships they share. These techniques rapidly overfit training datasets and struggle to transfer to other contexts or domains. One solution to the lack of transferability includes the utilization of outside knowledge, such as facts contained in a knowledge base or ontology. However, integrating unstructured data such as language models with highly structured data such as knowledge bases is a challenging research problem. Using concepts from distant supervision, word vectors, and knowledge graph embeddings, an elegant unsupervised learning approach will be presented for solving this knowledge integration problem. This talk illustrates the problem from two points-of-view: the natural language processing practitioner unaccustomed to semantics and knowledge bases, and the semantic web developer without a background in deep learning and language models." ;
+    schema:performer kgcr:000409 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000775,
+        kgcr:000776 .
+
+kgcr:000777 schema:about kgcr:000781,
+        kgcr:000950 ;
+    schema:abstract "Electronic health records (EHRs) have become a popular source of observational health data for learning insights that could inform the treatment of acute medical conditions. However, their utility for learning insights for informing preventive care and management of chronic conditions has remained limited. For this reason, the addition of social determinants of health (SDoH) [1] and “observations of daily living” (ODL) [2] to the EHR have been proposed. This combination of medical, social, behavioral, and lifestyle information about the patient is essential for allowing medical events to be understood in the context of one’s life and, conversely, allowing lifestyle choices to be considered jointly with one’s medical context. We propose that the personal health knowledge graph is a semantic representation of a patient’s combined medical records, SDoH, and ODLs that would be generated by both patients and their providers and be potentially useful to both for decision-making. While there are some initial efforts to clarify what personal knowledge graphs are [3] and how they may be made specific to health [4, 5], there is still much to be determined concerning how to operationalize and apply such a knowledge graph in life and clinical practice. There are challenges in collecting, managing, integrating, and analyzing the data required to populate the knowledge graph, maintaining, reasoning over, and sharing aspects of the knowledge graph. Following on the success of our inaugural workshop held at the Knowledge Graph Conference in 2020, in the second installment of this workshop, we aim to gather multiple stakeholders (health practitioners, health informaticists, knowledge engineers, and computer scientists) working on defining, building, consuming, and integrating personal health knowledge graphs. The workshop will focus on the challenges and opportunities in this nascent space with a strong focus on existing PHKG solutions.",
+        "No link to speaker from presentation in program page",
+        "No speaker description or presentation",
+        "Over a third of analyst time is spent in understanding what data exists, can it be trusted and how to use it. Countless Data Engineering time is spent in answering the same questions about data - what does that column mean, how does it get populated, how often does it update and if there’s any incident going on? The answer thus far to such questions has been curation. You request volunteers to put in this information or hire project managers to make sure it does but it always fails because documentation gets out of date. The holy grail to solving this is automation - collecting metadata automatically from various data sources and creating a rich graph - of data sets, reports, humans, jobs, streams, event schemas and more. Then build opinionated products on top of it to deliver a better experience for data users. At Lyft, we have made our analysts and data scientists over 20% more productive by making it easier to discover data. Recently, we open sourced Amundsen and it’s now being used by ING, Square, Workday and many more. However, as we made it easy to discover data, it’s led to an interesting challenge. Not only is it now easy to discover good trusted data, it’s also easier to discover bad data that was previously hidden in the unforgotten nook and crannies of the data lake. Consequently, we are now asking ourselves, how can we recommend not just any data but trusted data to our users. This talk gives a quick overview of Amundsen and then goes into detail on how we have tried both automated and curated metadata to showcase what’s trusted and not in Amundsen. It will dive deep into linking the Airflow DAG which produced the data (task level lineage), linking what and how many dashboards are built from a given data set (table level lineage), as well as SLAs and historical landing times to give users signal into what’s trusted. The talk will end with an insight into current challenges and how we may solve them in the future." ;
+    schema:performer kgcr:000410,
+        kgcr:000412,
+        kgcr:000536,
+        kgcr:000571,
+        kgcr:000609,
+        kgcr:000657,
+        kgcr:000658,
+        kgcr:000661,
+        kgcr:000688,
+        kgcr:000689,
+        kgcr:000696,
+        kgcr:000734,
+        kgcr:000749,
+        kgcr:000751,
+        kgcr:000754 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000769,
+        kgcr:000778,
+        kgcr:000782,
+        kgcr:000790,
+        kgcr:000853,
+        kgcr:000854,
+        kgcr:000883,
+        kgcr:000896,
+        kgcr:000951,
+        kgcr:000952 .
+
+kgcr:000779 schema:about kgcr:000823 ;
+    schema:abstract "This workshop establishes a bridge for researchers from industry and academia who are working on positive social impact in accordance with priorities outlined in the Sustainable Development Goals (SDGs). The workshop targets practitioners of knowledge graphs methods, related domain SMEs, and anyone working to leverage knowledge graphs for social good. We are proposing an applied research-based workshop that will show how businesses, social scientists, the public sector and academia use knowledge graphs to have a positive social impact. The efforts include various kinds of problems they are solving, bottlenecks they have, and insights they are gathering. This workshop can also be an excellent place to identify and find projects/researchers for future collaboration.",
+        "This workshop establishes a bridge for researchers from industry and academia who are working on positive social impact in accordance with priorities outlined in the Sustainable Development Goals (SDGs). The workshop targets practitioners of knowledge graphs methods, related domain SMEs, and anyone working to leverage knowledge graphs for social good. We are proposing an applied research-based workshop that will show how businesses, social scientists, the public sector and academia use knowledge graphs to have a positive social impact. The efforts include various kinds of problems they are solving, bottlenecks they have, and insights they are gathering. This workshop can also be an excellent place to identify and find projects/researchers for future collaboration. " ;
+    schema:performer kgcr:000145,
+        kgcr:000411,
+        kgcr:000440,
+        kgcr:000487,
+        kgcr:000561,
+        kgcr:000645,
+        kgcr:000703,
+        kgcr:000713,
+        kgcr:000733,
+        kgcr:000735,
+        kgcr:000738,
+        kgcr:000739,
+        kgcr:000744,
+        kgcr:000748 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000769,
+        kgcr:000780,
+        kgcr:000816,
+        kgcr:000883,
+        kgcr:000939 .
+
+kgcr:000783 schema:about kgcr:000784 ;
+    schema:abstract "Entity-based results are becoming an integral part of the search experience. Search-centric companies highly rely on knowledge graphs in providing the necessary information for building rich search experiences. An entity can originate from a structured, semi-structured, or unstructured data source. An entity passes through a series of stages to be onboarded into a knowledge graph and then served as part of a search result. This talk presents the life cycle of an entity including extraction, schema mapping, ingestion, entity resolution, data quality, and publishing. It covers the challenges and approaches employed at each stage. It also introduces some of the different experiences that can be generated for a given entity. Finally, it covers the multilingual aspect of knowledge graphs and the challenges of maintaining them at scale." ;
+    schema:performer kgcr:000413 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000785,
+        kgcr:000786 .
+
+kgcr:000787 schema:about kgcr:000788 ;
+    schema:abstract "Research in artificial intelligence and data science is accelerating rapidly due to an unprecedented explosion in the amount of information on the web [1,2]. In parallel, we noticed immense growth in research around Knowledge Graphs from industry and academia. Most focus of Knowledge Graphs has been on its construction, however, harnessing knowledge graphs/symbolic knowledge for end tasks is yet to be well explored. Particularly, integrating information from knowledge graphs with learning techniques for solving tasks. We call this “knowledge-infused learning” (KiL), an approach to encode knowledge for using it with deep learning. Knowledge Graphs are important in its use for neuro-symbolic AI [3,5,8]. In this changing world, retrospective studies for building state-of-the-art AI and Data science systems have raised concerns on trust, traceability, and interactivity for prospective applications in healthcare, finance, and crisis response [1,4]." ;
+    schema:performer kgcr:000419,
+        kgcr:000429,
+        kgcr:000557,
+        kgcr:000564,
+        kgcr:000595,
+        kgcr:000624,
+        kgcr:000636,
+        kgcr:000637,
+        kgcr:000656,
+        kgcr:000704,
+        kgcr:000726,
+        kgcr:000736 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000769,
+        kgcr:000789,
+        kgcr:000790,
+        kgcr:000883,
+        kgcr:000884 .
+
+kgcr:000791 schema:about kgcr:000792 ;
+    schema:abstract "Ambiguity, language discrepancies, and lack of background information are just a few challenges that organizations face on a daily basis when trying to analyze their content and data. When an organization produces data that is hard to manage, what methodologies can be used to turn unstructured (i.e., noisy, cluttered, unclear) content into clean, fruitful knowledge? In this webinar, CEO Andreas Blumauer will talk about the different semantic tools you can have under your belt to manage your unstructured data and reap the benefits of a comprehensive knowledge graph. Learn how intelligent content that is generated with help from semantic technologies can improve customer satisfaction, enable better business decision making, and grant extensive knowledge discovery. Through introductory material and live demos, we will introduce you to semantic search and recommendation tools to “matchmake” internal HR profiles and connect employees together based on their skills and interests. You will become familiar with question and answering machines that can be used to generate structured search results from organic text, and how entity extraction can enable you to derive meaningful concepts from text analysis. Don’t miss this opportunity to hear from an experienced semantic technology expert about how you can overcome the common roadblocks found in your unstructured data." ;
+    schema:performer kgcr:000435 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000769,
+        kgcr:000793 .
+
+kgcr:000794 schema:about kgcr:000795 ;
+    schema:abstract "The use of knowledge graphs as a data source for machine learning methods to solve complex problems in life sciences has rapidly become popular in recent years. Our Biological Insights Knowledge Graph (BIKG) combines relevant data for drug development from more than 50 public as well as internal data sources to provide insights for a range of tasks: from identifying new targets to repurposing existing drugs. In our case study presentation we are going to discuss our solutions to challenges of building an integrated knowledge graph from diverse sources as well as present two illustrative use case studies exploiting graph data to produce recommendations for domain experts: identifying candidate genes responsible for drug resistance in CRISPR screens and finding promising drugs for repurposing" ;
+    schema:performer kgcr:000441 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000796,
+        kgcr:000797 .
+
+kgcr:000798 schema:about kgcr:000799 ;
+    schema:abstract "OpenRefine is a data wrangling tool that celebrated its 10th birthday this year. Cleaning and importing data in knowledge graphs is its core use case since it was originally designed to help populate Freebase. In this talk, I want to give a broad overview of the latest developments in the tool and our efforts to consolidate it as a mature open source project. Please come along and tell us where you would like to see the tool in a few years!" ;
+    schema:performer kgcr:000445,
+        kgcr:000454,
+        kgcr:000463 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000769,
+        kgcr:000790,
+        kgcr:000800,
+        kgcr:000801 .
+
+kgcr:000802 schema:about kgcr:000803 ;
+    schema:abstract "Ontotext teams up with portfolio partners to offer a complete platform with best-of-breed tools for schema and taxonomy editing; data transformation and linking; access control and federation; data updates and validation; search and visualization. The ecosystem also includes global and regional delivery partners. And an overview of GraphDB updates over the last year: JDBC access to graph data; virtualization of SQL sources and performance breakthroughs, benchmarked against AWS Neptune." ;
+    schema:performer kgcr:000471 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000769,
+        kgcr:000804 .
+
+kgcr:000805 schema:about kgcr:000806 ;
+    schema:abstract "To keep pace with data’s clock speed of innovation, data engineers need to invest not only in the latest modeling and analytics tools, but also technologies that can increase data accuracy and prevent broken pipelines. The solution? Data observability, the next frontier of data engineering. I'll discuss why data observability and lineage matter to building a better data quality strategy and tactics best-in-class organizations use to address it -- including org structure, culture, and technology." ;
+    schema:performer kgcr:000473 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000807,
+        kgcr:000808 .
+
+kgcr:000809 schema:about kgcr:000810 ;
+    schema:abstract "Personal Knowledge Graph generation is no longer a cumbersome technical endeavor. PROV4ITDaTa is an MIT open-source platform to provide a smooth user experience for generating knowledge graphs from your online web services, such as Google, Flickr, and Imgur, into your personal data space. This brings your personal data back under your control, and as a graph, its true interlinking potential is unleashed. PROV4ITDaTa allows to configure and set up a web application where users can easily pick one or more web services to extract their data from, transform that data into best-practice knowledge graphs, and push those graphs to a personal data space, such as a Solid pod. All heavy lifting is included in PROV4ITData: management of service authentication (e.g., OAuth 1.0/2.0 sessions), setting up the infrastructure to extract and transform your personal data from popular web services, directly loading those graphs into your personal data space, and generating a simple user interface. Developers only need to focus on providing custom connectors to more specialized web services and configuring the data processing pipeline to generate knowledge graphs into any needed form or shape. The data processing pipeline is based on RML.io, meaning that it is extensible to any data source, can integrate multiple data sources on the fly, includes data cleansing functions, supports any RDF graph structure and ontology, and its configuration is fully declarative. The pipelines are thus more maintainable and more transparent than hard-coded solutions such as the Data Transfer Project (DTP). Where existing platforms such as DTP provide one-to-one data transfer, PROV4ITDaTa enables extensible many-to-many data processing pipelines, beyond the web services and (personal) data spaces we currently provide. All these features can easily be included in the PROV4ITDaTa platform and will be showcased during the presentation. As a result, developers can more easily support custom web services. As users can generate personal knowledge graphs faster and easier, more knowledge graph applications can be built that rely on real-world data. With a click of a button, users can try out knowledge graph applications using their actual data from music streaming systems, fitness apps, address books, social media, etc. Continuing this product, we are building a data processing workbench, where these different data processing pipeline configurations can be managed, scheduled, and orchestrated, giving companies more control, and allowing to upscale PROV4ITData more easily." ;
+    schema:performer kgcr:000475,
+        kgcr:000477 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000769,
+        kgcr:000790,
+        kgcr:000811,
+        kgcr:000812 .
+
+kgcr:000813 schema:about kgcr:000814 ;
+    schema:abstract "In recently naming graph technology one of their top 10 trends data and analytic trends for 2021, the Gartner Group highlighted an emerging pattern: today an ever-increasing number of F1000 organizations are implementing graph technology not to address point graph use cases, but rather data integration and analytics use cases through enterprise-scale knowledge graph platforms. The data diversity, complexity and volume inherent within these initiatives places scalability and functional demands on the underlying knowledge graph technology- far beyond what has typically been required in the past. In this session, we will explore the specific challenges associated with deploying a knowledge graph at enterprise space with a special focus in six key areas: 1. Data Source Diversity 2. Performance and Efficiency 3. Deployment Flexibility 4. Interactive Querying 5. Ease of Use 6. Security" ;
+    schema:performer kgcr:000478 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000815,
+        kgcr:000816 .
+
+kgcr:000817 schema:abstract "Recently, knowledge graphs have been successfully deployed to overcome the typical difficulties in accessing and integrating data stored in different kinds of sources. In particular, in the Virtual Knowledge Graph (VKG) approach, data is presented in the form of a graph, which is mapped to the underlying data sources, and query answering is based on advanced query transformation techniques. In this tutorial we illustrate the principles underlying the VKG approach, providing an overview of well-established algorithms and techniques, and we discuss relevant use-cases using VKGs. We also provide a step-by-step hands-on session, where participants can experiment on their own with the discussed technologies using the open-source VKG system Ontop and other open-source tools." ;
+    schema:performer kgcr:000482,
+        kgcr:000583,
+        kgcr:000604 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000769,
+        kgcr:000816,
+        kgcr:000818,
+        kgcr:000883,
+        kgcr:000893 .
+
+kgcr:000819 schema:about kgcr:000820 ;
+    schema:abstract "Semantic MediaWiki (SMW), which was introduced as early as in 2006, has since gone on to establish a vital community and is currently one of the few semantic wiki solutions still in existence. SMW is an extension of MediaWiki, the software used for Wikipedia and many other projects, resulting in a largely sustainable codebase and ecosystem. There are many reasons why SMW should not be overlooked by the knowledge graph community: -SMW is capable of directly connecting to several triple stores (Blazegraph, Virtuoso, Jena), which is why it can be considered an interface for entering data into knowledge graphs. -	SMW can use its internal relational database (or ElasticSearch), enabling users to build simple knowledge graphs without in-depth knowledge about triple stores. -SMW has the built-in capability of exporting to RDF including building complete RDF data dumps that can be imported into existing knowledge graphs. -	SMW has the capability to reuse existing ontologies by importing vocabularies and providing unique identifiers. -The explicit semantic content of Semantic MediaWiki is formally interpreted in the OWL DL ontology language and is made available in XML/RDF format. -	A simple internal query language is available to query the internal knowledge graph from within SMW, without the requirement of having a SPARQL endpoint. However, extensions for implementing SPARQL in SMW are available as well. -SMW has the capability to enable data curation for experienced users responsible for the ontology as well as simple form-based input for regular users that can easily populate the KG with data. -There are several approaches to visualizing data in SMW, thus making the knowledge graph visible and interactive. -Implementing custom ontologies in SMW is quite easy, everything is built-in wiki pages (e.g. definition of properties and datatypes, forms and templates). -	SMW has low barriers to implementation as it is a clean extension to MediaWiki, which is PHP software running on regular web hosts. -In the talk, I will give an overview of the mentioned aspects and highlight some main differences to Wikibase – which is an alternative approach for managing structured data in MediaWiki – as well as the current limitations of SMW." ;
+    schema:performer kgcr:000483 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000821,
+        kgcr:000822 .
+
+kgcr:000824 schema:about kgcr:000881 ;
+    schema:abstract """Climate change poses an existential threat to life. The decade unfolding now is a critical period for transforming our “business as usual” routines into new practices that reduce global carbon emissions below thresholds sufficient to avert irreversible planetary damage. This workshop, hosted by Common Action – a community collaboration platform for climate action – explores how to model pathways for action. In other words, let's demonstrate how knowledge graphs are being used to spotlight where individuals and groups can contribute directly. For this initial workshop we will prioritize modeling a “backbone” of the knowledge graph for Common Action. This component is intended to track key people and their projects, and also link to related KG projects which provide complementary graph data.
+In the first session of this workshop, a series of SMEs and data modelers will share 5-10 minute lightning presentations, providing glimpses into sectors across climate action. The goal of these presentations will be to share a high-level overview of the concepts and problems in the space, in order to make apparent synergies for collective modeling, and ultimately, collaborative action. """,
+        "No speaker description or presentation",
+        "This presentation will introduce and detail the current work of the W3C Dataset Exchange Working Group, including detail of the developments in the DCAT (Data Catalog) vocabulary and the proposal for content negotiation by profile (ConnegP) which is being developed by the working group in conjunction with the IETF. Peter will also include suggestions for how to use DCAT and discuss the types of problems that content negotiation by profile might help with." ;
+    schema:performer kgcr:000488,
+        kgcr:000591,
+        kgcr:000593,
+        kgcr:000638,
+        kgcr:000712,
+        kgcr:000722 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000790,
+        kgcr:000816,
+        kgcr:000825,
+        kgcr:000882,
+        kgcr:000883 .
+
+kgcr:000826 schema:about kgcr:000827 ;
+    schema:abstract "This presentation will introduce and detail the current work of the W3C Dataset Exchange Working Group, including detail of the developments in the DCAT (Data Catalog) vocabulary and the proposal for content negotiation by profile (ConnegP) which is being developed by the working group in conjunction with the IETF. Peter will also include suggestions for how to use DCAT and discuss the types of problems that content negotiation by profile might help with." ;
+    schema:performer kgcr:000489,
+        kgcr:000709,
+        kgcr:000710,
+        kgcr:000711 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000828,
+        kgcr:000829 .
+
+kgcr:000830 schema:about kgcr:000831 ;
+    schema:abstract "Knowledge graphs are powerful tools used by organizations to integrate their siloed data into useful, machine-readable information for a wide range of purposes. The OriginTrail Decentralized Knowledge Graph (DKG) extends this approach to enable trusted knowledge exchange between multiple organizations, marrying knowledge graph technology with DLT and blockchain frameworks to enable 4 Is - interoperability, interconnectivity, integrity and incentivization. Based on W3C and GS1 standards, the open-source OriginTrail DKG is hosted on the OriginTrail Decentralized Network, operated by hundreds of organizations and individuals around the globe and built to utilize a multitude of blockchains such as Ethereum and Polkadot. In 2021, the DKG is being extended with tools such as trusted knowledge tokens, knowledge wallets, knowledge marketplaces and knowledge tenders to enable incentivized, trusted knowledge exchange, which will together with the OriginTrail DKG be presented during the talk at Knowledge Graph Conference 2021" ;
+    schema:performer kgcr:000491 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000832,
+        kgcr:000833 .
+
+kgcr:000834 schema:about kgcr:000835 ;
+    schema:abstract "Driven by legacy paper-based approaches, the design, conduction and analysis of clinical studies requires the creation and transformation of many data in many different formats. This hinders the process and necessitates significant resources. Having metadata-driven transformation is not new, however, adoption of standards (.e.g CDISC) has not shown yet its full added value. We propose to extend this metadata-driven approach beyond CDISC standards from the writing of the unstructured clinical study protocol to submission of the clinical study report to health authorities. By sharing and reusing metadata end-to-end of the drug development critical path, we shorten and automate key tasks hence improving the efficiency of the overall process." ;
+    schema:performer kgcr:000502 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000836,
+        kgcr:000837 .
+
+kgcr:000838 schema:about kgcr:000839 ;
+    schema:abstract "The concept of an Open Knowledge Network (OKN) is one of the components of the National Science Foundation’s Harnessing the Data Revolution (HDR) Big Idea, with the objective of providing semantic information infrastructure. By encoding information and knowledge about real-world entities and their relationships, the OKN would enable next generation artificial intelligence-based technologies and applications, focusing in particular on science and engineering information. While large-scale knowledge networks have been deployed in services like Google Search, Amazon catalogs, Apple Siri, Microsoft Cortana, and WolframAlpha, an open effort would expand this approach, enabling discovery of non-trivial information from multiple disparate knowledge sources for thousands of new topic areas in scientific and engineering information. With this objective in mind, the NSF Convergence Accelerator announced a “track” on the Open Knowledge Network (Track A) in 2019. Twenty-one projects were funded in Phase I in 2019 and five were funded in Phase II in 2020. Multidisciplinary, multi-sector teams in these projects are addressing a range of issues including, programming environments for knowledge network creation, making hidden/implied geospatial information explicit in knowledge graphs, and encoding information in specific domains, viz. urban flooding, biomedicine, and court records. This talk will provide an overview of the NSF Convergence Accelerator program and the Open Knowledge Network activities." ;
+    schema:performer kgcr:000508 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000840,
+        kgcr:000841 .
+
+kgcr:000842 schema:about kgcr:000843 ;
+    schema:performer kgcr:000514 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000836,
+        kgcr:000844 .
+
+kgcr:000845 schema:about kgcr:000846 ;
+    schema:abstract "Customer adoption of graph databases is growing rapidly and has attracted many vendors and products. Graphs, as an abstraction, are a simple and intuitive way to model information about the world. Despite this, the learning curve for building a graph-based application remains steep and daunting, as it requires the use of tooling and processes that may seem unfamiliar, even to experienced data practitioners. Most importantly, there are components other than a graph database that are needed for a knowledge graph architecture. In this presentation we discuss these components, the tooling one needs to succeed in building a knowledge graph -driven application, and we present the idea of a “data value chain\": data flowing from legacy sources, through various manipulation steps, to a graph representation, ready to be consumed." ;
+    schema:performer kgcr:000089,
+        kgcr:000520 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000847,
+        kgcr:000848 .
+
+kgcr:000849 schema:about kgcr:000850 ;
+    schema:abstract "During the presentation, we will share our experience in building a knowledge graph leveraging Spark, NLP, and Machine Learning. We will start with explaining the business problems and challenges then walk through our data pipeline, including text analytics processes, name similarity solutions, street address normalization, clustering algorithms, confidence level building, etc. To finish, we will discuss the business impact and the takeaways.",
+        "No link to speaker from presentation in program page",
+        "No speaker or presentation" ;
+    schema:performer kgcr:000530,
+        kgcr:000585,
+        kgcr:000590,
+        kgcr:000648,
+        kgcr:000649,
+        kgcr:000651 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000790,
+        kgcr:000851,
+        kgcr:000852,
+        kgcr:000883,
+        kgcr:000944,
+        kgcr:000945 .
+
+kgcr:000855 schema:about kgcr:000856 ;
+    schema:abstract "Knowledge Graphs (KGs) continue to penetrate the industrial world after Google's famous \"things not strings\" was used to explain their acquisition of FreeBase ten years ago. While many KGs exist, they are by and large little more than \"entity catalogs\", missing entirely the links between those entities. At Google, we recently launched a new enhancement to search that allows product queries, such as \"Milk\", \"Celery\" or \"12 string guitar\", to return local results - places on maps, nearby, that sell the product. The challenge to making this work is that 70% of stores worldwide - and 40% in the US - do not have a web page, Google's primary data source for search. To overcome this challenge and extend our understanding of small to medium-sized brick&mortar shops, we used a unique combination of Knowledge Graphs, AI and Human Common Sense, that demonstrates both the promises and limitations of AI in solving practical business problems." ;
+    schema:performer kgcr:000170,
+        kgcr:000537 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000790,
+        kgcr:000854,
+        kgcr:000857,
+        kgcr:000858 .
+
+kgcr:000860 schema:about kgcr:000861 ;
+    schema:abstract "Graphs are characterized by their ability to model relationships between entities. Graph models allow for relationship traversals up to 3-5 orders of magnitude faster than traditional relational models. This performance advantage allows graphs to include more data and different types of data than were possible in the past. Enterprise Knowledge Graph (EKG) architects start asking questions: What other data can we include? What benefits could we gain if we began to think of our organization as a more holistic and integrated system? How do the diverse datasets interact to give us deeper insights into how to optimize our operations? This workshop will introduce the fundamental concepts around EKGs and Systems Thinking and how they fit together. We then will walk the group through a series of short exercises to demonstrate how the two concepts are related with examples." ;
+    schema:performer kgcr:000558 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000769,
+        kgcr:000862 .
+
+kgcr:000863 schema:performer kgcr:000558 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000864,
+        kgcr:000865 .
+
+kgcr:000866 schema:abstract "Python has excellent libraries for working with graphs which provide: semantic technologies, graph queries, interactive visualizations, graph algorithms, probabilistic graph inference, as well as embedding and other integrations with deep learning. However, almost none of these have integration paths other than writing lots of custom code, and most do not share common file formats. Moreover, few of these libraries integrate effectively with popular data science tools (e.g., pandas, scikit-learn, PyTorch, spaCy, etc.) or with popular infrastructure for scale-out (Apache Spark, Ray, RAPIDS, Apache Parquet, fsspec, etc.) on cloud computing. This tutorial introduces kglab – an open source project that integrates RDFlib, OWL-RL, pySHACL, NetworkX, iGraph, pslpython, node2vec, PyVis, and more – to show how to use a wide range of graph-based approaches, blending smoothly into data science workflows, and working efficiently with popular data engineering practices. The material emphasizes hands-on coding examples which you can reuse; best practices for integrating and leveraging other useful libraries; history and bibliography (e.g., links to primary sources); accessible, detailed API documentation; a detailed glossary of terminology; plus links to many helpful resources, such as online “playgrounds”. Meanwhile, keep a practical focus on use cases" ;
+    schema:performer kgcr:000560,
+        kgcr:000603 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000867,
+        kgcr:000868,
+        kgcr:000891,
+        kgcr:000892 .
+
+kgcr:000869 schema:performer kgcr:000574,
+        kgcr:000667 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000769,
+        kgcr:000790,
+        kgcr:000870,
+        kgcr:000883 .
+
+kgcr:000871 schema:about kgcr:000872 ;
+    schema:abstract "No link to speaker or presentation",
+        "The Enterprise Knowledge Graph Foundation was established to define best practices and mature the marketplace for Enterprise Knowledge Graph (EKG) adoption. We are a member-supported non-profit (501c6) trade association established as a coordination body for the international enterprise knowledge graph community. EKGF members contribute open-source thoughts, ideas and working code. These contributions support areas ranging from the EKGF infrastructure itself, for delivering EKGF products and services, to original EKG principles intended to provide guidelines for the development and deployment of an enterprise knowledge graph, and an EKG Maturity Model which establishes standard criteria for measuring progress and sets out the practical questions that all involved stakeholders ask to ensure trust, confidence, and usage flexibility of data." ;
+    schema:performer kgcr:000580,
+        kgcr:000612,
+        kgcr:000620,
+        kgcr:000621,
+        kgcr:000706 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000769,
+        kgcr:000790,
+        kgcr:000873,
+        kgcr:000883,
+        kgcr:000897 .
+
+kgcr:000874 schema:about kgcr:000875 ;
+    schema:abstract "The future of search is already known, and it's built on Knowledge Graphs. From a business' POV, we'll explore the focus of search engines today, why KGs are so integral and examine the benefits of building your own site around a knowledge graph. From increases in customer retention, conversion and satisfaction, we'll see how this approach works. If you want to improve your user experience, there's an impact. If you want to decrease support costs and build consumer confidence - and impact reviews - we'll see how a KG-based approach works. There is a lot of work to do, but in today's world of search, the systems are complex and deep...and simple models of managing websites, content and search from years passed simply won't keep up." ;
+    schema:performer kgcr:000586 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000769,
+        kgcr:000876 .
+
+kgcr:000877 schema:about kgcr:000878 ;
+    schema:abstract "Bristol-Myers Squibb (BMS) is a global pharmaceutical company with drug discovery and development programs in several therapeutic areas. As part of its enterprise information governance, there is an ongoing effort to unlock research data from siloed systems, by building a knowledge graph that transcends research domains and departments. The Hyve, a Dutch IT services provider for the biomedical domain, assists in this effort by creating semantic models of particular areas, such as computational genomics or clinical trials. In this case-study, we will share our experience modelling research data in Immuno-Oncology & Cell Therapy (IOCT). Here, traceability of research data through the development pipeline poses a particular problem because most data is currently stored in particular vendor solutions and departments. We will first introduce the semantic model that was created to model the IOCT research domain and data, and how it builds on public domain ontologies and existing BMS ontologies. We will then present our efforts to build a knowledge graph by instantiating this model using a selected set of research data. We will evaluate the strategies and tools we explored to unlock as much of the data as possible, and the end-to-end use cases that can now be answered using the knowledge graph." ;
+    schema:performer kgcr:000588 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000879,
+        kgcr:000880 .
+
+kgcr:000885 schema:abstract "The switch to decentralization in data management is finally happening as organizations struggle with a disconnect between data teams and domain knowledge. Once a new organizational structure around data domains is in place, the need for platforms for managing data products appears. In this talk, we argue that knowledge technologies are best placed to be the technical layer for data products. Ontologies provide the flexibility and expressiveness to represent the complexities of domains. Knowledge graphs provide graph representation, query languages, and standard access APIs that are perfectly suited for cross-organizational data access. Last but not least knowledge graphs, being all about data integration, provide an efficient way to connect data inside and across domains through entity linking and shared vocabularies. This talk will be followed by a short Demo of the Knowledge graph no-code platform, KgBase, by Justin Zhen" ;
+    schema:performer kgcr:000597 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000883,
+        kgcr:000886 .
+
+kgcr:000887 schema:about kgcr:000888 ;
+    schema:abstract "Machine Learning (ML), as one of the key drivers of Artificial Intelligence, has demonstrated disruptive results in numerous industries. However, one of the most fundamental problems of applying ML, and particularly Artificial Neural Network models, in critical systems is its inability to provide a rationale for their decisions. For instance, a ML system recognizes an object to be a warfare mine through comparison with its similar observations. No human-transposable rationale is given, mainly because common sense knowledge or reasoning is out-of-scope of ML systems. We present how knowledge graphs could be applied to expose more human-understandable machine learning decisions, and present an asset, combining ML and knowledge graphs to expose a human-like explanation when recognizing an object of any class in a knowledge graph of 4,233,000 resources." ;
+    schema:performer kgcr:000601 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000889,
+        kgcr:000890 .
+
+kgcr:000894 schema:abstract "Ontologies form the semantic framework for knowledge graphs, but to serve the purpose of linking data, ontologies need to be based on taxonomies or other controlled vocabularies, whose concepts are linked to data and tagged to content. There has also been a trend of greater integration of taxonomies and ontologies: ontologies are being adopted for wider business use, and taxonomies have been included in the W3C standards with widespread adoption of SKOS (Simple Knowledge Organization System)." ;
+    schema:performer kgcr:000608 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000883,
+        kgcr:000895 .
+
+kgcr:000898 schema:abstract "It is common practice for data providers to include text descriptions for each column when publishing data sets in the form of data dictionaries. While these documents are useful in helping an end-user properly interpret the meaning of a column in a data set, existing data dictionaries typically are not machine-readable and do not follow a common specification standard. We introduce the Semantic Data Dictionary, a specification that formalizes the assignment of a semantic representation of data, enabling standardization and harmonization across diverse data sets. The rendition of data in this form helps promote improved discovery, interoperability, reuse, traceability, and reproducibility. We present the associated research and describe how the Semantic Data Dictionary can help address existing limitations in the related literature. We discuss our approach, present an example by annotating portions of the publicly available National Health and Nutrition Examination Survey data set, present modeling challenges, and describe the use of this approach in sponsored research, including our work on a large National Institutes of Health (NIH)-funded exposure and health data portal and in the RPI-IBM collaborative Health Empowerment by Analytics, Learning, and Semantics project. This work has been evaluated in comparison with traditional data dictionaries, mapping languages, and data integration tools." ;
+    schema:performer kgcr:000614,
+        kgcr:000721 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000883,
+        kgcr:000899 .
+
+kgcr:000900 schema:about kgcr:000901 ;
+    schema:abstract "No presentation?",
+        "The Property Graph Schema Working Group (PGSWG) is an informal working group that was set up in 2018 under the umbrella of LDBC, the Linked Data Benchmark Council, to support the formal working group that works on the SQL/PGQ and GQL, the upcoming ISO/IEC standards for managing property graphs. The PGSWG overlaps partially with the formal working group and consists of around 60 members from academia as well as industry. The academic members come from different research domains, including data storage, data management, query languages, query optimization, programming languages, data modeling and Semantic Web. The industrial partners come from companies such as TigerGraph, Neo4j, Amazon, FactGem, Google, Redis, Ant Group, Memgraph and Uber. The goal of PGSWG is to discuss the Property Graph data model and the schema language that will describe instances of this data model, both in the context of the SQL extension and outside of it. Discussions in the group cover topics such as the basic Property Graph data model, property types, subtyping, null values, key constraints and cardinality constraints. In this presentation we will give a brief overview of the history of this working group, the current status of its discussions and where they might be going in the near future." ;
+    schema:performer kgcr:000059,
+        kgcr:000615 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000790,
+        kgcr:000883,
+        kgcr:000902,
+        kgcr:000903 .
+
+kgcr:000904 schema:about kgcr:000905 ;
+    schema:abstract "Intuit is embarking on a multi-year journey to transform from a financial product-centric company into an \"AI-driven Expert Platform\" company. We have aligned our enterprise data architecture and strategy to the company growth strategy, with a clean end-to-end enterprise architecture that embraces data-centric principles with an ambitious goal to elevating data to knowledge. In this talk, I will describe the burning platform of the data challenge, the e2e clean data architecture solution to overcome the challenge, and our incremental approach to apply knowledge graph technology in many aspects of the architecture. I will also share progress made and key lessons learned from the journey." ;
+    schema:performer kgcr:000618 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000906,
+        kgcr:000907 .
+
+kgcr:000908 schema:about kgcr:000909 ;
+    schema:abstract "This presentation will feature and demonstrate \"VocBench\", an semantic web collaborative development platform for ontologies, thesauri and lexicons. VocBench has initially been developed for maintenance of the thesaurus \"Agrovoc\". It has become then a generic tool for thesaurus management and now features dedicated support for editing OWL ontologies, SKOS(/XL) thesauri, Ontolex-lemon lexicons, EDOAL linksets and generic RDF datasets. Advanced editing capabilities, high scalability (the platform integrates with high performant triple stores such as RDF4J and GraphDB) and editing and publication workflow management all contribute to a full-fledged collaborative online environment. The tool is opensource, but professional resources are available to offer services or develop necessary extensions." ;
+    schema:performer kgcr:000625 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000910,
+        kgcr:000911 .
+
+kgcr:000912 schema:about kgcr:000913 ;
+    schema:abstract "The increasing reliance on distributed epidemiological data sources for time-sensitive analysis defines an emergent computational commons space: API ecosystems supporting epidemiology data commons. This space has been forced to evolve significantly to meet the real-time requirements of COVID-19 information systems, to the extent that syntactic interoperability often takes precedence over aligning data structures with conceptual context. This presentation will explore how the engineering of API ecosystems responds to governance and scope, before it responds to the analytical frameworks that triggered their development, as illustrated with hands-on visits to a number of live data sources. It will be argued that both knowledge representation and statistical learning (AI) benefit from being an afterthought of this evolutionary process." ;
+    schema:performer kgcr:000627 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000914,
+        kgcr:000915 .
+
+kgcr:000916 schema:performer kgcr:000629 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000917,
+        kgcr:000918 .
+
+kgcr:000919 schema:about kgcr:000920 ;
+    schema:abstract "Knowledge Graphs can be considered as fulfilling an early vision in Computer Science of creating intelligent systems that integrate knowledge and data at large scale. Stemming from scientific advancements in research areas of Semantic Web, Databases, Knowledge representation, NLP, Machine Learning, among others, Knowledge Graphs have rapidly gained popularity in academia and industry in the past years. The integration of such disparate disciplines and techniques gives richness to Knowledge Graphs but also presents the challenge to practitioners and theoreticians to know how current advances develop from early techniques in order, on one hand, take full advantage of them, and on the other, avoid reinventing the wheel. This talk will provide a quick historical context on the roots of Knowledge Graphs grounded in the advancements of Logic, Data, and the combination thereof." ;
+    schema:performer kgcr:000631 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000921,
+        kgcr:000922 .
+
+kgcr:000923 schema:about kgcr:000924 ;
+    schema:abstract "The Wirecard scandal was one of the most shocking economic events in Germany in 2020. The former DAX30 company collapsed on June 25, owing creditors more than €3.5 billion (almost $4 billion) after disclosing a gaping hole in its books that its auditor EY said was the result of a sophisticated global fraud. But were there any signs that something went wrong? In our study, we gathered all relevant information from management and supervisory board members from the 30 largest companies (DAX30) in Germany for the fiscal year 2019. Relevant information includes place of birth, date of birth, education and work experience. Our knowledge graph contains 745 people, 1.203 companies and organizations, 5.116 roles and 1.128 degrees or educational programs. All this information helps us to understand what was different at Wirecard and what may be the reasons why Wirecard failed. Using a knowledge graph enables us to automatically detect and visualize all kinds of ties between supervisory and management board members, whereas detecting them manually requires more effort and is more error prone. The collection of the data reveals that there was little to no information available for most of the supervisory and management board members of Wirecard, which is uncommon for a DAX30 firm. In addition to that, it is obvious that the management board has far less work experience than managers from comparable companies. When looking at the experience of Wirecard’s supervisory board members, it becomes clear they were little or not all familiar with board activities. Furthermore, our graph shows that supervisory board members from Wirecard are less connected to other members of supervisory boards compared to other DAX30 companies." ;
+    schema:performer kgcr:000632 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000925,
+        kgcr:000926 .
+
+kgcr:000927 schema:about kgcr:000928 ;
+    schema:abstract "The switch to decentralization in data management is finally happening as organizations struggle with a disconnect between data teams and domain knowledge. Once a new organizational structure around data domains is in place, the need for platforms for managing data products appears. In this talk, we argue that knowledge technologies are best placed to be the technical layer for data products. Ontologies provide the flexibility and expressiveness to represent the complexities of domains. Knowledge graphs provide graph representation, query languages, and standard access APIs that are perfectly suited for cross-organizational data access. Last but not least knowledge graphs, being all about data integration, provide an efficient way to connect data inside and across domains through entity linking and shared vocabularies. This talk will be followed by a short Demo of the Knowledge graph no-code platform, KgBase, by Justin Zhen" ;
+    schema:performer kgcr:000634 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000883,
+        kgcr:000886 .
+
+kgcr:000929 schema:performer kgcr:000639 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000883,
+        kgcr:000930 .
+
+kgcr:000931 schema:about kgcr:000932 ;
+    schema:abstract "How do falsehoods spread on the web? This and other questions related to the propagation of fake news and biased discourse in the public area have been drawing increasing interest in different communities from social sciences to artificial intelligence. Online discourse, i.e. claims and opinions shared online, together with their associated contexts (authors, salient entities, related events) constitute a valuable source of insights to these questions. While knowledge graphs of today enable data reuse and federation, improving information retrieval on the web and facilitating knowledge discovery in various fields, they do not store information about claims and related online discourse data, making it difficult to access, query and reuse this wealth of information. Hence, we have built ClaimsKG — a knowledge graph of fact-checked claims and their related metadata, such as the claims’ truth labels, authors, topics, keywords and references. The knowledge graph is built by extracting information from a number of popular fact-checking web portals and structuring it following a specifically developed for this purpose conceptual data model mainly based on schema.org and the NIF vocabularies. Among other applications, ClaimsKG provides ground truth data for a number of tasks relevant to the analysis of societal debates on the web. In this talk, I will first present three tools that operate on the data of ClaimsKG: (1) the Claims Explorer, which allows us to navigate through our data and perform a faceted search; (2) the Claims Statistical Observatory, which helps uncover trends; and (3) the ClaimLinker, which allows linking arbitrary text to claims from ClaimsKG (or any other Knowledge graph containing claims), hence assisting the task of fact verification. I will further discuss perspectives on modeling claims in a generalized and contextualized manner, as well as related challenges such as claim disambiguation and the assessment of claim relatedness." ;
+    schema:performer kgcr:000078 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000933,
+        kgcr:000934 .
+
+kgcr:000935 schema:about kgcr:000936 ;
+    schema:abstract "The KnowWhereGraph project aims at providing a densely interlinked knowledge graph for environmental intelligence applications and situational awareness services (area briefings) that enrich the data of decision-makers and data scientists with pre-integrated data custom-tailored to their spatial area of interest, thereby vastly reducing the time needed to answer questions such as \"What is here?\", \"What happened here before?\", \"Who knows more?\", or \"How does it compare to....\". The project's graph interlinks data about places with various products such as soil maps, climate characteristics, historic events, and so on." ;
+    schema:performer kgcr:000643 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000937,
+        kgcr:000938 .
+
+kgcr:000940 schema:about kgcr:000941 ;
+    schema:abstract "This talk is an introduction to the vector search engine Weaviate. You will learn how storing data using vectors enables semantic search and automatic data classification. Topics like the underlying vector storage mechanism and how the pre-trained language vectorization model enables this are touched. In addition, this presentation consists of live demos to show the power of Weaviate and how you can get started with your own datasets. No prior technical knowledge is required; all concepts are illustrated with real use case examples and live demos." ;
+    schema:performer kgcr:000646 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000942,
+        kgcr:000943 .
+
+kgcr:000946 schema:about kgcr:000947 ;
+    schema:abstract "There has been an explosion of tools - especially in the machine learning space - describing themselves as ‘git for data’. This talk will review the main open source players and link the interest to data mesh architectures. Not to jump to outcomes without first conducting the review, but it will conclude that knowledge graphs are the best way to approach distributed collaboration." ;
+    schema:performer kgcr:000655 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000948,
+        kgcr:000949 .
+
+kgcr:000953 schema:about kgcr:000954 ;
+    schema:abstract "One of the key pieces of global infrastructure today is the web yet it continues to be developed using legacy technologies dating back to the 1960s. A result of using outdated technology in turn has created several major problems. First, relational data models are a primary contributor to the data silos problems. Second, object-oriented codebases are proliferating complexity, trapping business logic, and stifling code reuse. Third, some experts warn we are heading for a software apocalypse. And finally we’re over paying for software projects by orders of magnitude. Where do we begin to resolve these problems? In this talk, we present a data-centric transformation. We explain how RDF Knowledge Graphs, Data-Driven software, and declarative technologies can be used to create a future-proof architecture with diminishing costs. And we will demonstrate AtomGraph’s Knowledge Graph management system, LinkedDataHub, which implements these principles." ;
+    schema:performer kgcr:000663 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000955,
+        kgcr:000956 .
+
+kgcr:000957 schema:about kgcr:000958 ;
+    schema:abstract "Despite the estimated 70 zettabytes of data produced worldwide, the production and use of data is unequal and its conversion to knowledge uneven across communities and sectors. To address this data & knowledge inequality, both the public and philanthropic sectors are increasing investments in shared data infrastructure aimed at building more collaborative data ecosystems. In this talk, we’ll discuss why this matters, how knowledge graphs can help, and profile a collaborative data ecosystem where targeted investments are leading to more equitable societal outcomes. We’ll wrap up with a discussion of what the knowledge graph community can do to support the development of more equitable data ecosystems." ;
+    schema:performer kgcr:000665 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000959,
+        kgcr:000960 .
+
+kgcr:000961 schema:about kgcr:000962 ;
+    schema:abstract " Knowledge Graphs are increasingly being developed and leveraged in academia and industry to tackle complex biomedical challenges, such as drug discovery and safety, medical literature search, clinical decision support, and disease monitoring and management. In this talk, we will present the research and development on Elsevier’s Healthcare Knowledge Graph, a platform built to deliver advanced clinical decision support and enhanced point-of-care content discovery for clinicians and patients. Elsevier’s Healthcare Knowledge Graph uses popular linked data and semantic web technologies to capture knowledge and data from heterogeneous healthcare sources about diseases, drugs, findings, guidelines, cohorts, journals, and books. The graph is composed of medical concepts (e.g., drugs, symptoms), medical term labels and synonyms for these concepts, hierarchical and associative typed relations (e.g. drug-disease relations) between these concepts, and mappings to codes in external terminologies used in clinical data integration and electronic medical record systems. We will demonstrate how subject matter experts curate and visualize the Healthcare Knowledge Graph through novel exploration interfaces to keep the medical knowledge regularly updated, and also showcase how operationalized natural language processing pipelines continuously tag and extract novel medical concepts and relations within synoptic and reference medical content. We will walk through how Elsevier’s Healthcare Knowledge Graph platform is used to provide actionable knowledge in user-facing applications in the domains of focused and precise clinical search, clinical decision support, and content recommendation. This talk will provide a perspective on how such knowledge graphs will enable the capture, representation, and provision of complex medical knowledge of high velocity, variety, volume, and veracity, to power, trusted clinical and biomedical research applications." ;
+    schema:performer kgcr:000668 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000963,
+        kgcr:000964 .
+
+kgcr:000965 schema:performer kgcr:000192 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000883,
+        kgcr:000966 .
+
+kgcr:000967 schema:about kgcr:000968 ;
+    schema:abstract "Social Knowledge Graphs such as Wikidata have become massive successes, obtaining a level of coverage and quality that would be the envy of many traditional relational database engineering projects. And yet the downstream use scenarios for such datasets remain sharply limited compared to the vast range of relational database applications. In this talk, Mike will present some early work that aims to make Knowledge Graph-powered applications easier to build. This work is the result of a large NSF-funded collaboration among researchers at the University of Michigan, MIT, UC Berkeley, the University of Washington, and the Allen Institute for Artificial Intelligence." ;
+    schema:performer kgcr:000674 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000969,
+        kgcr:000970 .
+
+kgcr:000971 schema:about kgcr:000972 ;
+    schema:abstract "The enterprise data landscape is increasingly hybrid, varied, and changing. The emergence of IoT, rise in unstructured data volume, increasing relevance of external data sources, and trend towards hybrid multi-cloud environments are obstacles to satisfying each new data request. The old data strategy centered around relational data systems is fundamentally broken. Enterprise data fabrics offer a new way forward. The data fabric weaves together data from internal silos and external sources and creates a network of information to power your applications, AI, and analytics. Quite simply, they support the full breadth of today’s complex, connected enterprise. -	But how to achieve a data fabric? In this session, you’ll learn: -Key steps for building a data fabric and how to leverage existing data management investments -The technical skills and resources required to begin your data fabric implementation-An MVP methodology for data modeling to drive compounding business value" ;
+    schema:performer kgcr:000074 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000973,
+        kgcr:000974 .
+
+kgcr:000975 schema:abstract "No presentation",
+        "No presentation associated on program" ;
+    schema:performer kgcr:000679,
+        kgcr:000681 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000883,
+        kgcr:000976 .
+
+kgcr:000977 schema:about kgcr:000978 ;
+    schema:abstract "Nearly every business is constantly trying to identify, analyze, and grow its market. Yet, traditional processes for data management inevitably lead to a database that contains missing, outdated, invalid, or inconsistent data. Automated knowledge graph construction techniques are a scalable way to maintain and enforce the quality of data in real-world business databases and knowledge graphs offer an ideal representation for modeling the complex relationships between business entities and for validating properties and constraints. In this presentation, we will cover lessons learned building a commercial system that maintains 250M business entities and automatically updates over 100M new facts each month as the external world changes." ;
+    schema:performer kgcr:000683 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000883,
+        kgcr:000979 .
+
+kgcr:000980 schema:about kgcr:000981 ;
+    schema:abstract "The Yahoo Knowledge Graph powers entity data for user experiences across multiple products at Verizon Media, from search to media to ads. Nodes in the knowledge graph correspond to real world entities: people, places, movies, sports teams, and so on. The edges represent semantic relationships between these entities. A comprehensive entity experience requires collecting a use-case specific subgraph around an entity node in the graph and combining it with dynamic and multimedia content. A \"knowledge panel\" for a public company on a web search results page might include basic data like the company's founders and number of employees, combined with a realtime stock quote and relevant images. Other use cases, like a finance-focused website, may prefer to include additional detailed information like the board members, other companies those board members represent, revenue numbers, top competitors, and more. Legacy serving systems typically pre-collected and exposed a static view of an entity, which limited the ability for clients to traverse the graph or adapt the user experience for different contexts without offline preprocessing. They also required clients to implement a more complex series of requests to fetch partial data, extract dependencies, and query additional services to stitch together their full experience. In this talk we will take you through our experience moving away from serving these static subgraph views with independent services and client side processing. We will describe how we addressed the shortcomings of such a system and built a federated, realtime, web-scale graph querying framework with GraphQL on top of Amazon Neptune, Vespa, and third party APIs. Our unified graph approach has enabled customer teams to experiment, rapidly iterate over their designs, and easily power rich experiences by bringing together all the relevant data under a single request." ;
+    schema:performer kgcr:000685 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000982,
+        kgcr:000983 .
+
+kgcr:000984 schema:abstract "No link to presentation or speaker info." ;
+    schema:performer kgcr:000686 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000985,
+        kgcr:000986 .
+
+kgcr:000987 schema:abstract "No link to presentation" ;
+    schema:performer kgcr:000205,
+        kgcr:000737 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000883,
+        kgcr:000988 .
+
+kgcr:000989 schema:about kgcr:000990 ;
+    schema:abstract "We’ll explore how unstructured and structured data can come together to tell a complete story through the lens of a pharma clinical trial and subsequent events in the field. We’ll weave through the patient history and other documents using an ontology and several NLP tools, then use natural language querying to ask plain English questions of the graph to make sense of our data. Attendees will walk away with a better understanding of how to use NLP to make the most of their graph databases and incorporate text-heavy data sources." ;
+    schema:performer kgcr:000691 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:000991 schema:about kgcr:000992 ;
+    schema:abstract "The lack of a convenient way to capture annotations and statements about individual RDF triples has been a long standing issue for RDF. Such annotations are a native feature in other contemporary graph data models (e.g., edge properties in the Property Graph model). In recent years, the RDF* approach has emerged to address this limitation of RDF. After RDF* gained traction among both vendors and users of RDF systems, a community group has formed to produce a specification of the approach, now called RDF-star. In February 2021, the group published a first working draft of this spec, which is accompanied by several test suites. This presentation will introduce the approach and the various features that it adds to RDF and SPARQL." ;
+    schema:performer kgcr:000694 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:000993 schema:about kgcr:000994 ;
+    schema:abstract "Python has excellent libraries for working with graphs which provide: semantic technologies, graph queries, interactive visualizations, graph algorithms, probabilistic graph inference, as well as embedding and other integrations with deep learning. However, almost none of these have integration paths other than writing lots of custom code, and most do not share common file formats. Moreover, few of these libraries integrate effectively with popular data science tools (e.g., pandas, scikit-learn, PyTorch, spaCy, etc.) or with popular infrastructure for scale-out (Apache Spark, Ray, RAPIDS, Apache Parquet, fsspec, etc.) on cloud computing. This tutorial introduces kglab – an open source project that integrates RDFlib, OWL-RL, pySHACL, NetworkX, iGraph, pslpython, node2vec, PyVis, and more – to show how to use a wide range of graph-based approaches, blending smoothly into data science workflows, and working efficiently with popular data engineering practices. The material emphasizes hands-on coding examples which you can reuse; best practices for integrating and leveraging other useful libraries; history and bibliography (e.g., links to primary sources); accessible, detailed API documentation; a detailed glossary of terminology; plus links to many helpful resources, such as online “playgrounds”. Meanwhile, keep a practical focus on use cases" ;
+    schema:performer kgcr:000103 ;
+    schema:superEvent kgcr:conference-2021 ;
+    schema:workPerformed kgcr:000867,
+        kgcr:000868 .
+
+kgcr:000995 schema:superEvent kgcr:conference-2021 .
+
+kgcr:000996 schema:abstract "In this tutorial we will address the challenge of semantically defining the elements of knowledge graphs (entities, relations, etc), so that their meaning is explicit, accurate and commonly understood by both humans and machines. We will use RDF/OWL and Protege as our modeling tools and, through a running use case of a labor market knowledge graph, we will see how we can tackle pitfalls and dilemmas that commonly appear in the modeling process." ;
+    schema:performer kgcr:000697 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:000997 schema:about kgcr:000998 ;
+    schema:abstract "Conceived as a public and transparent good, populated out of data sources trusted by scientists, the OpenAIRE Research Graph aims at bringing discovery, monitoring, and assessment of science back in the hands of the scientific community. The underlying vision is to provide a trusted view of Open Science that is contextualized, traversable, open, and free-of-charge, thereby facilitating: -	Researchers to (i) build a complete individual scientific record, track the provenance of scientific results, reproduce experiments by reaching all products, (ii) have access to an open and transparent collection of data they can use for freely advancing information science and its real-world applications; -Funders, organizations, research infrastructures to monitor compliance of Open Science mandates, scientific trends, and research impact; -Research communities to monitor community research trends, identify and calculate community-specific indicators of quality of science by viewing and populating the subset of the Open Science Graph relative to the community;-Publishers to launch and promote their journals relying on equal and verifiable quality indicators, opted by research communities in their specific domains, and calculated over the Global Open Science Graph taking into account the whole citation graph, open access, reproducibility degrees, etc.-Companies (SMEs) to acquire content to deliver analytics services to customers operating in the scholarly communication domain (e.g., Elsevier, Springer, ACM).-The OpenAIRE Research Graph will be a key European Open Science Cloud (EOSC) resource, by providing the EOSC with: (i) a catalog of all scientific products, core in fostering Open Science and establishing its practices in the daily research activities, and (ii) Open Science monitoring tools, to measure trends and impact of Open Science and funding across communities and Nations." ;
+    schema:performer kgcr:000698,
+        kgcr:000701 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:000999 schema:about kgcr:001000 ;
+    schema:abstract "The COVID-19 pandemic has mobilized researchers worldwide to investigate many aspects of the outbreak, ranging from case statistics, patient demographics, transportation modeling, epidemiological studies, to viral genome sequencing. Relevant data are produced and publically shared at an unprecedented pace and updated daily. Given the urgency of the outbreak and the high levels of velocity and variety of pandemic-related data, efforts have not focused on data interoperability across domains. The avalanche of COVID-19-related data streams from agencies and public and private research teams, with little coordination and without reliance on best interoperability practices, creates enormous challenges for researchers attempting to analyze the pandemic in all its multi-disciplinary complexity and develop a comprehensive policy response. With data collection and analysis efforts largely fragmented and siloed, this goal can be addressed by the roll-out of a comprehensive semantic integration platform that organizes available information into an easily queryable transdisciplinary knowledge system. We developed the COVID-19-Net Knowledge Graph that integrates epidemiological, biological and population characteristic data. The challenges of integrating data across diverse domains, proposed solutions, and calls for action to prepare for future outbreaks will be discussed." ;
+    schema:performer kgcr:000707 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001001 schema:about kgcr:001002 ;
+    schema:abstract "The Bloomberg Knowledge Graph is a graph-centric representation of entities and relationships in the financial world which connects cross-domain data from various sources within Bloomberg. Recent developments in machine learning, knowledge graphs, and language technology have enabled intelligent ways to uncover interesting patterns amongst data that reveal previously hidden insights. By leveraging the entity and relationship information in the knowledge graph, interesting potential applications emerge, especially when combined with other information such as market data and news stories. This talk details how Bloomberg uses the knowledge graph and semantic technologies to enable various use cases, e.g., to link data across different domains, enrich news stories, and support financial analytics centered around entities. In addition, we will discuss the challenges we face to support these use cases, including representing and storing historical, point-in-time relationships between entities." ;
+    schema:performer kgcr:000715 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001003 schema:about kgcr:001004 ;
+    schema:abstract "In this talk, we will review how the recent breakthroughs in Neuroscience can be exploited to create Web search engines totally based on AI-generated data - eliminating the need to collect users’ data. In particular, we will focus on:         How can we generate search queries that are almost identical to a real user’s ones? How can we exploit the generated queries to predict user intent in a contextual graph?" ;
+    schema:performer kgcr:000717 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001005 schema:about kgcr:001006 ;
+    schema:abstract " In this talk we describe a new technique for merging knowledge graphs: translating the knowledge graph schemas into categories and the knowledge graph data into functors, then applying the \"co-limit/pushout\" construction from a branch of mathematics called category theory to merge these categories and functors, and then converting the categories and functors back into knowledge graph schemas and data. We show how this process is mathematically optimal (results in the highest possible data quality in the merge), and describe several real-world use cases of knowledge graph merge that have been implemented in an open-source tool.  " ;
+    schema:performer kgcr:000720 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001007 schema:performer kgcr:000723 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001008 schema:about kgcr:001009 ;
+    schema:abstract "SPOKE is a biomedical knowledge graph containing factual data on various biomedical fields including genetics, molecular biology, physiology, metabolomics, pharmacology and clinical medicine. SPOKE can be used to repurpose medications, predict patient outcomes, and accelerate drug development, among other uses." ;
+    schema:performer kgcr:000724 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001010 schema:about kgcr:001011 ;
+    schema:abstract "Following the GQL Manifesto, the ISO working group that develops the SQL standard voted to initiate a project for a new database language: GQL (Graph Query Language). This talk presents an overview of the goals of GQL and the progress so far, key aspects of the language design such as the basic data model, catalog structure, and graph pattern matching, as well as the standardization process and community activities surrounding this effort." ;
+    schema:performer kgcr:000727 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001012 schema:about kgcr:001013 ;
+    schema:abstract "Knowledge graphs provide a way for us to capture and relate information into a representation that can mimic expert knowledge. One type of expert knowledge that has proven to be particularly useful in industry is reasoning by analogy, or using a replacement problem and solution pair to think about the solution to a new problem. At opposite ends of the ‘representation spectrum’ are logic systems, which can easily become overly constrained and complex, and statistical approaches, which can be easily influenced by nonsensical data. In this talk, I describe challenges and successes I’ve seen using analogical reasoning and how a knowledge graph approach combined with statistics and data can overcome deficiencies in both methods. To illustrate the case, I’ll demonstrate how our financial decision support application leverages analogical reasoning in several places to answer challenging questions when evaluating organizations." ;
+    schema:performer kgcr:000729,
+        kgcr:000732 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001014 schema:about kgcr:001015 ;
+    schema:abstract "Semantic systems provide tremendous opportunities to interoperate our data, facilitate shared vocabularies, and power enterprise knowledge graphs, but these increasingly distributed data ecosystems also introduce new instabilities and concerns. What happens when data we rely on is changing in unexpected ways; how do we build trust around open-access data sources; what happens if a dataset suffers a catastrophic update that disrupts the entire data system it participates in? For data to participate in increasingly expansive and accessible semantic networks, it needs to be empowered with additional traceability, security, and trust. In this presentation, Trey will show how Fluree's platform works to do just that, by building its semantic graph database on top of an immutable ledger backplane that introduces a sense of truth and time to semantic data. This talk will look at how queries drastically improve when they become temporal; how a ledger backplane introduces time-traveling data; and how trust in data expands when data can reproduce its own lineage or prove the identity of the individual or machine who transacted it. The goal of the talk is to demonstrate that additional security and trust is not only a prerequisite for more expansive & interoperable data, but also a guarantee of richer, more powerful data that extends the reach of semantics into the fourth dimension." ;
+    schema:performer kgcr:000741 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001016 schema:abstract "Prior to the Shape Constraint Language (SHACL) we had no W3C standardization for validating our semantic knowledge graphs against a set of constraints. By constraining RDF using SHACL we gain the possibility of exactly this – validating semantic knowledge graphs under a closed-world assumption! This masterclass will introduce you to the SHACL Core constraints, demonstrate how to constrain your data and what happens if the data conforms false (or true for that matter!)" ;
+    schema:performer kgcr:000742 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001017 schema:about kgcr:001018 ;
+    schema:abstract "When transforming amounts of plain text into semantic knowledge graphs using Resource Description Framework, a service for automatic interpretation became apparent. Manual interpretation of text depends on human domain knowledge and discovery of entities and relationships in the text. This process is a highly time-consuming activity with a risk of misinterpretation. Based on the hypothesis that using Natural Language Processing techniques we can extract information and meaning from text faster than a human being, we successfully implemented a service for automatic metadata and ontology generation for a client in Norwegian public sector. This presentation will walk you through our hypothesis, the steps from text to RDF through Natural Language Processing, and our results." ;
+    schema:performer kgcr:000742 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001019 schema:abstract "Knowledge graphs have emerged as a compelling abstraction for organizing the world’s knowledge over the internet, capturing relationships among key entities of interest to enterprises, and a way to integrate information extracted from multiple data sources. Construction and maintenance of large-scale knowledge graphs requires leveraging knowledge representation, machine learning, and natural language processing. In addition, for applications that use machine learning, natural language processing and computer vision, knowledge graphs are being increasingly used as a knowledge representation for capturing and tracking the learned knowledge. Most major AI/NLP/Vision conferences attract a significant number of research papers that leverage knowledge graphs. While several knowledge graphs have been built and deployed in the industry today, their creation and successful maintenance requires addressing numerous challenges." ;
+    schema:performer kgcr:000745,
+        kgcr:000746,
+        kgcr:000747 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001020 schema:about kgcr:001021 ;
+    schema:abstract "Can one build a knowledge graph (KG) for all products in the world? Knowledge graphs have firmly established themselves as valuable sources of information for search and question answering, and it is natural to wonder if a KG can contain information about products offered at online retail sites. There have been several successful examples of generic KGs, but organizing information about products poses many additional challenges, including sparsity and noise of structured data for products, complexity of the domain with millions of product types and thousands of attributes, heterogeneity across a large number of categories, as well as large and constantly growing number of products. We present AutoKnow, our automatic (self-driving) system that addresses these challenges. The system includes a suite of novel techniques for taxonomy construction, product property identification, knowledge extraction, anomaly detection, and synonym discovery. AutoKnow is (a) automatic, requiring little human intervention, (b) multi-scalable, scalable in multiple dimensions (many domains, many products, and many attributes), and (c) integrative, exploiting rich customer behavior logs. AutoKnow has been operational in collecting product knowledge for over 11K product types." ;
+    schema:performer kgcr:000750 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001022 schema:about kgcr:001023 ;
+    schema:abstract "When knowledge graphs in your company get larger and larger, a scalable graph search is in high demand. In the current graph search solutions, scalability is still a big issue. Furthermore, with the fast development of deep learning on graphs, many companies rely on deep learning methods to mine insights from the ever-increasing knowledge graphs. But search and mining are usually not available in one package. This presentation will showcase the scalable solutions from Katana Graph which provide the end-to-end solutions for graph search and mining. It is ten times faster than the current market solutions and scales exponentially on graphs with billions or even trillions of nodes. It provides weighted k-shorted path searches and cutting edge graph deep learning methods (such as cluster-graph convolutional neural network, graph attention model, and graph transformer). Katana Graph is a start-up company founded by several faculty from University of Texas at Austin with the goal to provide the scalable graph search and deep graph mining in one click. In this presentation, we will showcase several use cases, such as searching and mining large scale knowledge graphs in drug discovery" ;
+    schema:performer kgcr:000258 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001024 schema:about kgcr:000781 ;
+    schema:abstract "Electronic health records (EHRs) have become a popular source of observational health data for learning insights that could inform the treatment of acute medical conditions. However, their utility for learning insights for informing preventive care and management of chronic conditions has remained limited. For this reason, the addition of social determinants of health (SDoH) [1] and “observations of daily living” (ODL) [2] to the EHR have been proposed. This combination of medical, social, behavioral, and lifestyle information about the patient is essential for allowing medical events to be understood in the context of one’s life and, conversely, allowing lifestyle choices to be considered jointly with one’s medical context. We propose that the personal health knowledge graph is a semantic representation of a patient’s combined medical records, SDoH, and ODLs that would be generated by both patients and their providers and be potentially useful to both for decision-making. While there are some initial efforts to clarify what personal knowledge graphs are [3] and how they may be made specific to health [4, 5], there is still much to be determined concerning how to operationalize and apply such a knowledge graph in life and clinical practice. There are challenges in collecting, managing, integrating, and analyzing the data required to populate the knowledge graph, maintaining, reasoning over, and sharing aspects of the knowledge graph. Following on the success of our inaugural workshop held at the Knowledge Graph Conference in 2020, in the second installment of this workshop, we aim to gather multiple stakeholders (health practitioners, health informaticists, knowledge engineers, and computer scientists) working on defining, building, consuming, and integrating personal health knowledge graphs. The workshop will focus on the challenges and opportunities in this nascent space with a strong focus on existing PHKG solutions." ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgcr:001025 schema:performer kgcr:000756 ;
+    schema:superEvent kgcr:conference-2021 .
+
+kgc:linkedIn a owl:DatatypeProperty .
+
+kgc:onlineProfile a owl:DatatypeProperty .
+
+kgc:streetAddress a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range kgc:Address .
+
+skos:Concept a owl:Class .
+
+skos:broader a owl:ObjectProperty .
+
+skos:narrower a owl:ObjectProperty .
+
+schema:City a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+schema:CivicStructure a owl:Class ;
+    rdfs:subClassOf schema:Place .
+
+schema:CollegeOrUniversity a owl:Class ;
+    rdfs:subClassOf schema:EducationalOrganization .
+
+schema:ContactPoint a owl:Class ;
+    rdfs:subClassOf schema:StructuredValue .
+
+schema:DigitalDocument a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:EducationalOrganization a owl:Class ;
+    rdfs:subClassOf schema:CivicStructure,
+        schema:Organization .
+
+schema:Enumeration a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:EventAttendanceModeEnumeration a owl:Class ;
+    rdfs:subClassOf schema:Enumeration ;
+    owl:oneOf ( schema:MixedEventAttendanceMode schema:OfflineEventAttendanceMode schema:OnlineEventAttendanceMode ) .
+
+schema:EventSeries a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+schema:MediaObject a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:ProfilePage a owl:Class ;
+    rdfs:subClassOf schema:WebPage .
+
+schema:State a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+schema:StructuredValue a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:VideoObject a owl:Class ;
+    rdfs:subClassOf schema:MediaObject .
+
+schema:WebPage a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
+kgc:Address a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+kgc:BusinessIndustry a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+kgc:BusinessType a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+kgc:Conference a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:County a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+kgc:FieldOfWork a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+kgcr:000059 schema:alumniOf kgcr:000061 ;
+    schema:nationality kgcr:000060 ;
+    schema:worksFor kgcr:000617 .
+
+kgcr:000074 schema:alumniOf kgcr:000678 ;
+    schema:worksFor kgcr:000075 .
+
+kgcr:000078 schema:alumniOf kgcr:000641 ;
+    schema:worksFor kgcr:000642 .
+
+kgcr:000089 schema:alumniOf kgcr:000091 ;
+    schema:nationality kgcr:000090 ;
+    schema:worksFor kgcr:000521 .
+
+kgcr:000096 schema:geoWithin kgcr:000097 .
+
+kgcr:000103 schema:nationality kgcr:000010 ;
+    schema:worksFor kgcr:000104 .
+
+kgcr:000145 schema:alumniOf kgcr:000740 .
+
+kgcr:000146 schema:additionalType kgcr:000004,
+        kgcr:000012,
+        kgcr:000147,
+        kgcr:000194 ;
+    kgc:hasBusinessType kgcr:000004,
+        kgcr:000012,
+        kgcr:000194 ;
+    kgc:hasIndustry kgcr:000147 .
+
+kgcr:000163 schema:additionalType kgcr:000021,
+        kgcr:000164 ;
+    schema:memberOf kgcr:000011 ;
+    kgc:hasBusinessType kgcr:000164 ;
+    kgc:hasIndustry kgcr:000021 .
+
+kgcr:000166 schema:geoWithin kgcr:000167 .
+
+kgcr:000170 schema:alumniOf kgcr:000538 ;
+    schema:worksFor kgcr:000171 .
+
+kgcr:000171 schema:additionalType kgcr:000005,
+        kgcr:000015,
+        kgcr:000099,
+        kgcr:000172,
+        kgcr:000176,
+        kgcr:000177,
+        kgcr:000194 ;
+    schema:memberOf kgcr:000003,
+        kgcr:000175,
+        kgcr:000556 ;
+    kgc:hasBusinessType kgcr:000015,
+        kgcr:000099,
+        kgcr:000172,
+        kgcr:000176,
+        kgcr:000177,
+        kgcr:000194 ;
+    kgc:hasIndustry kgcr:000005 .
+
+kgcr:000192 schema:alumniOf kgcr:000671,
+        kgcr:000673 ;
+    schema:worksFor kgcr:000672 .
+
+kgcr:000205 schema:alumniOf kgcr:000690 .
+
+kgcr:000251 schema:geoWithin kgcr:000097 .
+
+kgcr:000258 schema:alumniOf kgcr:000753 ;
+    schema:worksFor kgcr:000640 .
+
+kgcr:000375 schema:worksFor kgcr:000376 .
+
+kgcr:000376 schema:additionalType kgcr:000114,
+        kgcr:000194,
+        kgcr:000377,
+        kgcr:000378,
+        kgcr:000384 ;
+    kgc:hasBusinessType kgcr:000114,
+        kgcr:000194,
+        kgcr:000377,
+        kgcr:000384 ;
+    kgc:hasIndustry kgcr:000378 .
+
+kgcr:000380 schema:geoWithin kgcr:000381 .
+
+kgcr:000389 schema:geoWithin kgcr:000390 .
+
+kgcr:000391 schema:worksFor kgcr:000392 .
+
+kgcr:000392 schema:additionalType kgcr:000393 ;
+    schema:knowsAbout kgcr:000021 ;
+    kgc:hasBusinessType kgcr:000393 ;
+    kgc:hasFieldOfWork kgcr:000021 .
+
+kgcr:000394 schema:alumniOf kgcr:000396,
+        kgcr:000404,
+        kgcr:000405 ;
+    schema:knowsAbout kgcr:000397 ;
+    schema:nationality kgcr:000010,
+        kgcr:000395,
+        kgcr:000403 ;
+    schema:worksFor kgcr:000398 ;
+    kgc:hasFieldOfWork kgcr:000397 .
+
+kgcr:000406 schema:alumniOf kgcr:000407 ;
+    schema:worksFor kgcr:000408 .
+
+kgcr:000408 schema:memberOf kgcr:000058 .
+
+kgcr:000409 schema:worksFor kgcr:000398 .
+
+kgcr:000413 schema:worksFor kgcr:000414 .
+
+kgcr:000414 schema:additionalType kgcr:000004,
+        kgcr:000020,
+        kgcr:000194,
+        kgcr:000200,
+        kgcr:000416,
+        kgcr:000417,
+        kgcr:000422 ;
+    schema:memberOf kgcr:000003,
+        kgcr:000011,
+        kgcr:000415,
+        kgcr:000424,
+        kgcr:000425,
+        kgcr:000426,
+        kgcr:000427,
+        kgcr:000428 ;
+    kgc:hasBusinessType kgcr:000004,
+        kgcr:000194,
+        kgcr:000416,
+        kgcr:000422 ;
+    kgc:hasIndustry kgcr:000020,
+        kgcr:000200,
+        kgcr:000417 .
+
+kgcr:000419 schema:alumniOf kgcr:000420,
+        kgcr:000423 .
+
+kgcr:000429 schema:worksFor kgcr:000430 .
+
+kgcr:000430 schema:additionalType kgcr:000004 ;
+    kgc:hasBusinessType kgcr:000004 .
+
+kgcr:000432 schema:geoWithin kgcr:000433 .
+
+kgcr:000435 schema:worksFor kgcr:000436 .
+
+kgcr:000436 schema:additionalType kgcr:000004 ;
+    kgc:hasBusinessType kgcr:000004 .
+
+kgcr:000438 schema:geoWithin kgcr:000439 .
+
+kgcr:000441 schema:worksFor kgcr:000146 .
+
+kgcr:000445 schema:alumniOf kgcr:000446 ;
+    schema:worksFor kgcr:000447 .
+
+kgcr:000447 schema:additionalType kgcr:000114,
+        kgcr:000449,
+        kgcr:000456,
+        kgcr:000458,
+        kgcr:000459 ;
+    schema:memberOf kgcr:000011,
+        kgcr:000049,
+        kgcr:000053,
+        kgcr:000448,
+        kgcr:000457,
+        kgcr:000460,
+        kgcr:000461,
+        kgcr:000462 ;
+    kgc:hasBusinessType kgcr:000114,
+        kgcr:000449,
+        kgcr:000456,
+        kgcr:000458,
+        kgcr:000459 .
+
+kgcr:000454 schema:alumniOf kgcr:000455 .
+
+kgcr:000463 schema:worksFor kgcr:000464 .
+
+kgcr:000464 schema:additionalType kgcr:000004 ;
+    schema:memberOf kgcr:000049 ;
+    kgc:hasBusinessType kgcr:000004 .
+
+kgcr:000466 schema:geoWithin kgcr:000467 .
+
+kgcr:000471 schema:knowsAbout kgcr:000021 ;
+    schema:worksFor kgcr:000163 ;
+    kgc:hasFieldOfWork kgcr:000021 .
+
+kgcr:000473 schema:worksFor kgcr:000474 .
+
+kgcr:000474 schema:additionalType kgcr:000020 ;
+    kgc:hasIndustry kgcr:000020 .
+
+kgcr:000475 schema:worksFor kgcr:000476 .
+
+kgcr:000476 schema:additionalType kgcr:000041 ;
+    kgc:hasIndustry kgcr:000041 .
+
+kgcr:000478 schema:worksFor kgcr:000479 .
+
+kgcr:000479 schema:additionalType kgcr:000020,
+        kgcr:000480 ;
+    kgc:hasBusinessType kgcr:000480 ;
+    kgc:hasIndustry kgcr:000020 .
+
+kgcr:000483 schema:alumniOf kgcr:000484 ;
+    schema:nationality kgcr:000439 ;
+    schema:worksFor kgcr:000485 .
+
+kgcr:000485 schema:additionalType kgcr:000486 ;
+    kgc:hasBusinessType kgcr:000486 .
+
+kgcr:000489 schema:worksFor kgcr:000490 .
+
+kgcr:000491 schema:worksFor kgcr:000492 .
+
+kgcr:000492 schema:additionalType kgcr:000493 ;
+    schema:knowsAbout kgcr:000494,
+        kgcr:000501 ;
+    kgc:hasBusinessType kgcr:000493 ;
+    kgc:hasFieldOfWork kgcr:000494,
+        kgcr:000501 .
+
+kgcr:000496 schema:geoWithin kgcr:000497 .
+
+kgcr:000502 schema:worksFor kgcr:000503 .
+
+kgcr:000503 schema:additionalType kgcr:000004,
+        kgcr:000147,
+        kgcr:000172,
+        kgcr:000194 ;
+    schema:memberOf kgcr:000217 ;
+    kgc:hasBusinessType kgcr:000004,
+        kgcr:000172,
+        kgcr:000194 ;
+    kgc:hasIndustry kgcr:000147 .
+
+kgcr:000505 schema:geoWithin kgcr:000506 .
+
+kgcr:000508 schema:alumniOf kgcr:000509 ;
+    schema:worksFor kgcr:000510 .
+
+kgcr:000510 schema:additionalType kgcr:000230,
+        kgcr:000511 ;
+    kgc:hasBusinessType kgcr:000230,
+        kgcr:000511 .
+
+kgcr:000513 schema:geoWithin kgcr:000009 .
+
+kgcr:000514 schema:worksFor kgcr:000515 .
+
+kgcr:000515 schema:additionalType kgcr:000516,
+        kgcr:000519 ;
+    kgc:hasBusinessType kgcr:000516,
+        kgcr:000519 .
+
+kgcr:000518 schema:geoWithin kgcr:000069 .
+
+kgcr:000520 schema:worksFor kgcr:000521 .
+
+kgcr:000530 schema:worksFor kgcr:000531 .
+
+kgcr:000534 schema:geoWithin kgcr:000535 .
+
+kgcr:000537 schema:alumniOf kgcr:000538,
+        kgcr:000544 ;
+    schema:nationality kgcr:000010 ;
+    schema:worksFor kgcr:000539 .
+
+kgcr:000539 schema:additionalType kgcr:000004,
+        kgcr:000020,
+        kgcr:000194,
+        kgcr:000219,
+        kgcr:000422,
+        kgcr:000541,
+        kgcr:000545 ;
+    schema:memberOf kgcr:000003,
+        kgcr:000011,
+        kgcr:000160,
+        kgcr:000175,
+        kgcr:000202,
+        kgcr:000203,
+        kgcr:000415,
+        kgcr:000424,
+        kgcr:000426,
+        kgcr:000427,
+        kgcr:000428,
+        kgcr:000524,
+        kgcr:000529,
+        kgcr:000540,
+        kgcr:000546,
+        kgcr:000547,
+        kgcr:000548 ;
+    kgc:hasBusinessType kgcr:000004,
+        kgcr:000194,
+        kgcr:000422 ;
+    kgc:hasIndustry kgcr:000020,
+        kgcr:000219,
+        kgcr:000541,
+        kgcr:000545 .
+
+kgcr:000543 schema:geoWithin kgcr:000113 .
+
+kgcr:000550 schema:geoWithin kgcr:000551 .
+
+kgcr:000553 schema:alumniOf kgcr:000554 .
+
+kgcr:000561 schema:alumniOf kgcr:000563 ;
+    schema:nationality kgcr:000562 .
+
+kgcr:000564 schema:alumniOf kgcr:000565 .
+
+kgcr:000567 schema:additionalType kgcr:000004,
+        kgcr:000005,
+        kgcr:000240,
+        kgcr:000573 ;
+    schema:memberOf kgcr:000011,
+        kgcr:000175 ;
+    kgc:hasBusinessType kgcr:000004,
+        kgcr:000240 ;
+    kgc:hasIndustry kgcr:000005,
+        kgcr:000573 .
+
+kgcr:000569 schema:geoWithin kgcr:000570 .
+
+kgcr:000571 schema:alumniOf kgcr:000572 .
+
+kgcr:000574 schema:alumniOf kgcr:000575,
+        kgcr:000578 ;
+    schema:worksFor kgcr:000576 .
+
+kgcr:000580 schema:alumniOf kgcr:000581 ;
+    schema:worksFor kgcr:000582 .
+
+kgcr:000583 schema:alumniOf kgcr:000584 ;
+    schema:knowsAbout kgcr:000131 ;
+    schema:nationality kgcr:000383 ;
+    kgc:hasFieldOfWork kgcr:000131 .
+
+kgcr:000585 schema:worksFor kgcr:000531 .
+
+kgcr:000586 schema:worksFor kgcr:000587 .
+
+kgcr:000588 schema:worksFor kgcr:000589 .
+
+kgcr:000590 schema:worksFor kgcr:000531 .
+
+kgcr:000591 schema:worksFor kgcr:000592 .
+
+kgcr:000593 schema:worksFor kgcr:000594 .
+
+kgcr:000595 schema:alumniOf kgcr:000596 .
+
+kgcr:000597 schema:alumniOf kgcr:000598,
+        kgcr:000600 ;
+    schema:worksFor kgcr:000599 .
+
+kgcr:000601 schema:worksFor kgcr:000602 .
+
+kgcr:000604 schema:alumniOf kgcr:000606,
+        kgcr:000607 ;
+    schema:nationality kgcr:000605 .
+
+kgcr:000609 schema:alumniOf kgcr:000610 .
+
+kgcr:000612 schema:worksFor kgcr:000613 .
+
+kgcr:000615 schema:worksFor kgcr:000616 .
+
+kgcr:000618 schema:worksFor kgcr:000619 .
+
+kgcr:000620 schema:worksFor kgcr:000582 .
+
+kgcr:000621 schema:alumniOf kgcr:000622 ;
+    schema:worksFor kgcr:000623 .
+
+kgcr:000625 schema:worksFor kgcr:000626 .
+
+kgcr:000627 schema:worksFor kgcr:000628 .
+
+kgcr:000629 schema:alumniOf kgcr:000538 ;
+    schema:worksFor kgcr:000630 .
+
+kgcr:000631 schema:alumniOf kgcr:000259 ;
+    schema:worksFor kgcr:000018 .
+
+kgcr:000632 schema:alumniOf kgcr:000259 ;
+    schema:worksFor kgcr:000633 .
+
+kgcr:000634 schema:alumniOf kgcr:000259 ;
+    schema:worksFor kgcr:000635 .
+
+kgcr:000639 schema:worksFor kgcr:000640 .
+
+kgcr:000643 schema:worksFor kgcr:000644 .
+
+kgcr:000646 schema:worksFor kgcr:000647 .
+
+kgcr:000648 schema:worksFor kgcr:000531 .
+
+kgcr:000649 schema:worksFor kgcr:000650 .
+
+kgcr:000651 schema:worksFor kgcr:000652 .
+
+kgcr:000652 schema:additionalType kgcr:000004 ;
+    kgc:hasBusinessType kgcr:000004 .
+
+kgcr:000654 schema:geoWithin kgcr:000142 .
+
+kgcr:000655 schema:worksFor kgcr:000040 .
+
+kgcr:000658 schema:alumniOf kgcr:000659 ;
+    schema:worksFor kgcr:000660 .
+
+kgcr:000661 schema:worksFor kgcr:000662 .
+
+kgcr:000663 schema:worksFor kgcr:000664 .
+
+kgcr:000665 schema:worksFor kgcr:000666 .
+
+kgcr:000667 schema:worksFor kgcr:000576 .
+
+kgcr:000668 schema:alumniOf kgcr:000669 ;
+    schema:worksFor kgcr:000670 .
+
+kgcr:000674 schema:alumniOf kgcr:000675,
+        kgcr:000677 ;
+    schema:nationality kgcr:000010 ;
+    schema:worksFor kgcr:000676 .
+
+kgcr:000679 schema:worksFor kgcr:000680 .
+
+kgcr:000681 schema:worksFor kgcr:000682 .
+
+kgcr:000683 schema:alumniOf kgcr:000110 ;
+    schema:worksFor kgcr:000684 .
+
+kgcr:000685 schema:alumniOf kgcr:000575 ;
+    schema:worksFor kgcr:000154 .
+
+kgcr:000686 schema:worksFor kgcr:000687 .
+
+kgcr:000691 schema:alumniOf kgcr:000692,
+        kgcr:000693 .
+
+kgcr:000694 schema:worksFor kgcr:000695 .
+
+kgcr:000698 schema:alumniOf kgcr:000699 ;
+    schema:worksFor kgcr:000700 .
+
+kgcr:000701 schema:alumniOf kgcr:000702 .
+
+kgcr:000704 schema:alumniOf kgcr:000705 .
+
+kgcr:000706 schema:worksFor kgcr:000613 .
+
+kgcr:000707 schema:worksFor kgcr:000708 .
+
+kgcr:000709 schema:worksFor kgcr:000490 .
+
+kgcr:000713 schema:alumniOf kgcr:000714 ;
+    schema:knowsAbout kgcr:000131 ;
+    schema:nationality kgcr:000010 ;
+    kgc:hasFieldOfWork kgcr:000131 .
+
+kgcr:000715 schema:alumniOf kgcr:000222 ;
+    schema:worksFor kgcr:000716 .
+
+kgcr:000717 schema:alumniOf kgcr:000718 ;
+    schema:worksFor kgcr:000719 .
+
+kgcr:000724 schema:worksFor kgcr:000725 .
+
+kgcr:000727 schema:worksFor kgcr:000728 .
+
+kgcr:000729 schema:alumniOf kgcr:000730 ;
+    schema:worksFor kgcr:000731 .
+
+kgcr:000750 schema:worksFor kgcr:000521 .
+
+kgcr:000751 schema:alumniOf kgcr:000607,
+        kgcr:000677,
+        kgcr:000752 .
+
+kgcr:000754 schema:alumniOf kgcr:000755 .
+
+kgcr:000756 schema:worksFor kgcr:000757 .
+
+schema:Country a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+kgcr:000009 schema:geoWithin kgcr:000010 .
+
+kgcr:000069 schema:geoWithin kgcr:000070 .
+
+kgcr:000113 schema:geoWithin kgcr:000070 .
+
+kgcr:000167 schema:geoWithin kgcr:000168 .
+
+kgcr:000381 schema:geoWithin kgcr:000382 .
+
+kgcr:000390 schema:geoWithin kgcr:000227 .
+
+kgcr:000398 schema:additionalType kgcr:000056,
+        kgcr:000125 ;
+    schema:memberOf kgcr:000051,
+        kgcr:000055,
+        kgcr:000057,
+        kgcr:000058 ;
+    kgc:hasBusinessType kgcr:000056,
+        kgcr:000125 .
+
+kgcr:000400 schema:geoWithin kgcr:000401 .
+
+kgcr:000433 schema:geoWithin kgcr:000434 .
+
+kgcr:000467 schema:geoWithin kgcr:000468 .
+
+kgcr:000497 schema:geoWithin kgcr:000498 .
+
+kgcr:000506 schema:geoWithin kgcr:000507 .
+
+kgcr:000535 schema:geoWithin kgcr:000010 .
+
+kgcr:000551 schema:geoWithin kgcr:000552 .
+
+kgcr:000558 schema:worksFor kgcr:000559 .
+
+kgcr:000570 schema:geoWithin kgcr:000070 .
+
+kgcr:000576 schema:additionalType kgcr:000012,
+        kgcr:000577,
+        kgcr:000579 ;
+    kgc:hasBusinessType kgcr:000012,
+        kgcr:000579 ;
+    kgc:hasIndustry kgcr:000577 .
+
+kgcr:000582 schema:additionalType kgcr:000194 ;
+    kgc:hasBusinessType kgcr:000194 .
+
+kgcr:000742 schema:worksFor kgcr:000743 .
+
+schema:Place a owl:Class .
+
+kgcr:000401 schema:geoWithin kgcr:000402 .
+
+kgcr:000451 schema:geoWithin kgcr:000451,
+        kgcr:000452 .
+
+kgcr:000521 schema:additionalType kgcr:000004,
+        kgcr:000012,
+        kgcr:000194,
+        kgcr:000519,
+        kgcr:000522,
+        kgcr:000525,
+        kgcr:000526,
+        kgcr:000527,
+        kgcr:000528 ;
+    schema:memberOf kgcr:000003,
+        kgcr:000011,
+        kgcr:000175,
+        kgcr:000415,
+        kgcr:000425,
+        kgcr:000524,
+        kgcr:000529 ;
+    kgc:hasBusinessType kgcr:000004,
+        kgcr:000012,
+        kgcr:000194,
+        kgcr:000519,
+        kgcr:000527,
+        kgcr:000528 ;
+    kgc:hasIndustry kgcr:000522,
+        kgcr:000525,
+        kgcr:000526,
+        kgcr:000528 .
+
+schema:Person a owl:Class .
+
+kgcr:000097 schema:geoWithin kgcr:000098 .
+
+kgcr:000098 schema:geoWithin kgcr:000010 .
+
+kgcr:000531 schema:additionalType kgcr:000532 ;
+    kgc:hasBusinessType kgcr:000532 .
+
+schema:CreativeWork a owl:Class .
+
+schema:Intangible a owl:Class .
+
+schema:PostalAddress a owl:Class ;
+    rdfs:subClassOf schema:ContactPoint .
+
+schema:AdministrativeArea a owl:Class ;
+    rdfs:subClassOf schema:Place .
+
+schema:Organization a owl:Class .
+
+schema:Event a owl:Class .
+
+kgcr:conference-2021 a schema:EventSeries,
+        kgc:Conference ;
+    schema:eventAttendanceMode schema:OnlineEventAttendanceMode ;
+    schema:name "Knowledge Graph Conference 2021" ;
+    schema:sameAs wd:Q106704796 .
+

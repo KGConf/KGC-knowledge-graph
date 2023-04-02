@@ -15,6 +15,9 @@ schema:EventSeries a owl:Class ;
 schema:PresentationDigitalDocument a owl:Class ;
     rdfs:subClassOf schema:DigitalDocument .
 
+schema:WebSite a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
 schema:about a owl:ObjectProperty .
 
 schema:abstract a owl:DatatypeProperty .
@@ -78,8 +81,7 @@ schema:performer a owl:ObjectProperty ;
 
 schema:postalCode a owl:DatatypeProperty .
 
-schema:sameAs a owl:DatatypeProperty ;
-    rdfs:range xsd:anyURI .
+schema:sameAs a owl:ObjectProperty .
 
 schema:superEvent a owl:ObjectProperty ;
     rdfs:domain schema:Event ;
@@ -101,6 +103,9 @@ kgc: a owl:Ontology ;
 
 kgc:Conference a owl:Class ;
     rdfs:subClassOf schema:Event .
+
+kgc:LinkedInProfile a owl:Class ;
+    rdfs:subClassOf schema:ProfilePage .
 
 kgc:Tag a owl:Class ;
     rdfs:subClassOf schema:Intangible .
@@ -141,6 +146,8 @@ kgc:hasIndustry a owl:ObjectProperty ;
 
 kgc:linkedIn a owl:DatatypeProperty .
 
+kgc:onlineProfile a owl:DatatypeProperty .
+
 kgc:streetAddress a owl:ObjectProperty ;
     rdfs:domain schema:PostalAddress ;
     rdfs:range kgc:Address .
@@ -180,6 +187,9 @@ schema:EventAttendanceModeEnumeration a owl:Class ;
 schema:MediaObject a owl:Class ;
     rdfs:subClassOf schema:CreativeWork .
 
+schema:ProfilePage a owl:Class ;
+    rdfs:subClassOf schema:WebPage .
+
 schema:State a owl:Class ;
     rdfs:subClassOf schema:AdministrativeArea .
 
@@ -188,6 +198,9 @@ schema:StructuredValue a owl:Class ;
 
 schema:VideoObject a owl:Class ;
     rdfs:subClassOf schema:MediaObject .
+
+schema:WebPage a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
 
 kgc:Address a owl:Class ;
     rdfs:subClassOf schema:AdministrativeArea .
@@ -209,9 +222,9 @@ schema:Country a owl:Class ;
 
 schema:Place a owl:Class .
 
-schema:CreativeWork a owl:Class .
-
 schema:Person a owl:Class .
+
+schema:CreativeWork a owl:Class .
 
 schema:Intangible a owl:Class .
 
