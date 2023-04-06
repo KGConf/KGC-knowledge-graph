@@ -7,7 +7,7 @@ We will keep improving it and post updates here.
 * Speakers: Persons and Companies with links to Wikidata
 * Presentations
 * Topics
-For the year 2020.
+For the years 2020 and 2021.
 
 
 
