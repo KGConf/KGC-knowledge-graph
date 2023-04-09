@@ -575,9 +575,9 @@ kgcr:000001 a schema:Person ;
     schema:worksFor kgcr:000002 .
 
 kgcr:000006 a schema:PostalAddress ;
-    rdfs:label "Capital One:Tysons,Fairfax County,Virginia,United States of America" ;
+    rdfs:label "Tysons,Fairfax County,Virginia,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Capital One:Tysons,Fairfax County,Virginia,United States of America" ;
+    schema:name "Capital One,Tysons,Fairfax County,Virginia,United States of America" ;
     kgc:addressCounty kgcr:000008 ;
     kgc:addressRegion kgcr:000009 ;
     kgc:streetAddress kgcr:000007 .
@@ -587,9 +587,9 @@ kgcr:000007 a kgc:Address ;
     schema:name "Tysons" .
 
 kgcr:000013 a schema:PostalAddress ;
-    rdfs:label "Capital One:McLean,Fairfax County,Virginia,United States of America" ;
+    rdfs:label "McLean,Fairfax County,Virginia,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Capital One:McLean,Fairfax County,Virginia,United States of America" ;
+    schema:name "Capital One,McLean,Fairfax County,Virginia,United States of America" ;
     kgc:addressCounty kgcr:000008 ;
     kgc:addressRegion kgcr:000009 ;
     kgc:streetAddress kgcr:000014 .
@@ -629,9 +629,9 @@ kgcr:000018 a schema:Organization ;
     kgc:hasIndustry kgcr:000020 .
 
 kgcr:000022 a schema:PostalAddress ;
-    rdfs:label "data.world:Austin,Travis County,Texas,United States of America" ;
+    rdfs:label "Austin,Travis County,Texas,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "data.world:Austin,Travis County,Texas,United States of America" ;
+    schema:name "data.world,Austin,Travis County,Texas,United States of America" ;
     kgc:addressCity kgcr:000023 ;
     kgc:addressCounty kgcr:000024 ;
     kgc:addressRegion kgcr:000025 .
@@ -658,9 +658,9 @@ kgcr:000029 a schema:Organization ;
     kgc:hasIndustry kgcr:000020 .
 
 kgcr:000031 a schema:PostalAddress ;
-    rdfs:label "Graphen, Inc.:New York City,New York,United States of America" ;
+    rdfs:label " Inc.,New York City,New York,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Graphen, Inc.:New York City,New York,United States of America" ;
+    schema:name "Graphen, Inc.,New York City,New York,United States of America" ;
     kgc:addressCity kgcr:000032 ;
     kgc:addressRegion kgcr:000033 .
 
@@ -686,9 +686,9 @@ kgcr:000035 a schema:Organization ;
         kgcr:000038 .
 
 kgcr:000037 a schema:PostalAddress ;
-    rdfs:label "Dow Jones & Company:New York City,New York,United States of America" ;
+    rdfs:label "New York City,New York,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Dow Jones & Company:New York City,New York,United States of America" ;
+    schema:name "Dow Jones & Company,New York City,New York,United States of America" ;
     kgc:addressCity kgcr:000032 ;
     kgc:addressRegion kgcr:000033 .
 
@@ -742,9 +742,9 @@ kgcr:000044 a schema:Consortium ;
     schema:sameAs wd:Q49113 .
 
 kgcr:000046 a schema:PostalAddress ;
-    rdfs:label "Cornell University:Ithaca,Tompkins County,New York,United States of America" ;
+    rdfs:label "Ithaca,Tompkins County,New York,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Cornell University:Ithaca,Tompkins County,New York,United States of America" ;
+    schema:name "Cornell University,Ithaca,Tompkins County,New York,United States of America" ;
     kgc:addressCity kgcr:000047 ;
     kgc:addressCounty kgcr:000048 ;
     kgc:addressRegion kgcr:000033 .
@@ -817,9 +817,9 @@ kgcr:000066 a schema:Organization ;
     kgc:hasIndustry kgcr:000020 .
 
 kgcr:000067 a schema:PostalAddress ;
-    rdfs:label "Kyndi, Inc.:San Mateo,San Mateo County,California,United States of America" ;
+    rdfs:label " Inc.,San Mateo,San Mateo County,California,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Kyndi, Inc.:San Mateo,San Mateo County,California,United States of America" ;
+    schema:name "Kyndi, Inc.,San Mateo,San Mateo County,California,United States of America" ;
     kgc:addressCity kgcr:000068 ;
     kgc:addressCounty kgcr:000069 ;
     kgc:addressRegion kgcr:000070 .
@@ -862,9 +862,9 @@ kgcr:000075 a schema:Organization ;
     kgc:hasBusinessType kgcr:000041 .
 
 kgcr:000076 a schema:PostalAddress ;
-    rdfs:label "Stardog:Arlington County,Virginia,United States of America" ;
+    rdfs:label "Arlington County,Virginia,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Stardog:Arlington County,Virginia,United States of America" ;
+    schema:name "Stardog,Arlington County,Virginia,United States of America" ;
     kgc:addressCounty kgcr:000077 ;
     kgc:addressRegion kgcr:000009 .
 
@@ -930,9 +930,9 @@ kgcr:000087 a schema:Organization ;
     kgc:hasIndustry kgcr:000005 .
 
 kgcr:000088 a schema:PostalAddress ;
-    rdfs:label "Morgan Stanley:New York City,New York,United States of America" ;
+    rdfs:label "New York City,New York,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Morgan Stanley:New York City,New York,United States of America" ;
+    schema:name "Morgan Stanley,New York City,New York,United States of America" ;
     kgc:addressCity kgcr:000032 ;
     kgc:addressRegion kgcr:000033 .
 
@@ -976,9 +976,9 @@ kgcr:000092 a schema:Organization ;
     kgc:hasIndustry kgcr:000094 .
 
 kgcr:000095 a schema:PostalAddress ;
-    rdfs:label "Amazon Web Services:Seattle,King County,Washington,United States of America" ;
+    rdfs:label "Seattle,King County,Washington,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Amazon Web Services:Seattle,King County,Washington,United States of America" ;
+    schema:name "Amazon Web Services,Seattle,King County,Washington,United States of America" ;
     kgc:addressCity kgcr:000096 ;
     kgc:addressCounty kgcr:000097 ;
     kgc:addressRegion kgcr:000098 .
@@ -1011,9 +1011,9 @@ kgcr:000104 a schema:Organization ;
     kgc:hasIndustry kgcr:000020 .
 
 kgcr:000105 a schema:PostalAddress ;
-    rdfs:label "Derwen, Inc.:Sebastopol,Sonoma County,California,United States of America" ;
+    rdfs:label " Inc.,Sebastopol,Sonoma County,California,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Derwen, Inc.:Sebastopol,Sonoma County,California,United States of America" ;
+    schema:name "Derwen, Inc.,Sebastopol,Sonoma County,California,United States of America" ;
     kgc:addressCity kgcr:000106 ;
     kgc:addressCounty kgcr:000107 ;
     kgc:addressRegion kgcr:000070 .
@@ -1061,9 +1061,9 @@ kgcr:000110 a schema:Organization ;
         kgcr:000114 .
 
 kgcr:000111 a schema:PostalAddress ;
-    rdfs:label "Stanford University:Stanford,Santa Clara County,California,United States of America" ;
+    rdfs:label "Stanford,Santa Clara County,California,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Stanford University:Stanford,Santa Clara County,California,United States of America" ;
+    schema:name "Stanford University,Stanford,Santa Clara County,California,United States of America" ;
     kgc:addressCity kgcr:000112 ;
     kgc:addressCounty kgcr:000113 ;
     kgc:addressRegion kgcr:000070 .
@@ -1109,9 +1109,9 @@ kgcr:000118 a schema:Organization ;
     kgc:hasIndustry kgcr:000020 .
 
 kgcr:000119 a schema:PostalAddress ;
-    rdfs:label "Cherre Inc.:New York City,New York,United States of America" ;
+    rdfs:label "New York City,New York,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Cherre Inc.:New York City,New York,United States of America" ;
+    schema:name "Cherre Inc.,New York City,New York,United States of America" ;
     kgc:addressCity kgcr:000032 ;
     kgc:addressRegion kgcr:000033 .
 
@@ -1142,9 +1142,9 @@ kgcr:000124 a schema:Consortium ;
     schema:sameAs wd:Q2027055 .
 
 kgcr:000126 a schema:PostalAddress ;
-    rdfs:label "Ghent University:Ghent,East Flanders,Flemish Region,Belgium" ;
+    rdfs:label "Ghent,East Flanders,Flemish Region,Belgium" ;
     schema:addressCountry kgcr:000122 ;
-    schema:name "Ghent University:Ghent,East Flanders,Flemish Region,Belgium" ;
+    schema:name "Ghent University,Ghent,East Flanders,Flemish Region,Belgium" ;
     kgc:addressCity kgcr:000127 ;
     kgc:addressCounty kgcr:000128 ;
     kgc:addressRegion kgcr:000129 .
@@ -1190,9 +1190,9 @@ kgcr:000137 a schema:Organization ;
         kgcr:000144 .
 
 kgcr:000138 a schema:PostalAddress ;
-    rdfs:label "derivo GmbH:Ulm,Tübingen Government Region,Baden-Württemberg,Germany" ;
+    rdfs:label "Ulm,Tübingen Government Region,Baden-Württemberg,Germany" ;
     schema:addressCountry kgcr:000142 ;
-    schema:name "derivo GmbH:Ulm,Tübingen Government Region,Baden-Württemberg,Germany" ;
+    schema:name "derivo GmbH,Ulm,Tübingen Government Region,Baden-Württemberg,Germany" ;
     kgc:addressCity kgcr:000139 ;
     kgc:addressCounty kgcr:000140 ;
     kgc:addressRegion kgcr:000141 .
@@ -1224,9 +1224,9 @@ kgcr:000146 a schema:Organization ;
     kgc:hasIndustry kgcr:000147 .
 
 kgcr:000148 a schema:PostalAddress ;
-    rdfs:label "AstraZeneca:Cambridge,Cambridgeshire,East of England,England" ;
+    rdfs:label "Cambridge,Cambridgeshire,East of England,England" ;
     schema:addressCountry kgcr:000152 ;
-    schema:name "AstraZeneca:Cambridge,Cambridgeshire,East of England,England" ;
+    schema:name "AstraZeneca,Cambridge,Cambridgeshire,East of England,England" ;
     kgc:addressCity kgcr:000149 ;
     kgc:addressCounty kgcr:000150 ;
     kgc:addressRegion kgcr:000151 .
@@ -1263,16 +1263,16 @@ kgcr:000154 a schema:Organization ;
         kgcr:000161 .
 
 kgcr:000156 a schema:PostalAddress ;
-    rdfs:label "Verizon Media:New York City,New York,United States of America" ;
+    rdfs:label "New York City,New York,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Verizon Media:New York City,New York,United States of America" ;
+    schema:name "Verizon Media,New York City,New York,United States of America" ;
     kgc:addressCity kgcr:000032 ;
     kgc:addressRegion kgcr:000033 .
 
 kgcr:000158 a schema:PostalAddress ;
-    rdfs:label "Verizon Media:Sunnyvale,Santa Clara County,California,United States of America" ;
+    rdfs:label "Sunnyvale,Santa Clara County,California,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Verizon Media:Sunnyvale,Santa Clara County,California,United States of America" ;
+    schema:name "Verizon Media,Sunnyvale,Santa Clara County,California,United States of America" ;
     kgc:addressCity kgcr:000159 ;
     kgc:addressCounty kgcr:000113 ;
     kgc:addressRegion kgcr:000070 .
@@ -1311,9 +1311,9 @@ kgcr:000163 a schema:Organization ;
         kgcr:000041 .
 
 kgcr:000165 a schema:PostalAddress ;
-    rdfs:label "Ontotext:Sofia,Sofia Capital Municipality,Sofia City Province,Bulgaria" ;
+    rdfs:label "Sofia,Sofia Capital Municipality,Sofia City Province,Bulgaria" ;
     schema:addressCountry kgcr:000169 ;
-    schema:name "Ontotext:Sofia,Sofia Capital Municipality,Sofia City Province,Bulgaria" ;
+    schema:name "Ontotext,Sofia,Sofia Capital Municipality,Sofia City Province,Bulgaria" ;
     kgc:addressCity kgcr:000166 ;
     kgc:addressCounty kgcr:000167 ;
     kgc:addressRegion kgcr:000168 .
@@ -1352,9 +1352,9 @@ kgcr:000171 a schema:Organization ;
     kgc:hasIndustry kgcr:000005 .
 
 kgcr:000173 a schema:PostalAddress ;
-    rdfs:label "Goldman Sachs:200 West Street, Battery Park City,  Manhattan,New York City,New York,United States of America" ;
+    rdfs:label "200 West Street, Battery Park City,  Manhattan,New York City,New York,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Goldman Sachs:200 West Street, Battery Park City,  Manhattan,New York City,New York,United States of America" ;
+    schema:name "Goldman Sachs,200 West Street, Battery Park City,  Manhattan,New York City,New York,United States of America" ;
     kgc:addressCity kgcr:000032 ;
     kgc:addressRegion kgcr:000033 ;
     kgc:streetAddress kgcr:000174 .
@@ -1385,9 +1385,9 @@ kgcr:000179 a schema:Organization ;
         kgcr:000185 .
 
 kgcr:000180 a schema:PostalAddress ;
-    rdfs:label "Mind-Alliance Systems:Whippany,Hanover Township,Morris County,New Jersey,United States of America" ;
+    rdfs:label "Whippany,Hanover Township,Morris County,New Jersey,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Mind-Alliance Systems:Whippany,Hanover Township,Morris County,New Jersey,United States of America" ;
+    schema:name "Mind-Alliance Systems,Whippany,Hanover Township,Morris County,New Jersey,United States of America" ;
     kgc:addressCity kgcr:000182 ;
     kgc:addressCounty kgcr:000183 ;
     kgc:addressRegion kgcr:000184 ;
@@ -1422,9 +1422,9 @@ kgcr:000187 a schema:Organization ;
     kgc:hasIndustry kgcr:000188 .
 
 kgcr:000189 a schema:PostalAddress ;
-    rdfs:label "Thematix Partners LLC:New York City,New York,United States of America" ;
+    rdfs:label "New York City,New York,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Thematix Partners LLC:New York City,New York,United States of America" ;
+    schema:name "Thematix Partners LLC,New York City,New York,United States of America" ;
     kgc:addressCity kgcr:000032 ;
     kgc:addressRegion kgcr:000033 .
 
@@ -1456,9 +1456,9 @@ kgcr:000193 a schema:Organization ;
         kgcr:000200 .
 
 kgcr:000196 a schema:PostalAddress ;
-    rdfs:label "Oracle Corporation:Redwood Shores,Redwood City,San Mateo County,California,United States of America" ;
+    rdfs:label "Redwood Shores,Redwood City,San Mateo County,California,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Oracle Corporation:Redwood Shores,Redwood City,San Mateo County,California,United States of America" ;
+    schema:name "Oracle Corporation,Redwood Shores,Redwood City,San Mateo County,California,United States of America" ;
     kgc:addressCity kgcr:000198 ;
     kgc:addressCounty kgcr:000069 ;
     kgc:addressRegion kgcr:000070 ;
@@ -1475,9 +1475,9 @@ kgcr:000199 a schema:Consortium ;
     schema:sameAs wd:Q2985457 .
 
 kgcr:000201 a schema:PostalAddress ;
-    rdfs:label "Oracle Corporation:California,United States of America" ;
+    rdfs:label "California,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Oracle Corporation:California,United States of America" ;
+    schema:name "Oracle Corporation,California,United States of America" ;
     kgc:addressRegion kgcr:000070 .
 
 kgcr:000202 a schema:Consortium ;
@@ -1529,9 +1529,9 @@ kgcr:000206 a schema:Organization ;
         kgcr:000219 .
 
 kgcr:000208 a schema:PostalAddress ;
-    rdfs:label "Accenture:Dublin,County Dublin,Leinster,Ireland" ;
+    rdfs:label "Dublin,County Dublin,Leinster,Ireland" ;
     schema:addressCountry kgcr:000212 ;
-    schema:name "Accenture:Dublin,County Dublin,Leinster,Ireland" ;
+    schema:name "Accenture,Dublin,County Dublin,Leinster,Ireland" ;
     kgc:addressCity kgcr:000209 ;
     kgc:addressCounty kgcr:000210 ;
     kgc:addressRegion kgcr:000211 .
@@ -1548,8 +1548,8 @@ kgcr:000213 a schema:Consortium ;
     schema:sameAs wd:Q80655185 .
 
 kgcr:000215 a schema:PostalAddress ;
-    rdfs:label "Accenture:Irish Free State," ;
-    schema:name "Accenture:Irish Free State," ;
+    rdfs:label "Irish Free State," ;
+    schema:name "Accenture,Irish Free State," ;
     kgc:addressRegion kgcr:000216 .
 
 kgcr:000216 a schema:State ;
@@ -1562,8 +1562,8 @@ kgcr:000217 a schema:Consortium ;
     schema:sameAs wd:Q17353641 .
 
 kgcr:000220 a schema:PostalAddress ;
-    rdfs:label "Accenture:Ireland," ;
-    schema:name "Accenture:Ireland," ;
+    rdfs:label "Ireland," ;
+    schema:name "Accenture,Ireland," ;
     kgc:addressRegion kgcr:000212 .
 
 kgcr:000221 a schema:Person ;
@@ -1605,9 +1605,9 @@ kgcr:000223 a schema:Consortium ;
     schema:sameAs wd:Q2574590 .
 
 kgcr:000224 a schema:PostalAddress ;
-    rdfs:label "University of Amsterdam:Amsterdam,Amsterdam,North Holland,Netherlands" ;
+    rdfs:label "Amsterdam,Amsterdam,North Holland,Netherlands" ;
     schema:addressCountry kgcr:000227 ;
-    schema:name "University of Amsterdam:Amsterdam,Amsterdam,North Holland,Netherlands" ;
+    schema:name "University of Amsterdam,Amsterdam,Amsterdam,North Holland,Netherlands" ;
     kgc:addressCity kgcr:000225 ;
     kgc:addressCounty kgcr:000225 ;
     kgc:addressRegion kgcr:000226 .
@@ -1648,9 +1648,9 @@ kgcr:000235 a schema:Organization ;
         kgcr:000244 .
 
 kgcr:000236 a schema:PostalAddress ;
-    rdfs:label "Bank of America:Charlotte,Mecklenburg County,North Carolina,United States of America" ;
+    rdfs:label "Charlotte,Mecklenburg County,North Carolina,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Bank of America:Charlotte,Mecklenburg County,North Carolina,United States of America" ;
+    schema:name "Bank of America,Charlotte,Mecklenburg County,North Carolina,United States of America" ;
     kgc:addressCity kgcr:000237 ;
     kgc:addressCounty kgcr:000238 ;
     kgc:addressRegion kgcr:000239 .
@@ -1662,9 +1662,9 @@ kgcr:000237 a schema:City ;
     schema:sameAs wd:Q16565 .
 
 kgcr:000241 a schema:PostalAddress ;
-    rdfs:label "Bank of America:Thirteen Colonies,Kingdom of England" ;
+    rdfs:label "Thirteen Colonies,Kingdom of England" ;
     schema:addressCountry kgcr:000243 ;
-    schema:name "Bank of America:Thirteen Colonies,Kingdom of England" ;
+    schema:name "Bank of America,Thirteen Colonies,Kingdom of England" ;
     kgc:addressRegion kgcr:000242 .
 
 kgcr:000242 a schema:State ;
@@ -1674,9 +1674,9 @@ kgcr:000242 a schema:State ;
     schema:sameAs wd:Q179997 .
 
 kgcr:000245 a schema:PostalAddress ;
-    rdfs:label "Bank of America:Great Britain" ;
+    rdfs:label "Great Britain" ;
     schema:addressCountry kgcr:000246 ;
-    schema:name "Bank of America:Great Britain" .
+    schema:name "Bank of America,Great Britain" .
 
 kgcr:000246 a schema:Country ;
     rdfs:label "Great Britain" ;
@@ -1701,9 +1701,9 @@ kgcr:000248 a schema:Organization ;
         kgcr:000249 .
 
 kgcr:000250 a schema:PostalAddress ;
-    rdfs:label "Microsoft Research:Redmond,King County,Washington,United States of America" ;
+    rdfs:label "Redmond,King County,Washington,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Microsoft Research:Redmond,King County,Washington,United States of America" ;
+    schema:name "Microsoft Research,Redmond,King County,Washington,United States of America" ;
     kgc:addressCity kgcr:000251 ;
     kgc:addressCounty kgcr:000097 ;
     kgc:addressRegion kgcr:000098 .
@@ -1743,9 +1743,9 @@ kgcr:000253 a schema:Organization ;
     kgc:hasIndustry kgcr:000188 .
 
 kgcr:000255 a schema:PostalAddress ;
-    rdfs:label "Enterprise Knowledge LLC:Arlington County,Virginia,United States of America" ;
+    rdfs:label "Arlington County,Virginia,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "Enterprise Knowledge LLC:Arlington County,Virginia,United States of America" ;
+    schema:name "Enterprise Knowledge LLC,Arlington County,Virginia,United States of America" ;
     kgc:addressCounty kgcr:000077 ;
     kgc:addressRegion kgcr:000009 .
 
@@ -1781,9 +1781,9 @@ kgcr:000260 a schema:Consortium ;
     schema:sameAs wd:Q3151430 .
 
 kgcr:000262 a schema:PostalAddress ;
-    rdfs:label "University of Texas at Austin:Austin,Travis County,Texas,United States of America" ;
+    rdfs:label "Austin,Travis County,Texas,United States of America" ;
     schema:addressCountry kgcr:000010 ;
-    schema:name "University of Texas at Austin:Austin,Travis County,Texas,United States of America" ;
+    schema:name "University of Texas at Austin,Austin,Travis County,Texas,United States of America" ;
     kgc:addressCity kgcr:000023 ;
     kgc:addressCounty kgcr:000024 ;
     kgc:addressRegion kgcr:000025 .

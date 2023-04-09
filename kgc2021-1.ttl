@@ -637,8 +637,7 @@ kgcr:000376 a schema:Organization ;
         kgcr:000385,
         kgcr:000387,
         kgcr:000392 ;
-    schema:address kgcr:000379,
-        kgcr:000388 ;
+    schema:address kgcr:000379 ;
     schema:name "Wolters Kluwer (GRC Division)" ;
     schema:sameAs wd:Q249798 ;
     kgc:hasBusinessType kgcr:000377,
@@ -648,9 +647,9 @@ kgcr:000376 a schema:Organization ;
     kgc:hasIndustry kgcr:000378 .
 
 kgcr:000379 a schema:PostalAddress ;
-    rdfs:label "Wolters Kluwer (GRC Division):Assago,Metropolitan City of Milan,province of Milan,Lombardy,Italy" ;
+    rdfs:label "Assago,Metropolitan City of Milan,province of Milan,Lombardy,Italy" ;
     schema:addressCountry kgcr:000384 ;
-    schema:name "Wolters Kluwer (GRC Division):Assago,Metropolitan City of Milan,province of Milan,Lombardy,Italy" ;
+    schema:name "Wolters Kluwer (GRC Division),Assago,Metropolitan City of Milan,province of Milan,Lombardy,Italy" ;
     kgc:addressCity kgcr:000381 ;
     kgc:addressCounty kgcr:000382 ;
     kgc:addressRegion kgcr:000383 ;
@@ -664,13 +663,14 @@ kgcr:000380 a kgc:Address ;
 
 kgcr:000386 a schema:Person ;
     rdfs:label "Alan Morrison" ;
+    schema:address kgcr:000388 ;
     schema:name "Alan Morrison" ;
     schema:sameAs wd:Q57465740 .
 
 kgcr:000388 a schema:PostalAddress ;
-    rdfs:label "Wolters Kluwer (GRC Division):Alphen aan den Rijn,South Holland,Netherlands" ;
+    rdfs:label "Alphen aan den Rijn,South Holland,Netherlands" ;
     schema:addressCountry kgcr:000391 ;
-    schema:name "Wolters Kluwer (GRC Division):Alphen aan den Rijn,South Holland,Netherlands" ;
+    schema:name "Alan Morrison,Alphen aan den Rijn,South Holland,Netherlands" ;
     kgc:addressCity kgcr:000389 ;
     kgc:addressRegion kgcr:000390 .
 
@@ -730,9 +730,9 @@ kgcr:000402 a schema:Consortium ;
     schema:sameAs wd:Q5275906 .
 
 kgcr:000404 a schema:PostalAddress ;
-    rdfs:label "Northeastern University:Boston,Suffolk County,Massachusetts,United States of America" ;
+    rdfs:label "Boston,Suffolk County,Massachusetts,United States of America" ;
     schema:addressCountry kgcr:000408 ;
-    schema:name "Northeastern University:Boston,Suffolk County,Massachusetts,United States of America" ;
+    schema:name "Northeastern University,Boston,Suffolk County,Massachusetts,United States of America" ;
     kgc:addressCity kgcr:000405 ;
     kgc:addressCounty kgcr:000406 ;
     kgc:addressRegion kgcr:000407 .
@@ -832,9 +832,9 @@ kgcr:000424 a schema:Organization ;
         kgcr:000439 .
 
 kgcr:000428 a schema:PostalAddress ;
-    rdfs:label "Microsoft:Redmond,King County,Washington,United States of America" ;
+    rdfs:label "Redmond,King County,Washington,United States of America" ;
     schema:addressCountry kgcr:000408 ;
-    schema:name "Microsoft:Redmond,King County,Washington,United States of America" ;
+    schema:name "Microsoft,Redmond,King County,Washington,United States of America" ;
     kgc:addressCity kgcr:000429 ;
     kgc:addressCounty kgcr:000430 ;
     kgc:addressRegion kgcr:000431 .
@@ -877,9 +877,9 @@ kgcr:000447 a schema:Organization ;
     kgc:hasBusinessType kgcr:000435 .
 
 kgcr:000448 a schema:PostalAddress ;
-    rdfs:label "IMEC:Leuven,Arrondissement of Leuven,Flemish Brabant,Belgium" ;
+    rdfs:label "Leuven,Arrondissement of Leuven,Flemish Brabant,Belgium" ;
     schema:addressCountry kgcr:000452 ;
-    schema:name "IMEC:Leuven,Arrondissement of Leuven,Flemish Brabant,Belgium" ;
+    schema:name "IMEC,Leuven,Arrondissement of Leuven,Flemish Brabant,Belgium" ;
     kgc:addressCity kgcr:000449 ;
     kgc:addressCounty kgcr:000450 ;
     kgc:addressRegion kgcr:000451 .
@@ -904,9 +904,9 @@ kgcr:000454 a schema:Organization ;
     kgc:hasBusinessType kgcr:000435 .
 
 kgcr:000455 a schema:PostalAddress ;
-    rdfs:label "Semantic Web Company/ PoolParty:Vienna,Austria" ;
+    rdfs:label "Vienna,Austria" ;
     schema:addressCountry kgcr:000457 ;
-    schema:name "Semantic Web Company/ PoolParty:Vienna,Austria" ;
+    schema:name "Semantic Web Company/ PoolParty,Vienna,Austria" ;
     kgc:addressCity kgcr:000456 .
 
 kgcr:000456 a schema:City ;
@@ -939,9 +939,9 @@ kgcr:000460 a schema:Organization ;
     kgc:hasIndustry kgcr:000461 .
 
 kgcr:000462 a schema:PostalAddress ;
-    rdfs:label "AstraZeneca:Paris Saint-Germain F.C.,France" ;
+    rdfs:label "Paris Saint-Germain F.C.,France" ;
     schema:addressCountry kgcr:000464 ;
-    schema:name "AstraZeneca:Paris Saint-Germain F.C.,France" ;
+    schema:name "AstraZeneca,Paris Saint-Germain F.C.,France" ;
     kgc:streetAddress kgcr:000463 .
 
 kgcr:000463 a kgc:Address ;
@@ -996,9 +996,9 @@ kgcr:000469 a schema:Consortium ;
     schema:sameAs wd:Q590631 .
 
 kgcr:000471 a schema:PostalAddress ;
-    rdfs:label "U. of Oxford, Code for Science and Society:Oxford,Oxford,Oxfordshire,United Kingdom" ;
+    rdfs:label " Code for Science and Society,Oxford,Oxford,Oxfordshire,United Kingdom" ;
     schema:addressCountry kgcr:000474 ;
-    schema:name "U. of Oxford, Code for Science and Society:Oxford,Oxford,Oxfordshire,United Kingdom" ;
+    schema:name "U. of Oxford, Code for Science and Society,Oxford,Oxford,Oxfordshire,United Kingdom" ;
     kgc:addressCity kgcr:000472 ;
     kgc:addressCounty kgcr:000473 ;
     kgc:streetAddress kgcr:000472 .
@@ -1060,9 +1060,9 @@ kgcr:000487 a schema:Organization ;
     kgc:hasBusinessType kgcr:000435 .
 
 kgcr:000488 a schema:PostalAddress ;
-    rdfs:label "EBSCO Information Services:Birmingham,Jefferson County,Alabama,United States of America" ;
+    rdfs:label "Birmingham,Jefferson County,Alabama,United States of America" ;
     schema:addressCountry kgcr:000408 ;
-    schema:name "EBSCO Information Services:Birmingham,Jefferson County,Alabama,United States of America" ;
+    schema:name "EBSCO Information Services,Birmingham,Jefferson County,Alabama,United States of America" ;
     kgc:addressCity kgcr:000489 ;
     kgc:addressCounty kgcr:000490 ;
     kgc:addressRegion kgcr:000491 .
@@ -1074,9 +1074,9 @@ kgcr:000489 a schema:City ;
     schema:sameAs wd:Q79867 .
 
 kgcr:000492 a schema:PostalAddress ;
-    rdfs:label "EBSCO Information Services:Shelby County,Alabama,United States of America" ;
+    rdfs:label "Shelby County,Alabama,United States of America" ;
     schema:addressCountry kgcr:000408 ;
-    schema:name "EBSCO Information Services:Shelby County,Alabama,United States of America" ;
+    schema:name "EBSCO Information Services,Shelby County,Alabama,United States of America" ;
     kgc:addressCounty kgcr:000493 ;
     kgc:addressRegion kgcr:000491 .
 
@@ -1106,9 +1106,9 @@ kgcr:000495 a schema:Organization ;
     kgc:hasIndustry kgcr:000396 .
 
 kgcr:000497 a schema:PostalAddress ;
-    rdfs:label "Ontotext:Sofia,Sofia Capital Municipality,Sofia City Province,Bulgaria" ;
+    rdfs:label "Sofia,Sofia Capital Municipality,Sofia City Province,Bulgaria" ;
     schema:addressCountry kgcr:000501 ;
-    schema:name "Ontotext:Sofia,Sofia Capital Municipality,Sofia City Province,Bulgaria" ;
+    schema:name "Ontotext,Sofia,Sofia Capital Municipality,Sofia City Province,Bulgaria" ;
     kgc:addressCity kgcr:000498 ;
     kgc:addressCounty kgcr:000499 ;
     kgc:addressRegion kgcr:000500 .
@@ -1161,9 +1161,9 @@ kgcr:000509 a schema:Organization ;
     kgc:hasIndustry kgcr:000436 .
 
 kgcr:000511 a schema:PostalAddress ;
-    rdfs:label "Cambridge Semantics:Boston,Suffolk County,Massachusetts,United States of America" ;
+    rdfs:label "Boston,Suffolk County,Massachusetts,United States of America" ;
     schema:addressCountry kgcr:000408 ;
-    schema:name "Cambridge Semantics:Boston,Suffolk County,Massachusetts,United States of America" ;
+    schema:name "Cambridge Semantics,Boston,Suffolk County,Massachusetts,United States of America" ;
     kgc:addressCity kgcr:000405 ;
     kgc:addressCounty kgcr:000406 ;
     kgc:addressRegion kgcr:000407 .
@@ -1224,9 +1224,9 @@ kgcr:000522 a schema:Organization ;
         kgcr:000531 .
 
 kgcr:000525 a schema:PostalAddress ;
-    rdfs:label "Trace Labs and OriginTrail:Vancouver,Metro Vancouver,British Columbia,Canada" ;
+    rdfs:label "Vancouver,Metro Vancouver,British Columbia,Canada" ;
     schema:addressCountry kgcr:000529 ;
-    schema:name "Trace Labs and OriginTrail:Vancouver,Metro Vancouver,British Columbia,Canada" ;
+    schema:name "Trace Labs and OriginTrail,Vancouver,Metro Vancouver,British Columbia,Canada" ;
     kgc:addressCity kgcr:000526 ;
     kgc:addressCounty kgcr:000527 ;
     kgc:addressRegion kgcr:000528 .
@@ -1268,9 +1268,9 @@ kgcr:000534 a schema:Consortium ;
     schema:sameAs wd:Q17353641 .
 
 kgcr:000535 a schema:PostalAddress ;
-    rdfs:label "Novartis:Basel,Basel-Stadt,Switzerland" ;
+    rdfs:label "Basel,Basel-Stadt,Switzerland" ;
     schema:addressCountry kgcr:000538 ;
-    schema:name "Novartis:Basel,Basel-Stadt,Switzerland" ;
+    schema:name "Novartis,Basel,Basel-Stadt,Switzerland" ;
     kgc:addressCity kgcr:000536 ;
     kgc:addressCounty kgcr:000537 .
 
@@ -1308,9 +1308,9 @@ kgcr:000542 a schema:Organization ;
         kgcr:000547 .
 
 kgcr:000544 a schema:PostalAddress ;
-    rdfs:label "National Science Foundation:Alexandria,Virginia,United States of America" ;
+    rdfs:label "Alexandria,Virginia,United States of America" ;
     schema:addressCountry kgcr:000408 ;
-    schema:name "National Science Foundation:Alexandria,Virginia,United States of America" ;
+    schema:name "National Science Foundation,Alexandria,Virginia,United States of America" ;
     kgc:addressCity kgcr:000545 ;
     kgc:addressCounty kgcr:000546 .
 
@@ -1336,9 +1336,9 @@ kgcr:000549 a schema:Organization ;
         kgcr:000555 .
 
 kgcr:000551 a schema:PostalAddress ;
-    rdfs:label "Facebook:Menlo Park,San Mateo County,California,United States of America" ;
+    rdfs:label "Menlo Park,San Mateo County,California,United States of America" ;
     schema:addressCountry kgcr:000408 ;
-    schema:name "Facebook:Menlo Park,San Mateo County,California,United States of America" ;
+    schema:name "Facebook,Menlo Park,San Mateo County,California,United States of America" ;
     kgc:addressCity kgcr:000552 ;
     kgc:addressCounty kgcr:000553 ;
     kgc:addressRegion kgcr:000554 .
@@ -1355,9 +1355,9 @@ kgcr:000556 a schema:Person ;
     schema:worksFor kgcr:000557 .
 
 kgcr:000559 a schema:PostalAddress ;
-    rdfs:label "Amazon:Seattle,King County,Washington,United States of America" ;
+    rdfs:label "Seattle,King County,Washington,United States of America" ;
     schema:addressCountry kgcr:000408 ;
-    schema:name "Amazon:Seattle,King County,Washington,United States of America" ;
+    schema:name "Amazon,Seattle,King County,Washington,United States of America" ;
     kgc:addressCity kgcr:000560 ;
     kgc:addressCounty kgcr:000430 ;
     kgc:addressRegion kgcr:000431 .
@@ -1374,9 +1374,9 @@ kgcr:000568 a schema:Person ;
     schema:worksFor kgcr:000569 .
 
 kgcr:000571 a schema:PostalAddress ;
-    rdfs:label "Financial Industry Regulatory Authority:Washington, D.C.,District of Columbia,United States of America" ;
+    rdfs:label "Washington, D.C.,District of Columbia,United States of America" ;
     schema:addressCountry kgcr:000408 ;
-    schema:name "Financial Industry Regulatory Authority:Washington, D.C.,District of Columbia,United States of America" ;
+    schema:name "Financial Industry Regulatory Authority,Washington, D.C.,District of Columbia,United States of America" ;
     kgc:addressCity kgcr:000572 ;
     kgc:addressCounty kgcr:000573 .
 
@@ -1442,9 +1442,9 @@ kgcr:000578 a schema:Consortium ;
     schema:sameAs wd:Q3614083 .
 
 kgcr:000580 a schema:PostalAddress ;
-    rdfs:label "Google:Mountain View,Santa Clara County,California,United States of America" ;
+    rdfs:label "Mountain View,Santa Clara County,California,United States of America" ;
     schema:addressCountry kgcr:000408 ;
-    schema:name "Google:Mountain View,Santa Clara County,California,United States of America" ;
+    schema:name "Google,Mountain View,Santa Clara County,California,United States of America" ;
     kgc:addressCity kgcr:000581 ;
     kgc:addressCounty kgcr:000582 ;
     kgc:addressRegion kgcr:000554 .
@@ -1521,9 +1521,9 @@ kgcr:000593 a schema:Organization ;
     kgc:hasIndustry kgcr:000594 .
 
 kgcr:000595 a schema:PostalAddress ;
-    rdfs:label "Goldman Sachs:200 West Street,Battery Park City,Manhattan,United States of America" ;
+    rdfs:label "200 West Street,Battery Park City,Manhattan,United States of America" ;
     schema:addressCountry kgcr:000408 ;
-    schema:name "Goldman Sachs:200 West Street,Battery Park City,Manhattan,United States of America" ;
+    schema:name "Goldman Sachs,200 West Street,Battery Park City,Manhattan,United States of America" ;
     kgc:addressCity kgcr:000597 ;
     kgc:addressCounty kgcr:000598 ;
     kgc:streetAddress kgcr:000596 .
@@ -1612,9 +1612,9 @@ kgcr:000617 a schema:Organization ;
         kgcr:000624 .
 
 kgcr:000619 a schema:PostalAddress ;
-    rdfs:label "Wells Fargo:San Francisco,San Francisco County,California,United States of America" ;
+    rdfs:label "San Francisco,San Francisco County,California,United States of America" ;
     schema:addressCountry kgcr:000408 ;
-    schema:name "Wells Fargo:San Francisco,San Francisco County,California,United States of America" ;
+    schema:name "Wells Fargo,San Francisco,San Francisco County,California,United States of America" ;
     kgc:addressCity kgcr:000620 ;
     kgc:addressCounty kgcr:000621 ;
     kgc:addressRegion kgcr:000554 .
@@ -2026,9 +2026,9 @@ kgcr:000710 a schema:Organization ;
     kgc:hasBusinessType kgcr:000435 .
 
 kgcr:000711 a schema:PostalAddress ;
-    rdfs:label "OneFootball:Berlin,Germany" ;
+    rdfs:label "Berlin,Germany" ;
     schema:addressCountry kgcr:000713 ;
-    schema:name "OneFootball:Berlin,Germany" ;
+    schema:name "OneFootball,Berlin,Germany" ;
     kgc:addressCity kgcr:000712 .
 
 kgcr:000712 a schema:City ;
