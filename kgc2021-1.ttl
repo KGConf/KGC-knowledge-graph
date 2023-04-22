@@ -128,10 +128,95 @@ kgc:hasIndustry a owl:ObjectProperty ;
     rdfs:domain schema:Organization ;
     rdfs:range kgc:BusinessIndustry .
 
+kgcr:000387 a kgc:BusinessType ;
+    rdfs:label "open-access publisher" ;
+    schema:name "open-access publisher" ;
+    schema:sameAs wd:Q45400320 .
+
+kgcr:000439 a kgc:BusinessIndustry ;
+    rdfs:label "software development" ;
+    schema:name "software development" ;
+    schema:sameAs wd:Q638608 .
+
+kgcr:000478 a kgc:BusinessType ;
+    rdfs:label "exempt charity" ;
+    schema:name "exempt charity" ;
+    schema:sameAs wd:Q5420001 .
+
+kgcr:000479 a schema:Consortium ;
+    rdfs:label "Jisc" ;
+    schema:name "Jisc" ;
+    schema:sameAs wd:Q6269240 .
+
+kgcr:000480 a kgc:BusinessType ;
+    rdfs:label "public university" ;
+    schema:name "public university" ;
+    schema:sameAs wd:Q875538 .
+
+kgcr:000481 a schema:Consortium ;
+    rdfs:label "IIIF Consortium" ;
+    schema:name "IIIF Consortium" ;
+    schema:sameAs wd:Q35677307 .
+
+kgcr:000482 a kgc:BusinessType ;
+    rdfs:label "higher education institution" ;
+    schema:name "higher education institution" ;
+    schema:sameAs wd:Q38723 .
+
+kgcr:000483 a schema:Consortium ;
+    rdfs:label "International Alliance of Research Universities" ;
+    schema:name "International Alliance of Research Universities" ;
+    schema:sameAs wd:Q1140056 .
+
+kgcr:000484 a schema:Consortium ;
+    rdfs:label "Digital Preservation Coalition" ;
+    schema:name "Digital Preservation Coalition" ;
+    schema:sameAs wd:Q5275956 .
+
+kgcr:000485 a schema:Consortium ;
+    rdfs:label "Shibboleth Consortium" ;
+    schema:name "Shibboleth Consortium" ;
+    schema:sameAs wd:Q105077092 .
+
+kgcr:000531 a kgc:FieldOfWork ;
+    rdfs:label "missing person" ;
+    schema:name "missing person" ;
+    schema:sameAs wd:Q388505 .
+
+kgcr:000601 a kgc:BusinessType ;
+    rdfs:label "commercial organization" ;
+    schema:name "commercial organization" ;
+    schema:sameAs wd:Q21980538 .
+
+kgcr:000603 a schema:Consortium ;
+    rdfs:label "Initiative Finanzstandort Deutschland" ;
+    schema:name "Initiative Finanzstandort Deutschland" ;
+    schema:sameAs wd:Q1663567 .
+
+kgcr:000604 a kgc:BusinessType ;
+    rdfs:label "credit institution" ;
+    schema:name "credit institution" ;
+    schema:sameAs wd:Q730038 .
+
+kgcr:000606 a kgc:BusinessType ;
+    rdfs:label "investment bank" ;
+    schema:name "investment bank" ;
+    schema:sameAs wd:Q319845 .
+
+kgcr:000607 a kgc:BusinessType ;
+    rdfs:label "asset management" ;
+    schema:name "asset management" ;
+    schema:sameAs wd:Q873442 .
+
 kgcr:000616 a schema:Person ;
     rdfs:label "David Newman" ;
     schema:name "David Newman" ;
     schema:worksFor kgcr:000617 .
+
+kgcr:000624 a kgc:BusinessIndustry ;
+    rdfs:label "banking industry" ;
+    schema:name "banking industry" ;
+    schema:sameAs wd:Q806718 .
 
 kgcr:000836 a kgc:Talk ;
     rdfs:label "Paths to More Personal and Collaborative Knowledge Graphs" ;
@@ -634,16 +719,12 @@ kgcr:000376 a schema:Organization ;
     rdfs:label "Wolters Kluwer (GRC Division)" ;
     schema:additionalType kgcr:000377,
         kgcr:000378,
-        kgcr:000385,
-        kgcr:000387,
-        kgcr:000392 ;
+        kgcr:000385 ;
     schema:address kgcr:000379 ;
     schema:name "Wolters Kluwer (GRC Division)" ;
     schema:sameAs wd:Q249798 ;
     kgc:hasBusinessType kgcr:000377,
-        kgcr:000385,
-        kgcr:000387,
-        kgcr:000392 ;
+        kgcr:000385 ;
     kgc:hasIndustry kgcr:000378 .
 
 kgcr:000379 a schema:PostalAddress ;
@@ -779,6 +860,11 @@ kgcr:000417 a schema:Organization ;
     schema:memberOf kgcr:000418 ;
     schema:name "Coreon GmbH" .
 
+kgcr:000418 a schema:Consortium ;
+    rdfs:label "Coalition for Networked Information" ;
+    schema:name "Coalition for Networked Information" ;
+    schema:sameAs wd:Q5137944 .
+
 kgcr:000419 a schema:Person ;
     rdfs:label "Alex Kalinowski" ;
     schema:name "Alex Kalinowski" ;
@@ -805,31 +891,14 @@ kgcr:000423 a schema:Person ;
 
 kgcr:000424 a schema:Organization ;
     rdfs:label "Microsoft" ;
-    schema:additionalType kgcr:000392,
-        kgcr:000426,
-        kgcr:000427,
-        kgcr:000435,
-        kgcr:000436,
-        kgcr:000438,
-        kgcr:000439 ;
+    schema:additionalType kgcr:000426,
+        kgcr:000427 ;
     schema:address kgcr:000428 ;
-    schema:memberOf kgcr:000425,
-        kgcr:000434,
-        kgcr:000437,
-        kgcr:000441,
-        kgcr:000442,
-        kgcr:000443,
-        kgcr:000444,
-        kgcr:000445 ;
+    schema:memberOf kgcr:000425 ;
     schema:name "Microsoft" ;
     schema:sameAs wd:Q2283 ;
-    kgc:hasBusinessType kgcr:000392,
-        kgcr:000426,
-        kgcr:000435,
-        kgcr:000438 ;
-    kgc:hasIndustry kgcr:000427,
-        kgcr:000436,
-        kgcr:000439 .
+    kgc:hasBusinessType kgcr:000426 ;
+    kgc:hasIndustry kgcr:000427 .
 
 kgcr:000428 a schema:PostalAddress ;
     rdfs:label "Redmond,King County,Washington,United States of America" ;
@@ -861,6 +930,31 @@ kgcr:000440 a schema:CollegeOrUniversity ;
     rdfs:label "Birla Institute of Technology and Science" ;
     schema:name "Birla Institute of Technology and Science" ;
     schema:sameAs wd:Q2648311 .
+
+kgcr:000441 a schema:Consortium ;
+    rdfs:label "Wi-Fi Alliance" ;
+    schema:name "Wi-Fi Alliance" ;
+    schema:sameAs wd:Q1361045 .
+
+kgcr:000442 a schema:Consortium ;
+    rdfs:label "SD Association" ;
+    schema:name "SD Association" ;
+    schema:sameAs wd:Q7389502 .
+
+kgcr:000443 a schema:Consortium ;
+    rdfs:label "OpenID Foundation" ;
+    schema:name "OpenID Foundation" ;
+    schema:sameAs wd:Q105272307 .
+
+kgcr:000444 a schema:Consortium ;
+    rdfs:label "Rust Foundation" ;
+    schema:name "Rust Foundation" ;
+    schema:sameAs wd:Q105394699 .
+
+kgcr:000445 a schema:Consortium ;
+    rdfs:label "Bytecode Alliance" ;
+    schema:name "Bytecode Alliance" ;
+    schema:sameAs wd:Q75097496 .
 
 kgcr:000446 a schema:Person ;
     rdfs:label "Anastasia Dimou" ;
@@ -968,27 +1062,12 @@ kgcr:000467 a schema:CollegeOrUniversity ;
 
 kgcr:000468 a schema:Organization ;
     rdfs:label "U. of Oxford, Code for Science and Society" ;
-    schema:additionalType kgcr:000387,
-        kgcr:000470,
-        kgcr:000478,
-        kgcr:000480,
-        kgcr:000482 ;
+    schema:additionalType kgcr:000470 ;
     schema:address kgcr:000471 ;
-    schema:memberOf kgcr:000437,
-        kgcr:000469,
-        kgcr:000477,
-        kgcr:000479,
-        kgcr:000481,
-        kgcr:000483,
-        kgcr:000484,
-        kgcr:000485 ;
+    schema:memberOf kgcr:000469 ;
     schema:name "U. of Oxford, Code for Science and Society" ;
     schema:sameAs wd:Q34433 ;
-    kgc:hasBusinessType kgcr:000387,
-        kgcr:000470,
-        kgcr:000478,
-        kgcr:000480,
-        kgcr:000482 .
+    kgc:hasBusinessType kgcr:000470 .
 
 kgcr:000469 a schema:Consortium ;
     rdfs:label "Russell Group" ;
@@ -1018,30 +1097,10 @@ kgcr:000476 a schema:CollegeOrUniversity ;
     schema:name "University of Ljubljana" ;
     schema:sameAs wd:Q1377 .
 
-kgcr:000479 a schema:Consortium ;
-    rdfs:label "Jisc" ;
-    schema:name "Jisc" ;
-    schema:sameAs wd:Q6269240 .
-
-kgcr:000481 a schema:Consortium ;
-    rdfs:label "IIIF Consortium" ;
-    schema:name "IIIF Consortium" ;
-    schema:sameAs wd:Q35677307 .
-
-kgcr:000483 a schema:Consortium ;
-    rdfs:label "International Alliance of Research Universities" ;
-    schema:name "International Alliance of Research Universities" ;
-    schema:sameAs wd:Q1140056 .
-
-kgcr:000484 a schema:Consortium ;
-    rdfs:label "Digital Preservation Coalition" ;
-    schema:name "Digital Preservation Coalition" ;
-    schema:sameAs wd:Q5275956 .
-
-kgcr:000485 a schema:Consortium ;
-    rdfs:label "Shibboleth Consortium" ;
-    schema:name "Shibboleth Consortium" ;
-    schema:sameAs wd:Q105077092 .
+kgcr:000477 a schema:Consortium ;
+    rdfs:label "ORCID, Inc." ;
+    schema:name "ORCID, Inc." ;
+    schema:sameAs wd:Q19861084 .
 
 kgcr:000486 a schema:Person ;
     rdfs:label "Ashleigh Faith" ;
@@ -1215,13 +1274,11 @@ kgcr:000522 a schema:Organization ;
     rdfs:label "Trace Labs and OriginTrail" ;
     schema:additionalType kgcr:000523 ;
     schema:address kgcr:000525 ;
-    schema:knowsAbout kgcr:000524,
-        kgcr:000531 ;
+    schema:knowsAbout kgcr:000524 ;
     schema:name "Trace Labs and OriginTrail" ;
     schema:sameAs wd:Q64940983 ;
     kgc:hasBusinessType kgcr:000523 ;
-    kgc:hasFieldOfWork kgcr:000524,
-        kgcr:000531 .
+    kgc:hasFieldOfWork kgcr:000524 .
 
 kgcr:000525 a schema:PostalAddress ;
     rdfs:label "Vancouver,Metro Vancouver,British Columbia,Canada" ;
@@ -1499,25 +1556,13 @@ kgcr:000592 a schema:Person ;
 
 kgcr:000593 a schema:Organization ;
     rdfs:label "Goldman Sachs" ;
-    schema:additionalType kgcr:000392,
-        kgcr:000539,
-        kgcr:000594,
-        kgcr:000601,
-        kgcr:000604,
-        kgcr:000606,
-        kgcr:000607 ;
+    schema:additionalType kgcr:000539,
+        kgcr:000594 ;
     schema:address kgcr:000595 ;
-    schema:memberOf kgcr:000434,
-        kgcr:000567,
-        kgcr:000603 ;
+    schema:memberOf kgcr:000434 ;
     schema:name "Goldman Sachs" ;
     schema:sameAs wd:Q193326 ;
-    kgc:hasBusinessType kgcr:000392,
-        kgcr:000539,
-        kgcr:000601,
-        kgcr:000604,
-        kgcr:000606,
-        kgcr:000607 ;
+    kgc:hasBusinessType kgcr:000539 ;
     kgc:hasIndustry kgcr:000594 .
 
 kgcr:000595 a schema:PostalAddress ;
@@ -1547,11 +1592,6 @@ kgcr:000600 a schema:CollegeOrUniversity ;
 kgcr:000602 a schema:Person ;
     rdfs:label "Conor White-Sullivan" ;
     schema:name "Conor White-Sullivan" .
-
-kgcr:000603 a schema:Consortium ;
-    rdfs:label "Initiative Finanzstandort Deutschland" ;
-    schema:name "Initiative Finanzstandort Deutschland" ;
-    schema:sameAs wd:Q1663567 .
 
 kgcr:000605 a schema:Person ;
     rdfs:label "Cory Henson" ;
@@ -1597,19 +1637,14 @@ kgcr:000615 a schema:CollegeOrUniversity ;
 
 kgcr:000617 a schema:Organization ;
     rdfs:label "Wells Fargo" ;
-    schema:additionalType kgcr:000435,
-        kgcr:000594,
-        kgcr:000618,
-        kgcr:000624 ;
+    schema:additionalType kgcr:000594,
+        kgcr:000618 ;
     schema:address kgcr:000619 ;
-    schema:memberOf kgcr:000437,
-        kgcr:000567 ;
+    schema:memberOf kgcr:000437 ;
     schema:name "Wells Fargo" ;
     schema:sameAs wd:Q744149 ;
-    kgc:hasBusinessType kgcr:000435,
-        kgcr:000618 ;
-    kgc:hasIndustry kgcr:000594,
-        kgcr:000624 .
+    kgc:hasBusinessType kgcr:000618 ;
+    kgc:hasIndustry kgcr:000594 .
 
 kgcr:000619 a schema:PostalAddress ;
     rdfs:label "San Francisco,San Francisco County,California,United States of America" ;
@@ -3573,8 +3608,7 @@ kgcr:000401 a schema:Organization ;
     schema:address kgcr:000404 ;
     schema:memberOf kgcr:000402,
         kgcr:000411,
-        kgcr:000414,
-        kgcr:000418 ;
+        kgcr:000414 ;
     schema:name "Northeastern University" ;
     schema:sameAs wd:Q37548 ;
     kgc:hasBusinessType kgcr:000403,
@@ -3596,11 +3630,6 @@ kgcr:000412 a kgc:BusinessType ;
     schema:name "private not-for-profit educational institution" ;
     schema:sameAs wd:Q23002054 .
 
-kgcr:000418 a schema:Consortium ;
-    rdfs:label "Coalition for Networked Information" ;
-    schema:name "Coalition for Networked Information" ;
-    schema:sameAs wd:Q5137944 .
-
 kgcr:000426 a kgc:BusinessType ;
     rdfs:label "software company" ;
     schema:name "software company" ;
@@ -3611,35 +3640,10 @@ kgcr:000427 a kgc:BusinessIndustry ;
     schema:name "technology industry" ;
     schema:sameAs wd:Q21157865 .
 
-kgcr:000439 a kgc:BusinessIndustry ;
-    rdfs:label "software development" ;
-    schema:name "software development" ;
-    schema:sameAs wd:Q638608 .
-
-kgcr:000441 a schema:Consortium ;
-    rdfs:label "Wi-Fi Alliance" ;
-    schema:name "Wi-Fi Alliance" ;
-    schema:sameAs wd:Q1361045 .
-
-kgcr:000442 a schema:Consortium ;
-    rdfs:label "SD Association" ;
-    schema:name "SD Association" ;
-    schema:sameAs wd:Q7389502 .
-
-kgcr:000443 a schema:Consortium ;
-    rdfs:label "OpenID Foundation" ;
-    schema:name "OpenID Foundation" ;
-    schema:sameAs wd:Q105272307 .
-
-kgcr:000444 a schema:Consortium ;
-    rdfs:label "Rust Foundation" ;
-    schema:name "Rust Foundation" ;
-    schema:sameAs wd:Q105394699 .
-
-kgcr:000445 a schema:Consortium ;
-    rdfs:label "Bytecode Alliance" ;
-    schema:name "Bytecode Alliance" ;
-    schema:sameAs wd:Q75097496 .
+kgcr:000438 a kgc:BusinessType ;
+    rdfs:label "technology company" ;
+    schema:name "technology company" ;
+    schema:sameAs wd:Q18388277 .
 
 kgcr:000450 a kgc:County ;
     rdfs:label "Arrondissement of Leuven" ;
@@ -3672,26 +3676,6 @@ kgcr:000473 a kgc:County ;
     rdfs:label "Oxfordshire" ;
     schema:name "Oxfordshire" ;
     schema:sameAs wd:Q23169 .
-
-kgcr:000477 a schema:Consortium ;
-    rdfs:label "ORCID, Inc." ;
-    schema:name "ORCID, Inc." ;
-    schema:sameAs wd:Q19861084 .
-
-kgcr:000478 a kgc:BusinessType ;
-    rdfs:label "exempt charity" ;
-    schema:name "exempt charity" ;
-    schema:sameAs wd:Q5420001 .
-
-kgcr:000480 a kgc:BusinessType ;
-    rdfs:label "public university" ;
-    schema:name "public university" ;
-    schema:sameAs wd:Q875538 .
-
-kgcr:000482 a kgc:BusinessType ;
-    rdfs:label "higher education institution" ;
-    schema:name "higher education institution" ;
-    schema:sameAs wd:Q38723 .
 
 kgcr:000490 a kgc:County ;
     rdfs:label "Jefferson County" ;
@@ -3768,11 +3752,6 @@ kgcr:000529 a schema:Country ;
     schema:name "Canada" ;
     schema:sameAs wd:Q16 .
 
-kgcr:000531 a kgc:FieldOfWork ;
-    rdfs:label "missing person" ;
-    schema:name "missing person" ;
-    schema:sameAs wd:Q388505 .
-
 kgcr:000537 a kgc:County ;
     rdfs:label "Basel-Stadt" ;
     schema:name "Basel-Stadt" ;
@@ -3834,6 +3813,11 @@ kgcr:000566 a schema:Consortium ;
     schema:name "Zigbee Alliance" ;
     schema:sameAs wd:Q79100838 .
 
+kgcr:000567 a schema:Consortium ;
+    rdfs:label "FIDO Alliance" ;
+    schema:name "FIDO Alliance" ;
+    schema:sameAs wd:Q15731702 .
+
 kgcr:000570 a kgc:BusinessType ;
     rdfs:label "self-regulatory organization" ;
     schema:name "self-regulatory organization" ;
@@ -3876,26 +3860,6 @@ kgcr:000598 a kgc:County ;
     schema:name "Manhattan" ;
     schema:sameAs wd:Q11299 .
 
-kgcr:000601 a kgc:BusinessType ;
-    rdfs:label "commercial organization" ;
-    schema:name "commercial organization" ;
-    schema:sameAs wd:Q21980538 .
-
-kgcr:000604 a kgc:BusinessType ;
-    rdfs:label "credit institution" ;
-    schema:name "credit institution" ;
-    schema:sameAs wd:Q730038 .
-
-kgcr:000606 a kgc:BusinessType ;
-    rdfs:label "investment bank" ;
-    schema:name "investment bank" ;
-    schema:sameAs wd:Q319845 .
-
-kgcr:000607 a kgc:BusinessType ;
-    rdfs:label "asset management" ;
-    schema:name "asset management" ;
-    schema:sameAs wd:Q873442 .
-
 kgcr:000608 a schema:Person ;
     rdfs:label "Dan McCreary" ;
     schema:name "Dan McCreary" ;
@@ -3911,11 +3875,6 @@ kgcr:000621 a kgc:County ;
     schema:geoWithin kgcr:000554 ;
     schema:name "San Francisco County" ;
     schema:sameAs wd:Q13188841 .
-
-kgcr:000624 a kgc:BusinessIndustry ;
-    rdfs:label "banking industry" ;
-    schema:name "banking industry" ;
-    schema:sameAs wd:Q806718 .
 
 kgcr:000626 a schema:CollegeOrUniversity ;
     rdfs:label "University of California, Berkeley" ;
@@ -4317,6 +4276,11 @@ kgcr:000431 a schema:State ;
     schema:name "Washington" ;
     schema:sameAs wd:Q1223 .
 
+kgcr:000434 a schema:Consortium ;
+    rdfs:label "Linux Foundation" ;
+    schema:name "Linux Foundation" ;
+    schema:sameAs wd:Q858851 .
+
 kgcr:000472 a kgc:Address ;
     rdfs:label "Oxford" ;
     schema:geoWithin kgcr:000472,
@@ -4383,26 +4347,16 @@ kgcr:000952 a schema:VideoObject ;
     rdfs:label "Video Recording Of Building Data Products using a No-code Knowledge Graph Platform" ;
     schema:embedUrl "https://knowledgegraphconference.vhx.tv/packages/kgc-2021/videos/justin-zhen-francois-scharffe-the-knowledge-graph-conference" .
 
-kgcr:000387 a kgc:BusinessType ;
-    rdfs:label "open-access publisher" ;
-    schema:name "open-access publisher" ;
-    schema:sameAs wd:Q45400320 .
-
 kgcr:000430 a kgc:County ;
     rdfs:label "King County" ;
     schema:geoWithin kgcr:000431 ;
     schema:name "King County" ;
     schema:sameAs wd:Q108861 .
 
-kgcr:000434 a schema:Consortium ;
-    rdfs:label "Linux Foundation" ;
-    schema:name "Linux Foundation" ;
-    schema:sameAs wd:Q858851 .
-
-kgcr:000438 a kgc:BusinessType ;
-    rdfs:label "technology company" ;
-    schema:name "technology company" ;
-    schema:sameAs wd:Q18388277 .
+kgcr:000437 a schema:Consortium ;
+    rdfs:label "World Wide Web Consortium" ;
+    schema:name "World Wide Web Consortium" ;
+    schema:sameAs wd:Q37033 .
 
 kgcr:000461 a kgc:BusinessIndustry ;
     rdfs:label "pharmaceutical industry" ;
@@ -4424,11 +4378,6 @@ kgcr:000555 a kgc:BusinessType ;
     rdfs:label "website" ;
     schema:name "website" ;
     schema:sameAs wd:Q35127 .
-
-kgcr:000567 a schema:Consortium ;
-    rdfs:label "FIDO Alliance" ;
-    schema:name "FIDO Alliance" ;
-    schema:sameAs wd:Q15731702 .
 
 kgcr:000569 a schema:Organization ;
     rdfs:label "Financial Industry Regulatory Authority" ;
@@ -4463,10 +4412,10 @@ kgcr:000396 a kgc:FieldOfWork ;
     schema:name "Semantic Web" ;
     schema:sameAs wd:Q54837 .
 
-kgcr:000437 a schema:Consortium ;
-    rdfs:label "World Wide Web Consortium" ;
-    schema:name "World Wide Web Consortium" ;
-    schema:sameAs wd:Q37033 .
+kgcr:000436 a kgc:BusinessIndustry ;
+    rdfs:label "software industry" ;
+    schema:name "software industry" ;
+    schema:sameAs wd:Q880371 .
 
 kgcr:000465 a kgc:BusinessType ;
     rdfs:label "enterprise" ;
@@ -4482,11 +4431,6 @@ kgcr:000554 a schema:State ;
 schema:AdministrativeArea a owl:Class ;
     rdfs:subClassOf schema:Place .
 
-kgcr:000436 a kgc:BusinessIndustry ;
-    rdfs:label "software industry" ;
-    schema:name "software industry" ;
-    schema:sameAs wd:Q880371 .
-
 schema:Event a owl:Class .
 
 schema:State a owl:Class ;
@@ -4496,6 +4440,11 @@ kgcr:000392 a kgc:BusinessType ;
     rdfs:label "public company" ;
     schema:name "public company" ;
     schema:sameAs wd:Q891723 .
+
+kgcr:000435 a kgc:BusinessType ;
+    rdfs:label "business" ;
+    schema:name "business" ;
+    schema:sameAs wd:Q4830453 .
 
 kgc:BusinessIndustry a owl:Class ;
     rdfs:subClassOf schema:Intangible .
@@ -4508,11 +4457,6 @@ schema:City a owl:Class ;
 
 schema:Country a owl:Class ;
     rdfs:subClassOf schema:AdministrativeArea .
-
-kgcr:000435 a kgc:BusinessType ;
-    rdfs:label "business" ;
-    schema:name "business" ;
-    schema:sameAs wd:Q4830453 .
 
 kgcr:000408 a schema:Country ;
     rdfs:label "United States of America" ;
