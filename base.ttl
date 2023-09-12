@@ -1,0 +1,240 @@
+@prefix kgc: <http://www.knowledgegraph.tech/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schema:Consortium a owl:Class ;
+    rdfs:subClassOf schema:Organization .
+
+schema:EventSeries a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+schema:PresentationDigitalDocument a owl:Class ;
+    rdfs:subClassOf schema:DigitalDocument .
+
+schema:WebSite a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:about a owl:ObjectProperty .
+
+schema:abstract a owl:DatatypeProperty .
+
+schema:additionalType a owl:ObjectProperty .
+
+schema:address a owl:ObjectProperty ;
+    rdfs:range schema:PostalAddress .
+
+schema:addressCountry a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range schema:Country .
+
+schema:alumniOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:CollegeOrUniversity .
+
+schema:archivedAt a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:description a owl:DatatypeProperty .
+
+schema:embedUrl a owl:DatatypeProperty ;
+    rdfs:domain schema:VideoObject .
+
+schema:eventAttendanceMode a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:EventAttendanceModeEnumeration .
+
+schema:geoWithin a owl:ObjectProperty ;
+    rdfs:domain schema:Place ;
+    rdfs:range schema:AdministrativeArea .
+
+schema:industry a owl:ObjectProperty .
+
+schema:jobTitle a owl:DatatypeProperty .
+
+schema:keywords a owl:DatatypeProperty .
+
+schema:knowsAbout a owl:ObjectProperty .
+
+schema:linkedIn rdfs:range xsd:anyURI .
+
+schema:location a owl:ObjectProperty ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:AdministrativeArea .
+
+schema:memberOf a owl:ObjectProperty ;
+    rdfs:range schema:Organization .
+
+schema:name a owl:DatatypeProperty .
+
+schema:nationality a owl:ObjectProperty ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Country .
+
+schema:performer a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:Person .
+
+schema:postalCode a owl:DatatypeProperty .
+
+schema:sameAs a owl:ObjectProperty .
+
+schema:superEvent a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:Event .
+
+schema:workPerformed a owl:ObjectProperty ;
+    rdfs:domain schema:Event ;
+    rdfs:range schema:CreativeWork .
+
+schema:worksFor a owl:ObjectProperty ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Organization .
+
+kgc: a owl:Ontology ;
+    rdfs:label "Knowledge Graph Conference Ontology" ;
+    rdfs:comment "Designed By Bita Banihashemi",
+        "Email: firstName DOT lastName AT gmail DOT com" ;
+    owl:versionInfo "1.0" .
+
+kgc:Conference a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:LinkedInProfile a owl:Class ;
+    rdfs:subClassOf schema:ProfilePage .
+
+kgc:Tag a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+kgc:Talk a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:Tutorial a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:Workshop a owl:Class ;
+    rdfs:subClassOf schema:Event .
+
+kgc:addressCity a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range schema:City .
+
+kgc:addressCounty a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range kgc:County .
+
+kgc:addressRegion a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range schema:State .
+
+kgc:facetOf a owl:ObjectProperty .
+
+kgc:hasBusinessType a owl:ObjectProperty ;
+    rdfs:domain schema:Organization ;
+    rdfs:range kgc:BusinessType .
+
+kgc:hasFieldOfWork a owl:ObjectProperty ;
+    rdfs:range kgc:FieldOfWork .
+
+kgc:hasIndustry a owl:ObjectProperty ;
+    rdfs:domain schema:Organization ;
+    rdfs:range kgc:BusinessIndustry .
+
+kgc:linkedIn a owl:DatatypeProperty .
+
+kgc:onlineProfile a owl:DatatypeProperty .
+
+kgc:streetAddress a owl:ObjectProperty ;
+    rdfs:domain schema:PostalAddress ;
+    rdfs:range kgc:Address .
+
+skos:Concept a owl:Class .
+
+skos:broader a owl:ObjectProperty .
+
+skos:narrower a owl:ObjectProperty .
+
+schema:City a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+schema:CivicStructure a owl:Class ;
+    rdfs:subClassOf schema:Place .
+
+schema:CollegeOrUniversity a owl:Class ;
+    rdfs:subClassOf schema:EducationalOrganization .
+
+schema:ContactPoint a owl:Class ;
+    rdfs:subClassOf schema:StructuredValue .
+
+schema:DigitalDocument a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:EducationalOrganization a owl:Class ;
+    rdfs:subClassOf schema:CivicStructure,
+        schema:Organization .
+
+schema:Enumeration a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:EventAttendanceModeEnumeration a owl:Class ;
+    rdfs:subClassOf schema:Enumeration ;
+    owl:oneOf ( schema:MixedEventAttendanceMode schema:OfflineEventAttendanceMode schema:OnlineEventAttendanceMode ) .
+
+schema:MediaObject a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:ProfilePage a owl:Class ;
+    rdfs:subClassOf schema:WebPage .
+
+schema:State a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+schema:StructuredValue a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:VideoObject a owl:Class ;
+    rdfs:subClassOf schema:MediaObject .
+
+schema:WebPage a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
+
+kgc:Address a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+kgc:BusinessIndustry a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+kgc:BusinessType a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+kgc:County a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+kgc:FieldOfWork a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:Country a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
+
+schema:Place a owl:Class .
+
+schema:Person a owl:Class .
+
+schema:CreativeWork a owl:Class .
+
+schema:Intangible a owl:Class .
+
+schema:PostalAddress a owl:Class ;
+    rdfs:subClassOf schema:ContactPoint .
+
+schema:AdministrativeArea a owl:Class ;
+    rdfs:subClassOf schema:Place .
+
+schema:Organization a owl:Class .
+
+schema:Event a owl:Class .
+

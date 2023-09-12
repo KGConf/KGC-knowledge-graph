@@ -1,0 +1,13 @@
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.DS_Store
+*BB-BkUp*
+*Today*
+*tests*
+*.ipynb_checkpoints*
+
+
